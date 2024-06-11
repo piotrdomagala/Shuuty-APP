@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalistyczny Landing Page</title>
+    <title>My Landing Page</title>
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
         }
         .container {
             display: flex;
@@ -17,19 +23,20 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
         h1 {
             font-size: 3em;
             margin-bottom: 0.5em;
         }
         p {
-            font-size: 1.2em;
+            font-size: 1.5em;
             margin-bottom: 1.5em;
         }
         .button {
-            background-color: #007bff;
-            color: white;
+            background-color: #000000;
+            color: #ffffff;
             padding: 1em 2em;
             text-decoration: none;
             border-radius: 5px;
@@ -37,7 +44,7 @@
             transition: background-color 0.3s;
         }
         .button:hover {
-            background-color: #0056b3;
+            background-color: #333333;
         }
         footer {
             position: absolute;
@@ -51,12 +58,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>Witaj na Naszej Stronie</h1>
-        <p>Odkryj więcej o naszych usługach i produktach.</p>
-        <a href="#" class="button">Dowiedz się więcej</a>
+        <h1>Welcome to My Landing Page</h1>
+        <p>Discover more about our services and products.</p>
+        <a href="#" class="button">Learn More</a>
     </div>
     <footer>
-        &copy; 2024 Minimalistyczny Landing Page. Wszystkie prawa zastrzeżone.
+        &copy; 2024 My Landing Page. All rights reserved.
     </footer>
 </body>
 </html>
