@@ -18,16 +18,11 @@
         }
         .header {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: flex-end;
             padding: 10px 20px;
             background-color: #ffffff;
             width: 100%;
             box-sizing: border-box;
-        }
-        .app-title {
-            font-size: 1.5em;
-            font-family: 'OCR A Extended', monospace;
         }
         .dropdown {
             position: relative;
@@ -83,7 +78,6 @@
             align-items: center;
             padding: 20px;
             flex-grow: 1;
-            flex-direction: column;
         }
         .left-section {
             flex: 1;
@@ -95,60 +89,61 @@
             -webkit-overflow-scrolling: touch;
         }
         .left-section img {
-            max-width: 50%;
+            max-width: 20%;
             height: auto;
-            margin: 0 10px;
-            scroll-snap-align: center;
+            margin: 0 5px;
+            scroll-snap-align: start;
             flex-shrink: 0;
         }
         .right-section {
-            position: relative;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            height: 100%;
+        }
+        .right-section-content {
+            flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            background-color: #ffffff;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-            margin-top: -50px;
-            z-index: 1;
+            max-width: 80%;
         }
         .right-section h1 {
-            font-size: 1.2em;
+            font-size: 3em;
             margin-bottom: 0.5em;
             font-family: 'OCR A Extended', monospace;
-            text-align: center;
         }
         .right-section .title {
-            font-size: 1em;
+            font-size: 1.5em;
             font-weight: bold;
             margin-bottom: 0.2em;
-            text-align: center;
         }
         .right-section .description {
-            font-size: 0.9em;
+            font-size: 1.2em;
             margin-bottom: 1em;
-            text-align: center;
             white-space: pre-line;
         }
         .download-section {
-            text-align: center;
-            padding: 5px 0 0 0;
+            text-align: left;
+            padding: 10px 0 0 0;
             background-color: #ffffff;
             font-family: 'Segoe UI', sans-serif;
             font-weight: normal;
-            margin-top: 10px;
+            align-self: flex-start;
         }
         .download-section h2 {
-            font-size: 0.9em;
+            font-size: 1.2em;
             margin-bottom: 0.5em;
             font-weight: normal;
             margin-top: 0;
         }
         .download-links {
             display: flex;
-            justify-content: center;
-            gap: 10px;
+            justify-content: flex-start;
+            gap: 20px;
             margin-top: 5px;
             flex-wrap: wrap;
         }
@@ -160,7 +155,7 @@
             color: #000;
         }
         .download-links a img {
-            max-width: 100px;
+            max-width: 150px;
             height: auto;
         }
         footer {
@@ -184,25 +179,53 @@
         }
         @media (max-width: 768px) {
             .container {
+                flex-direction: column;
+                align-items: center;
                 padding: 10px;
+                height: auto;
+            }
+            .left-section, .right-section {
+                flex: none;
+                width: 100%;
+                padding: 0;
+                align-items: center;
+                text-align: center;
+                height: auto;
+            }
+            .left-section {
+                order: 2;
+                display: flex;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scroll-snap-type: x mandatory;
             }
             .left-section img {
-                max-width: 100%;
+                max-width: 50%;
                 margin: 0 5px;
                 flex-shrink: 0;
-                scroll-snap-align: center;
+                scroll-snap-align: start;
             }
             .right-section {
-                order: 3;
-                width: 100%;
-                margin-top: -30px;
-                z-index: 2;
+                order: 1;
+            }
+            .right-section h1 {
+                font-size: 1.5em;
+            }
+            .right-section .title {
+                font-size: 1.2em;
+            }
+            .right-section .description {
+                font-size: 0.9em;
             }
             .download-section {
-                margin-top: 10px;
+                text-align: center;
+                order: 3;
+                width: 100%;
+                margin-top: 20px;
             }
             .download-links {
-                gap: 5px;
+                flex-direction: row;
+                gap: 10px;
                 justify-content: center;
             }
         }
@@ -210,7 +233,6 @@
 </head>
 <body>
     <div class="header">
-        <div class="app-title">Shuuty</div>
         <div class="dropdown">
             <button class="dropbtn" id="language-btn"><img src="images/polish_icon.png" alt="Polski"> <span id="current-language">Polski</span></button>
             <div class="dropdown-content">
@@ -228,8 +250,11 @@
             <img src="images/image5.webp" alt="Image 5">
         </div>
         <div class="right-section">
-            <h1 id="main-title">Znajdź tych których szukasz</h1>
-            <p id="description" class="description">Umów się na aktywność, gdziekolwiek jesteś.<br>Poznaj nowych ludzi podobnych do Ciebie oraz<br>zaplanuj swój czas jak nigdy wcześniej.</p>
+            <div class="right-section-content">
+                <h1 id="title">Shuuty</h1>
+                <div class="title" id="main-title">Znajdź tych których szukasz</div>
+                <p id="description" class="description">Umów się na aktywność, gdziekolwiek jesteś.<br>Poznaj nowych ludzi podobnych do Ciebie oraz<br>zaplanuj swój czas jak nigdy wcześniej.</p>
+            </div>
             <div class="download-section">
                 <h2 id="download-title">Pobierz aplikację</h2>
                 <div class="download-links">
@@ -255,6 +280,7 @@
             if (lang === 'en') {
                 document.getElementById('current-language').innerText = 'English';
                 document.getElementById('language-btn').innerHTML = '<img src="images/english_icon.png" alt="English"> English';
+                document.getElementById('title').innerText = 'Shuuty';
                 document.getElementById('main-title').innerText = 'Find Those You Seek';
                 document.getElementById('description').innerHTML = 'Arrange activities wherever you are.<br>Meet new people similar to you and<br>plan your time like never before.';
                 document.getElementById('download-title').innerText = 'Download the App';
@@ -262,6 +288,7 @@
             } else if (lang === 'pl') {
                 document.getElementById('current-language').innerText = 'Polski';
                 document.getElementById('language-btn').innerHTML = '<img src="images/polish_icon.png" alt="Polski"> Polski';
+                document.getElementById('title').innerText = 'Shuuty';
                 document.getElementById('main-title').innerText = 'Znajdź tych których szukasz';
                 document.getElementById('description').innerHTML = 'Umów się na aktywność, gdziekolwiek jesteś.<br>Poznaj nowych ludzi podobnych do Ciebie oraz<br>zaplanuj swój czas jak nigdy wcześniej.';
                 document.getElementById('download-title').innerText = 'Pobierz aplikację';
