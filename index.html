@@ -71,6 +71,7 @@
             justify-content: center;
             gap: 20px;
             margin-top: 20px;
+            flex-wrap: wrap; /* Allow wrapping on small screens */
         }
         .download-links a {
             display: inline-block;
@@ -135,8 +136,9 @@
                 margin-top: 20px;
             }
             .download-links {
-                flex-direction: column;
+                flex-direction: row; /* Keep download links in a row */
                 gap: 10px;
+                justify-content: center; /* Center them horizontally */
             }
         }
     </style>
@@ -150,9 +152,7 @@
         <div class="right-section">
             <div class="right-section-content">
                 <h1>Shuuty App</h1>
-                <p>Welcome to My Landing Pageeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-                    eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeddasdsadsdasdsadsadsadasdsadsadsadas.
-                    Discover more about our services and products.</p>
+                <p>Welcome to My Landing Page. Discover more about our services and products.</p>
             </div>
             <div class="download-section">
                 <h2>Pobierz aplikację</h2>
@@ -171,3 +171,4 @@
     </footer>
 </body>
 </html>
+
