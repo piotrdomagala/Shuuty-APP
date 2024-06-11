@@ -103,6 +103,7 @@
             align-items: flex-start;
             padding: 20px;
             height: 100%;
+            margin-top: -20px;
         }
         .right-section-content {
             flex: 1;
@@ -207,6 +208,7 @@
             }
             .right-section {
                 order: 1;
+                margin-top: 0;
             }
             .right-section h1 {
                 font-size: 1.5em;
@@ -269,7 +271,7 @@
     <footer>
         <span id="footer-text">&copy; 2024 Shuuty. Wszelkie prawa zastrzeżone.</span>
         <div class="footer-links">
-            <a href="#">Support</a> | <a href="#">Privacy</a> | <a href="#">Terms</a>
+            <a href="#" id="support-link">Support</a> | <a href="#" id="privacy-link">Privacy</a> | <a href="#" id="terms-link">Terms</a>
         </div>
     </footer>
 
@@ -283,6 +285,9 @@
                 document.getElementById('description').innerHTML = 'Arrange activities wherever you are.<br>Meet new people similar to you and<br>plan your time like never before.';
                 document.getElementById('download-title').innerText = 'Download the App';
                 document.getElementById('footer-text').innerHTML = '&copy; 2024 Shuuty. All rights reserved.';
+                document.getElementById('support-link').innerText = 'Support';
+                document.getElementById('privacy-link').innerText = 'Privacy';
+                document.getElementById('terms-link').innerText = 'Terms';
             } else if (lang === 'pl') {
                 document.getElementById('current-language').innerText = 'Polski';
                 document.getElementById('language-btn').innerHTML = '<img src="images/polish_icon.png" alt="Polski"> Polski';
@@ -291,6 +296,9 @@
                 document.getElementById('description').innerHTML = 'Umów się na aktywność, gdziekolwiek jesteś.<br>Poznaj nowych ludzi podobnych do Ciebie oraz<br>zaplanuj swój czas jak nigdy wcześniej.';
                 document.getElementById('download-title').innerText = 'Pobierz aplikację';
                 document.getElementById('footer-text').innerHTML = '&copy; 2024 Shuuty. Wszelkie prawa zastrzeżone.';
+                document.getElementById('support-link').innerText = 'Wsparcie';
+                document.getElementById('privacy-link').innerText = 'Prywatność';
+                document.getElementById('terms-link').innerText = 'Warunki';
             }
         }
     </script>
