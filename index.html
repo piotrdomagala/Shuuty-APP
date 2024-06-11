@@ -130,11 +130,19 @@
             flex-wrap: wrap;
         }
         .download-links a {
-            display: inline-block;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #000;
         }
-        .download-links img {
-            max-width: 100px;
+        .download-links a img {
+            max-width: 50px;
             height: auto;
+            margin-bottom: 10px;
+        }
+        .download-links a span {
+            font-size: 0.9em;
         }
         footer {
             text-align: center;
@@ -221,8 +229,14 @@
             <div class="download-section">
                 <h2>Pobierz aplikację</h2>
                 <div class="download-links">
-                    <a href="#"><img src="images/android.png" alt="Download for Android"></a>
-                    <a href="#"><img src="images/ios.png" alt="Download for iOS"></a>
+                    <a href="#">
+                        <img src="images/your_android_icon.png" alt="Download for Android">
+                        <span>Android</span>
+                    </a>
+                    <a href="#">
+                        <img src="images/your_ios_icon.png" alt="Download for iOS">
+                        <span>iOS</span>
+                    </a>
                 </div>
             </div>
         </div>
