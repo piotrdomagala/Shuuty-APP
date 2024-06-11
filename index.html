@@ -89,7 +89,6 @@
             -webkit-overflow-scrolling: touch;
         }
         .left-section img {
-            max-width: 50%;
             height: auto;
             margin: 0 10px;
             scroll-snap-align: start;
@@ -229,6 +228,11 @@
                 justify-content: center;
             }
         }
+        @media (min-width: 769px) {
+            .left-section img {
+                max-width: 30%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -268,4 +272,8 @@
     <footer>
         <span id="footer-text">&copy; 2024 Shuuty. Wszelkie prawa zastrzeżone.</span>
         <div class="footer-links">
-            <a href="#">Support</a> | <a href="#">Privacy</a> | <a href="#">Terms</a
+            <a href="#">Support</a> | <a href="#">Privacy</a> | <a href="#">Terms</a>
+        </div>
+    </footer>
+</body>
+</html>
