@@ -1,0 +1,2 @@
+# Shuuty-APP
+Creating opportunities
