@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
     <title>Shuuty App</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=OCR+A+Extended&display=swap');
+
         body {
             margin: 0;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -16,6 +18,7 @@
             justify-content: space-between;
             min-height: 100vh;
         }
+
         .header {
             display: flex;
             justify-content: flex-end;
@@ -23,11 +26,15 @@
             background-color: #ffffff;
             width: 100%;
             box-sizing: border-box;
+            position: sticky;
+            top: 0;
         }
+
         .dropdown {
             position: relative;
             display: inline-block;
         }
+
         .dropbtn {
             background-color: transparent;
             color: #000;
@@ -37,11 +44,13 @@
             display: flex;
             align-items: center;
         }
+
         .dropbtn img {
             margin-left: 5px;
             width: 20px;
             height: 20px;
         }
+
         .dropdown-content {
             display: none;
             position: absolute;
@@ -50,6 +59,7 @@
             z-index: 1;
             right: 0;
         }
+
         .dropdown-content a {
             color: black;
             padding: 8px 12px;
@@ -58,43 +68,57 @@
             align-items: center;
             font-size: 0.9em;
         }
+
         .dropdown-content a img {
             margin-right: 10px;
             width: 20px;
             height: 20px;
         }
+
         .dropdown-content a:hover {
             background-color: #f1f1f1;
         }
+
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
         .dropdown:hover .dropbtn {
             color: #333;
         }
+
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
             flex-grow: 1;
+            flex-wrap: wrap;
         }
+
         .left-section {
             flex: 1;
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
         }
+
+        .image-container {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
         .left-section img {
-            max-width: 50%;
+            max-width: 45%;
             height: auto;
             margin: 0 10px;
             scroll-snap-align: start;
             flex-shrink: 0;
         }
+
         .right-section {
             flex: 1;
             display: flex;
@@ -104,6 +128,7 @@
             padding: 20px;
             height: 100%;
         }
+
         .right-section-content {
             flex: 1;
             display: flex;
@@ -111,21 +136,25 @@
             justify-content: center;
             max-width: 80%;
         }
+
         .right-section h1 {
             font-size: 3em;
             margin-bottom: 0.5em;
             font-family: 'OCR A Extended', monospace;
         }
+
         .right-section .title {
             font-size: 1.5em;
             font-weight: bold;
             margin-bottom: 0.2em;
         }
+
         .right-section .description {
             font-size: 1.2em;
             margin-bottom: 1em;
             white-space: pre-line;
         }
+
         .download-section {
             text-align: left;
             padding: 10px 0 0 0;
@@ -134,12 +163,14 @@
             font-weight: normal;
             align-self: flex-start;
         }
+
         .download-section h2 {
             font-size: 1.2em;
             margin-bottom: 0.5em;
             font-weight: normal;
             margin-top: 0;
         }
+
         .download-links {
             display: flex;
             justify-content: flex-start;
@@ -147,6 +178,7 @@
             margin-top: 5px;
             flex-wrap: wrap;
         }
+
         .download-links a {
             display: flex;
             flex-direction: column;
@@ -154,10 +186,12 @@
             text-decoration: none;
             color: #000;
         }
+
         .download-links a img {
             max-width: 150px;
             height: auto;
         }
+
         footer {
             text-align: center;
             font-size: 0.9em;
@@ -165,18 +199,22 @@
             background-color: #f9f9f9;
             padding: 20px;
         }
+
         .footer-links {
             margin-top: 10px;
         }
+
         .footer-links a {
             color: #777;
             margin: 0 10px;
             text-decoration: none;
             transition: color 0.3s;
         }
+
         .footer-links a:hover {
             color: #333;
         }
+
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -194,19 +232,13 @@
             }
             .left-section {
                 order: 2;
-                display: flex;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                scroll-snap-type: x mandatory;
-            }
-            .left-section img {
-                max-width: 50%;
-                margin: 0 5px;
-                flex-shrink: 0;
-                scroll-snap-align: start;
             }
             .right-section {
                 order: 1;
+            }
+            .left-section img {
+                max-width: 45%;
+                margin: 10px 0;
             }
             .right-section h1 {
                 font-size: 1.5em;
@@ -230,48 +262,6 @@
             }
         }
     </style>
-</head>
-<body>
-    <div class="header">
-        <div class="dropdown">
-            <button class="dropbtn" id="language-btn"><img src="images/polish_icon.png" alt="Polski"> <span id="current-language">Polski</span></button>
-            <div class="dropdown-content">
-                <a href="#" onclick="changeLanguage('en')"><img src="images/english_icon.png" alt="English"> English</a>
-                <a href="#" onclick="changeLanguage('pl')"><img src="images/polish_icon.png" alt="Polski"> Polski</a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="left-section">
-            <img src="images/image1.webp" alt="Image 1">
-            <img src="images/image2.webp" alt="Image 2">
-        </div>
-        <div class="right-section">
-            <div class="right-section-content">
-                <h1 id="title">Shuuty</h1>
-                <div class="title" id="main-title">Znajdź tych których szukasz</div>
-                <p id="description" class="description">Umów się na aktywność, gdziekolwiek jesteś.<br>Poznaj nowych ludzi podobnych do Ciebie oraz<br>zaplanuj swój czas jak nigdy wcześniej.</p>
-            </div>
-            <div class="download-section">
-                <h2 id="download-title">Pobierz aplikację</h2>
-                <div class="download-links">
-                    <a href="https://play.google.com/store/apps/details?id=com.shuuty&hl=en-US&ah=JpCaODeLlr4ezPgI17PkuGtLw7M">
-                        <img src="images/your_android_icon.png" alt="Download for Android">
-                    </a>
-                    <a href="#">
-                        <img src="images/your_ios_icon.png" alt="Download for iOS">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <span id="footer-text">&copy; 2024 Shuuty. Wszelkie prawa zastrzeżone.</span>
-        <div class="footer-links">
-            <a href="#">Support</a> | <a href="#">Privacy</a> | <a href="#">Terms</a>
-        </div>
-    </footer>
-
     <script>
         function changeLanguage(lang) {
             if (lang === 'en') {
@@ -293,5 +283,11 @@
             }
         }
     </script>
-</body>
-</html>
+</head>
+<body>
+    <div class="header">
+        <div class="dropdown">
+            <button class="dropbtn" id="language-btn"><img src="images/polish_icon.png" alt="Polski"> <span id="current-language">Polski</span></button>
+            <div class="dropdown-content">
+                <a href="#" onclick="changeLanguage('en')"><img src="images/english_icon.png" alt="English"> English</a>
+                <a href="#" onclick="changeLanguage('pl')"><img src="images/polish_icon.png" alt="Polski"> Polski</a>
