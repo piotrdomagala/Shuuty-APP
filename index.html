@@ -114,13 +114,15 @@
             margin-bottom: 1em;
         }
         .download-section {
-            text-align: center;
+            text-align: left;
             padding: 20px;
             background-color: #ffffff;
         }
         .download-section h2 {
             font-size: 2em;
+            font-weight: bold;
             margin-bottom: 1em;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         .download-links {
             display: flex;
@@ -195,6 +197,7 @@
                 order: 3;
                 width: 100%;
                 margin-top: 20px;
+                text-align: center; /* Center align on mobile */
             }
             .download-links {
                 flex-direction: row;
@@ -221,8 +224,8 @@
         </div>
         <div class="right-section">
             <div class="right-section-content">
-                <h1 id="title">Shuuty App</h1>
-                <p id="description">Welcome to My Landing Page. Discover more about our services and products.</p>
+                <h1 id="title">Aplikacja Shuuty</h1>
+                <p id="description">Gdziekolwiek jesteś, z nami umówisz aktywność w Twojej okolicy i poznasz nowych ludzi takich jak Ty a swój czas zaplanujesz jak nigdy wcześniej.</p>
             </div>
             <div class="download-section">
                 <h2 id="download-title">Pobierz aplikację</h2>
@@ -238,7 +241,7 @@
         </div>
     </div>
     <footer>
-        <span id="footer-text">&copy; 2024 Shuuty App. All rights reserved.</span>
+        <span id="footer-text">&copy; 2024 Aplikacja Shuuty. Wszelkie prawa zastrzeżone.</span>
         <div class="footer-links">
             <a href="#">Support</a> | <a href="#">Privacy</a> | <a href="#">Terms</a>
         </div>
@@ -249,17 +252,5 @@
             if (lang === 'en') {
                 document.getElementById('current-language').innerText = 'English';
                 document.getElementById('title').innerText = 'Shuuty App';
-                document.getElementById('description').innerText = 'Welcome to My Landing Page. Discover more about our services and products.';
-                document.getElementById('download-title').innerText = 'Download the App';
-                document.getElementById('footer-text').innerText = '&copy; 2024 Shuuty App. All rights reserved.';
-            } else if (lang === 'pl') {
-                document.getElementById('current-language').innerText = 'Polski';
-                document.getElementById('title').innerText = 'Aplikacja Shuuty';
-                document.getElementById('description').innerText = 'Witamy na naszej stronie. Dowiedz się więcej o naszych usługach i produktach.';
-                document.getElementById('download-title').innerText = 'Pobierz aplikację';
-                document.getElementById('footer-text').innerText = '&copy; 2024 Aplikacja Shuuty. Wszelkie prawa zastrzeżone.';
-            }
-        }
-    </script>
-</body>
-</html>
+                document.getElementById('description').innerText = 'Wherever you are, with us you will schedule activities in your area and meet new people like you and plan your time like never before.';
+                document.getElementById('download-title').innerText = 'Download the
