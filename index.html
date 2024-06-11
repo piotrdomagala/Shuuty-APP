@@ -207,9 +207,10 @@
 <body>
     <div class="header">
         <div class="dropdown">
-            <button class="dropbtn"><img src="images/polish_icon.png" alt="Polski"> Polski</button>
+            <button class="dropbtn"><img src="images/polish_icon.png" alt="Polski"> <span id="current-language">Polski</span></button>
             <div class="dropdown-content">
-                <a href="#"><img src="images/english_icon.png" alt="English"> English</a>
+                <a href="#" onclick="changeLanguage('en')"><img src="images/english_icon.png" alt="English"> English</a>
+                <a href="#" onclick="changeLanguage('pl')"><img src="images/polish_icon.png" alt="Polski"> Polski</a>
             </div>
         </div>
     </div>
@@ -220,11 +221,11 @@
         </div>
         <div class="right-section">
             <div class="right-section-content">
-                <h1>Shuuty App</h1>
-                <p>Welcome to My Landing Page. Discover more about our services and products.</p>
+                <h1 id="title">Shuuty App</h1>
+                <p id="description">Welcome to My Landing Page. Discover more about our services and products.</p>
             </div>
             <div class="download-section">
-                <h2>Pobierz aplikację</h2>
+                <h2 id="download-title">Pobierz aplikację</h2>
                 <div class="download-links">
                     <a href="#">
                         <img src="images/your_android_icon.png" alt="Download for Android">
@@ -237,10 +238,28 @@
         </div>
     </div>
     <footer>
-        &copy; 2024 Shuuty App. All rights reserved.
+        <span id="footer-text">&copy; 2024 Shuuty App. All rights reserved.</span>
         <div class="footer-links">
             <a href="#">Support</a> | <a href="#">Privacy</a> | <a href="#">Terms</a>
         </div>
     </footer>
+
+    <script>
+        function changeLanguage(lang) {
+            if (lang === 'en') {
+                document.getElementById('current-language').innerText = 'English';
+                document.getElementById('title').innerText = 'Shuuty App';
+                document.getElementById('description').innerText = 'Welcome to My Landing Page. Discover more about our services and products.';
+                document.getElementById('download-title').innerText = 'Download the App';
+                document.getElementById('footer-text').innerText = '&copy; 2024 Shuuty App. All rights reserved.';
+            } else if (lang === 'pl') {
+                document.getElementById('current-language').innerText = 'Polski';
+                document.getElementById('title').innerText = 'Aplikacja Shuuty';
+                document.getElementById('description').innerText = 'Witamy na naszej stronie. Dowiedz się więcej o naszych usługach i produktach.';
+                document.getElementById('download-title').innerText = 'Pobierz aplikację';
+                document.getElementById('footer-text').innerText = '&copy; 2024 Aplikacja Shuuty. Wszelkie prawa zastrzeżone.';
+            }
+        }
+    </script>
 </body>
 </html>
