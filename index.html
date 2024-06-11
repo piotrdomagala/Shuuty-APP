@@ -114,15 +114,16 @@
             margin-bottom: 1em;
         }
         .download-section {
-            text-align: left;
+            text-align: center;
             padding: 20px;
             background-color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: bold;
+            margin-top: 10px; /* Adjusted margin to align with the title */
         }
         .download-section h2 {
             font-size: 2em;
-            font-weight: bold;
             margin-bottom: 1em;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         .download-links {
             display: flex;
@@ -197,7 +198,6 @@
                 order: 3;
                 width: 100%;
                 margin-top: 20px;
-                text-align: center; /* Center align on mobile */
             }
             .download-links {
                 flex-direction: row;
@@ -252,5 +252,17 @@
             if (lang === 'en') {
                 document.getElementById('current-language').innerText = 'English';
                 document.getElementById('title').innerText = 'Shuuty App';
-                document.getElementById('description').innerText = 'Wherever you are, with us you will schedule activities in your area and meet new people like you and plan your time like never before.';
-                document.getElementById('download-title').innerText = 'Download the
+                document.getElementById('description').innerText = 'Wherever you are, with us you can schedule activities in your area, meet new people like you, and plan your time like never before.';
+                document.getElementById('download-title').innerText = 'Download the App';
+                document.getElementById('footer-text').innerText = '&copy; 2024 Shuuty App. All rights reserved.';
+            } else if (lang === 'pl') {
+                document.getElementById('current-language').innerText = 'Polski';
+                document.getElementById('title').innerText = 'Aplikacja Shuuty';
+                document.getElementById('description').innerText = 'Gdziekolwiek jesteś, z nami umówisz aktywność w Twojej okolicy i poznasz nowych ludzi takich jak Ty a swój czas zaplanujesz jak nigdy wcześniej.';
+                document.getElementById('download-title').innerText = 'Pobierz aplikację';
+                document.getElementById('footer-text').innerText = '&copy; 2024 Aplikacja Shuuty. Wszelkie prawa zastrzeżone.';
+            }
+        }
+    </script>
+</body>
+</html>
