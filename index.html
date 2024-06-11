@@ -117,15 +117,17 @@
         }
         .download-section {
             text-align: center;
-            padding: 20px 0;
+            padding: 10px 0;
             background-color: #ffffff;
             font-family: 'Segoe UI', sans-serif;
             font-weight: normal;
+            align-self: flex-start;
         }
         .download-section h2 {
-            font-size: 1.5em;
+            font-size: 1.2em;
             margin-bottom: 0.5em;
             font-weight: normal;
+            margin-top: 0;
         }
         .download-links {
             display: flex;
@@ -211,7 +213,7 @@
 <body>
     <div class="header">
         <div class="dropdown">
-            <button class="dropbtn"><img src="images/polish_icon.png" alt="Polski"> <span id="current-language">Polski</span></button>
+            <button class="dropbtn" id="language-btn"><img src="images/polish_icon.png" alt="Polski"> <span id="current-language">Polski</span></button>
             <div class="dropdown-content">
                 <a href="#" onclick="changeLanguage('en')"><img src="images/english_icon.png" alt="English"> English</a>
                 <a href="#" onclick="changeLanguage('pl')"><img src="images/polish_icon.png" alt="Polski"> Polski</a>
@@ -252,16 +254,18 @@
         function changeLanguage(lang) {
             if (lang === 'en') {
                 document.getElementById('current-language').innerText = 'English';
+                document.getElementById('language-btn').innerHTML = '<img src="images/english_icon.png" alt="English"> English';
                 document.getElementById('title').innerText = 'Shuuty';
                 document.getElementById('description').innerText = 'Wherever you are, with us you can schedule activities in your area, meet new people like you, and plan your time like never before.';
                 document.getElementById('download-title').innerText = 'Download the App';
-                document.getElementById('footer-text').innerText = '&copy; 2024 Shuuty. All rights reserved.';
+                document.getElementById('footer-text').innerHTML = '&copy; 2024 Shuuty. All rights reserved.';
             } else if (lang === 'pl') {
                 document.getElementById('current-language').innerText = 'Polski';
+                document.getElementById('language-btn').innerHTML = '<img src="images/polish_icon.png" alt="Polski"> Polski';
                 document.getElementById('title').innerText = 'Shuuty';
                 document.getElementById('description').innerText = 'Gdziekolwiek jesteś, z nami umówisz aktywność w Twojej okolicy i poznasz nowych ludzi takich jak Ty a swój czas zaplanujesz jak nigdy wcześniej.';
                 document.getElementById('download-title').innerText = 'Pobierz aplikację';
-                document.getElementById('footer-text').innerText = '&copy; 2024 Shuuty. Wszelkie prawa zastrzeżone.';
+                document.getElementById('footer-text').innerHTML = '&copy; 2024 Shuuty. Wszelkie prawa zastrzeżone.';
             }
         }
     </script>
