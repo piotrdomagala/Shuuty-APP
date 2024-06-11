@@ -17,12 +17,10 @@
         }
         .container {
             display: flex;
-            flex-direction: row;
             justify-content: center;
             align-items: center;
             padding: 20px;
             flex-grow: 1;
-            height: calc(100vh - 40px); /* Adjust height to fill the screen */
         }
         .left-section {
             flex: 1;
@@ -30,7 +28,6 @@
             justify-content: flex-end;
             align-items: center;
             padding-right: 10px;
-            height: 100%;
         }
         .left-section img {
             max-width: 24%;
@@ -41,10 +38,16 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between; /* Distribute space between elements */
             align-items: flex-start;
             padding: 20px;
-            height: 100%; /* Ensure the right section fills the height */
+            height: 100%;
+        }
+        .right-section-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
         }
         .right-section h1 {
             font-size: 3em;
@@ -57,7 +60,6 @@
         .download-section {
             text-align: center;
             padding: 20px;
-            margin-top: 20px;
             background-color: #ffffff; /* Change background color to match the page */
         }
         .download-section h2 {
@@ -101,7 +103,7 @@
                 flex-direction: column;
                 align-items: center;
                 padding: 10px;
-                height: auto; /* Adjust height for mobile */
+                height: auto;
             }
             .left-section, .right-section {
                 flex: none;
@@ -109,7 +111,7 @@
                 padding: 0;
                 align-items: center;
                 text-align: center;
-                height: auto; /* Adjust height for mobile */
+                height: auto;
             }
             .left-section {
                 order: 2;
@@ -146,8 +148,10 @@
             <img src="images/image2.webp" alt="Image 2">
         </div>
         <div class="right-section">
-            <h1>Shuuty App</h1>
-            <p>Welcome to My Landing Page. Discover more about our services and products.</p>
+            <div class="right-section-content">
+                <h1>Shuuty App</h1>
+                <p>Welcome to My Landing Page. Discover more about our services and products.</p>
+            </div>
             <div class="download-section">
                 <h2>Pobierz aplikację</h2>
                 <div class="download-links">
