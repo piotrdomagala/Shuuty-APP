@@ -89,7 +89,7 @@
             -webkit-overflow-scrolling: touch;
         }
         .left-section img {
-            max-width: 40%;
+            max-width: 20%;
             height: auto;
             margin: 0 5px;
             scroll-snap-align: start;
@@ -245,15 +245,18 @@
         <div class="left-section">
             <img src="images/image1.webp" alt="Image 1">
             <img src="images/image2.webp" alt="Image 2">
+            <img src="images/image3.webp" alt="Image 3">
+            <img src="images/image4.webp" alt="Image 4">
+            <img src="images/image5.webp" alt="Image 5">
         </div>
         <div class="right-section">
             <div class="right-section-content">
                 <h1 id="title">Shuuty</h1>
-                <div class="title" id="main-title">Znajdź tych których szukasz</div>
-                <p id="description" class="description">Umów się na aktywność, gdziekolwiek jesteś.<br>Poznaj nowych ludzi podobnych do Ciebie oraz<br>zaplanuj swój czas jak nigdy wcześniej.</p>
+                <div class="title" id="main-title" data-lang-en="Find Those You Seek" data-lang-pl="Znajdź tych których szukasz">Znajdź tych których szukasz</div>
+                <p id="description" class="description" data-lang-en="Arrange activities wherever you are.\nMeet new people similar to you and\nplan your time like never before." data-lang-pl="Umów się na aktywność, gdziekolwiek jesteś.\nPoznaj nowych ludzi podobnych do Ciebie oraz\nzaplanuj swój czas jak nigdy wcześniej.">Umów się na aktywność, gdziekolwiek jesteś.<br>Poznaj nowych ludzi podobnych do Ciebie oraz<br>zaplanuj swój czas jak nigdy wcześniej.</p>
             </div>
             <div class="download-section">
-                <h2 id="download-title">Pobierz aplikację</h2>
+                <h2 id="download-title" data-lang-en="Download the App" data-lang-pl="Pobierz aplikację">Pobierz aplikację</h2>
                 <div class="download-links">
                     <a href="https://play.google.com/store/apps/details?id=com.shuuty&hl=en-US&ah=JpCaODeLlr4ezPgI17PkuGtLw7M">
                         <img src="images/your_android_icon.png" alt="Download for Android">
@@ -266,7 +269,7 @@
         </div>
     </div>
     <footer>
-        <span id="footer-text">&copy; 2024 Shuuty. Wszelkie prawa zastrzeżone.</span>
+        <span id="footer-text" data-lang-en="&copy; 2024 Shuuty. All rights reserved." data-lang-pl="&copy; 2024 Shuuty. Wszelkie prawa zastrzeżone.">&copy; 2024 Shuuty. Wszelkie prawa zastrzeżone.</span>
         <div class="footer-links" id="footer-links">
             <a href="#" data-lang-en="Support" data-lang-pl="Wsparcie">Support</a> | 
             <a href="#" data-lang-en="Privacy" data-lang-pl="Prywatność">Privacy</a> | 
@@ -275,20 +278,12 @@
     </footer>
     <script>
         function changeLanguage(lang) {
-            const elements = document.querySelectorAll('[id^="title"], [id^="main-title"], [id^="description"], [id^="download-title"], [id^="footer-text"], .footer-links a');
-
-            elements.forEach(el => {
-                if (el.hasAttribute(`data-lang-${lang}`)) {
-                    el.innerText = el.getAttribute(`data-lang-${lang}`);
-                }
-            });
-
             document.getElementById('current-language').innerText = lang === 'pl' ? 'Polski' : 'English';
+            document.getElementById('language-btn').innerHTML = lang === 'pl' ? '<img src="images/polish_icon.png" alt="Polski"> Polski' : '<img src="images/english_icon.png" alt="English"> English';
 
-            // Change footer links text
-            const footerLinks = document.querySelectorAll('.footer-links a');
-            footerLinks.forEach(link => {
-                link.innerText = link.getAttribute(`data-lang-${lang}`);
+            const elements = document.querySelectorAll('[data-lang-en], [data-lang-pl]');
+            elements.forEach(el => {
+                el.innerHTML = el.getAttribute(`data-lang-${lang}`);
             });
         }
 
