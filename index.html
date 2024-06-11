@@ -89,6 +89,7 @@
             -webkit-overflow-scrolling: touch;
         }
         .left-section img {
+            max-width: 30%;
             height: auto;
             margin: 0 5px;
             scroll-snap-align: start;
@@ -228,11 +229,6 @@
                 justify-content: center;
             }
         }
-        @media (min-width: 769px) {
-            .left-section img {
-                max-width: 30%;
-            }
-        }
     </style>
 </head>
 <body>
@@ -279,21 +275,33 @@
     </footer>
     <script>
         function changeLanguage(lang) {
-            const elements = document.querySelectorAll('[id^="title"], [id^="main-title"], [id^="description"], [id^="download-title"], [id^="footer-text"], .footer-links a');
-
-            elements.forEach(el => {
-                if (el.hasAttribute(`data-lang-${lang}`)) {
-                    el.innerText = el.getAttribute(`data-lang-${lang}`);
-                }
-            });
-
-            document.getElementById('current-language').innerText = lang === 'pl' ? 'Polski' : 'English';
-
-            // Change footer links text
-            const footerLinks = document.querySelectorAll('.footer-links a');
-            footerLinks.forEach(link => {
-                link.innerText = link.getAttribute(`data-lang-${lang}`);
-            });
+            if (lang === 'en') {
+                document.getElementById('current-language').innerText = 'English';
+                document.getElementById('language-btn').innerHTML = '<img src="images/english_icon.png" alt="English"> English';
+                document.getElementById('title').innerText = 'Shuuty';
+                document.getElementById('main-title').innerText = 'Find Those You Seek';
+                document.getElementById('description').innerHTML = 'Arrange activities wherever you are.<br>Meet new people similar to you and<br>plan your time like never before.';
+                document.getElementById('download-title').innerText = 'Download the App';
+                document.getElementById('footer-text').innerHTML = '&copy; 2024 Shuuty. All rights reserved.';
+                // Change footer links text
+                const footerLinks = document.querySelectorAll('.footer-links a');
+                footerLinks.forEach(link => {
+                    link.innerText = link.getAttribute(`data-lang-en`);
+                });
+            } else if (lang === 'pl') {
+                document.getElementById('current-language').innerText = 'Polski';
+                document.getElementById('language-btn').innerHTML = '<img src="images/polish_icon.png" alt="Polski"> Polski';
+                document.getElementById('title').innerText = 'Shuuty';
+                document.getElementById('main-title').innerText = 'Znajdź tych których szukasz';
+                document.getElementById('description').innerHTML = 'Umów się na aktywność, gdziekolwiek jesteś.<br>Poznaj nowych ludzi podobnych do Ciebie oraz<br>zaplanuj swój czas jak nigdy wcześniej.';
+                document.getElementById('download-title').innerText = 'Pobierz aplikację';
+                document.getElementById('footer-text').innerHTML = '&copy; 2024 Shuuty. Wszelkie prawa zastrzeżone.';
+                // Change footer links text
+                const footerLinks = document.querySelectorAll('.footer-links a');
+                footerLinks.forEach(link => {
+                    link.innerText = link.getAttribute(`data-lang-pl`);
+                });
+            }
         }
 
         // Initialize language on page load
