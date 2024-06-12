@@ -284,6 +284,11 @@
 
     <script>
         function changeLanguage(lang) {
+            localStorage.setItem('selectedLanguage', lang);
+            applyLanguage(lang);
+        }
+
+        function applyLanguage(lang) {
             if (lang === 'en') {
                 document.getElementById('current-language').innerText = 'English';
                 document.getElementById('language-btn').innerHTML = '<img src="images/english_icon.png" alt="English"> English';
@@ -308,6 +313,11 @@
                 document.getElementById('terms-link').innerText = 'Warunki';
             }
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectedLanguage = localStorage.getItem('selectedLanguage') || 'pl';
+            applyLanguage(selectedLanguage);
+        });
     </script>
 </body>
 </html>
