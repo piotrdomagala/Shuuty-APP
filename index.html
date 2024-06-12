@@ -317,6 +317,14 @@
         document.addEventListener('DOMContentLoaded', function() {
             const selectedLanguage = localStorage.getItem('selectedLanguage') || 'pl';
             applyLanguage(selectedLanguage);
+            
+            // Add event listeners for language change
+            document.querySelectorAll('.dropdown-content a').forEach(item => {
+                item.addEventListener('click', event => {
+                    const lang = event.currentTarget.getAttribute('onclick').split("'")[1];
+                    changeLanguage(lang);
+                });
+            });
         });
     </script>
 </body>
