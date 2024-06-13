@@ -16,7 +16,6 @@
             justify-content: space-between;
             min-height: 100vh;
             overflow-x: hidden;
-            overflow-y: hidden;
         }
         .header {
             display: flex;
@@ -162,6 +161,7 @@
             color: #777;
             background-color: #f9f9f9;
             padding: 20px;
+            flex-shrink: 0;
         }
         .footer-links {
             margin-top: 10px;
@@ -178,13 +178,12 @@
         @media (max-width: 768px) {
             body {
                 overflow-x: hidden;
-                overflow-y: hidden;
             }
             .container {
                 flex-direction: column;
                 align-items: center;
                 padding: 10px;
-                height: 100vh;
+                height: calc(100vh - 60px); /* Odjęcie wysokości stopki */
                 overflow-y: hidden;
             }
             .left-section, .right-section {
