@@ -79,22 +79,25 @@
             padding: 10px;
             flex-grow: 1;
             gap: 10px;
+            position: relative;
         }
         .left-section {
             flex: 1;
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            -webkit-overflow-scrolling: touch;
-            gap: 5px;
+            overflow-x: hidden;
+            position: relative;
         }
         .left-section img {
             max-width: 20%;
             height: auto;
-            scroll-snap-align: start;
-            flex-shrink: 0;
+            transition: transform 0.3s ease, z-index 0.3s ease;
+            position: absolute;
+        }
+        .left-section img:hover {
+            transform: scale(2);
+            z-index: 1;
         }
         .right-section {
             flex: 1;
@@ -200,12 +203,16 @@
                 -webkit-overflow-scrolling: touch;
                 scroll-snap-type: x mandatory;
                 gap: 5px;
+                position: relative;
             }
             .left-section img {
                 max-width: 50%;
                 margin: 0;
                 flex-shrink: 0;
                 scroll-snap-align: start;
+                position: static;
+                transform: none;
+                z-index: auto;
             }
             .right-section {
                 order: 1;
@@ -232,9 +239,11 @@
             }
         }
         @media (min-width: 769px) {
-            .left-section {
-                gap: 2px; /* Zmniejszony odstęp między obrazami w wersji na komputer */
-            }
+            .left-section img:nth-child(1) { left: 0; }
+            .left-section img:nth-child(2) { left: 16%; }
+            .left-section img:nth-child(3) { left: 32%; }
+            .left-section img:nth-child(4) { left: 48%; }
+            .left-section img:nth-child(5) { left: 64%; }
         }
     </style>
 </head>
