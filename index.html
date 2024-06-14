@@ -169,11 +169,10 @@
                 order: 1;
                 gap: 5px;
                 scroll-snap-type: x mandatory;
-                animation: scroll-images 10s linear infinite;
-            }
-            @keyframes scroll-images {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(calc(-100% - 20px)); }
+                display: flex;
+                width: 100%;
+                flex-wrap: nowrap;
+                overflow-x: scroll;
             }
             .left-section img {
                 max-width: 50%;
@@ -182,6 +181,7 @@
             .right-section {
                 order: 2;
                 text-align: center;
+                padding-left: 0;
             }
             .right-section h1 {
                 font-size: 1.5em;
