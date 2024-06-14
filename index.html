@@ -86,12 +86,10 @@
             gap: 1px;
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
-            scroll-snap-type: x mandatory;
         }
         .left-section img {
             max-width: 19%;
             flex-shrink: 0;
-            scroll-snap-align: center;
         }
         .right-section {
             flex: 1;
@@ -160,28 +158,24 @@
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
-                align-items: center;
                 padding: 10px;
-                height: calc(100vh - 80px);
+                height: calc(100vh - 60px);
                 overflow-y: hidden;
             }
             .left-section {
-                order: 1;
+                order: 2;
+                display: flex;
+                overflow-x: auto;
                 gap: 5px;
                 scroll-snap-type: x mandatory;
-                display: flex;
-                width: 100%;
-                flex-wrap: nowrap;
-                overflow-x: scroll;
             }
             .left-section img {
                 max-width: 50%;
-                scroll-snap-align: center;
+                scroll-snap-align: start;
             }
             .right-section {
-                order: 2;
+                order: 1;
                 text-align: center;
-                padding-left: 0;
             }
             .right-section h1 {
                 font-size: 1.5em;
@@ -193,9 +187,10 @@
                 font-size: 0.9em;
             }
             .download-section {
+                text-align: center;
                 order: 3;
                 width: 100%;
-                margin-top: 10px;
+                margin-top: 20px;
             }
             .download-links {
                 justify-content: center;
