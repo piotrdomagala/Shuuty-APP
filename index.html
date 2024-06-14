@@ -86,10 +86,12 @@
             gap: 1px;
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
         }
         .left-section img {
             max-width: 19%;
             flex-shrink: 0;
+            scroll-snap-align: center;
         }
         .right-section {
             flex: 1;
@@ -158,23 +160,27 @@
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
+                align-items: center;
                 padding: 10px;
-                height: calc(100vh - 60px);
+                height: calc(100vh - 80px);
                 overflow-y: hidden;
             }
             .left-section {
-                order: 2;
-                display: flex;
-                overflow-x: auto;
+                order: 1;
                 gap: 5px;
                 scroll-snap-type: x mandatory;
+                animation: scroll-images 10s linear infinite;
+            }
+            @keyframes scroll-images {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(calc(-100% - 20px)); }
             }
             .left-section img {
                 max-width: 50%;
-                scroll-snap-align: start;
+                scroll-snap-align: center;
             }
             .right-section {
-                order: 1;
+                order: 2;
                 text-align: center;
             }
             .right-section h1 {
@@ -187,10 +193,9 @@
                 font-size: 0.9em;
             }
             .download-section {
-                text-align: center;
                 order: 3;
                 width: 100%;
-                margin-top: 20px;
+                margin-top: 10px;
             }
             .download-links {
                 justify-content: center;
