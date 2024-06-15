@@ -80,9 +80,9 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 .left-section img {
-    max-width: 19%;
-    flex-shrink: 0;
+    width: 19%;  /* Changed from max-width to width */
     height: auto;
+    flex-shrink: 0;
 }
 .right-section {
     flex: 1;
