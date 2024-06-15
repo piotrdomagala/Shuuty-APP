@@ -59,6 +59,15 @@ function applyLanguage(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+    const imageContainer = document.querySelector('.left-section');
+    const images = document.querySelectorAll('.left-section img');
+
+    // Clone images for infinite scrolling
+    images.forEach(img => {
+        const clone = img.cloneNode(true);
+        imageContainer.appendChild(clone);
+    });
+
     document.querySelectorAll('.dropdown-content a').forEach(item => {
         item.addEventListener('click', event => {
             event.preventDefault();
