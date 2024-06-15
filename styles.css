@@ -10,11 +10,11 @@
         order: 2;
         display: flex;
         overflow-x: auto;
-        gap: 0;  /* Usuwamy odstępy między obrazami */
         scroll-snap-type: x mandatory;
+        gap: 0;  /* Usuwamy odstępy między obrazami */
     }
     .left-section img {
-        min-width: 100%;  /* Ustawiamy szerokość obrazów na 100% szerokości ekranu */
+        min-width: 80%;  /* Ustawiamy szerokość obrazów na 80% szerokości ekranu */
         height: auto;
         scroll-snap-align: center;
     }
