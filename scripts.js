@@ -32,7 +32,6 @@ function applyLanguage(lang) {
 
     const selectedLang = langElements[lang];
     
-    // Ensure all elements exist before trying to set properties
     const elements = {
         currentLanguage: document.getElementById('current-language'),
         languageBtn: document.getElementById('language-btn'),
@@ -48,7 +47,11 @@ function applyLanguage(lang) {
 
     for (const [key, element] of Object.entries(elements)) {
         if (element) {
-            element.innerHTML = selectedLang[key];
+            if (key === 'languageBtn') {
+                element.innerHTML = selectedLang[key];
+            } else {
+                element.innerText = selectedLang[key];
+            }
         } else {
             console.warn(`Element with id ${key} not found`);
         }
