@@ -49,7 +49,7 @@ function applyLanguage(lang) {
         console.log(`Checking element with id ${key}`);
         if (element) {
             console.log(`Element ${key} found, setting value`);
-            if (key === 'languageBtn') {
+            if (key === 'languageBtn' || key === 'description') {
                 element.innerHTML = selectedLang[key];
             } else {
                 element.innerText = selectedLang[key];
