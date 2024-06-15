@@ -1,0 +1,54 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    margin-bottom: 2rem;
+}
+
+header {
+    background: url('header-background.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 5rem 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.25rem;
+}
+
+section {
+    padding: 3rem 0;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+section p {
+    font-size: 1.25rem;
+    color: #6c757d;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 2rem 0;
+}
+
+footer h2 {
+    font-size: 2rem;
+}
+
+footer p {
+    font-size: 1rem;
+}
