@@ -31,7 +31,7 @@ function applyLanguage(lang) {
     };
 
     const selectedLang = langElements[lang];
-    
+
     const elements = {
         currentLanguage: document.getElementById('current-language'),
         languageBtn: document.getElementById('language-btn'),
@@ -46,9 +46,7 @@ function applyLanguage(lang) {
     };
 
     for (const [key, element] of Object.entries(elements)) {
-        console.log(`Checking element with id ${key}`);
         if (element) {
-            console.log(`Element ${key} found, setting value`);
             if (key === 'languageBtn' || key === 'description') {
                 element.innerHTML = selectedLang[key];
             } else {
