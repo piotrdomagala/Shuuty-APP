@@ -31,16 +31,28 @@ function applyLanguage(lang) {
     };
 
     const selectedLang = langElements[lang];
-    document.getElementById('current-language').innerText = selectedLang.currentLanguage;
-    document.getElementById('language-btn').innerHTML = selectedLang.languageBtn;
-    document.getElementById('title').innerText = selectedLang.title;
-    document.getElementById('main-title').innerText = selectedLang.mainTitle;
-    document.getElementById('description').innerHTML = selectedLang.description;
-    document.getElementById('download-title').innerText = selectedLang.downloadTitle;
-    document.getElementById('footer-text').innerHTML = selectedLang.footerText;
-    document.getElementById('support-link').innerText = selectedLang.supportLink;
-    document.getElementById('privacy-link').innerText = selectedLang.privacyLink;
-    document.getElementById('terms-link').innerText = selectedLang.termsLink;
+    
+    // Ensure all elements exist before trying to set properties
+    const elements = {
+        currentLanguage: document.getElementById('current-language'),
+        languageBtn: document.getElementById('language-btn'),
+        title: document.getElementById('title'),
+        mainTitle: document.getElementById('main-title'),
+        description: document.getElementById('description'),
+        downloadTitle: document.getElementById('download-title'),
+        footerText: document.getElementById('footer-text'),
+        supportLink: document.getElementById('support-link'),
+        privacyLink: document.getElementById('privacy-link'),
+        termsLink: document.getElementById('terms-link')
+    };
+
+    for (const [key, element] of Object.entries(elements)) {
+        if (element) {
+            element.innerHTML = selectedLang[key];
+        } else {
+            console.warn(`Element with id ${key} not found`);
+        }
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
