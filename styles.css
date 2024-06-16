@@ -192,6 +192,9 @@ body {
         justify-content: center;
         gap: 10px;
     }
+    .header, .footer {
+        padding: 5px 10px;
+    }
 }
 @media (min-width: 769px) {
     .container {
