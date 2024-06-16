@@ -164,7 +164,7 @@ body {
         margin-bottom: 0; /* Usunięcie odstępu między sekcjami */
     }
     .left-section img {
-        max-width: 80%;
+        width: 50%; /* Ustawienie szerokości na 50% szerokości ekranu, aby były dwa obrazy na ekranie */
         scroll-snap-align: start;
     }
     .right-section {
