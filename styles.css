@@ -206,11 +206,14 @@ body {
     .left-section {
         flex: 1;
         max-width: 70%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5%; /* Niewielki odstęp między obrazami */
     }
     .left-section img {
-        width: 100%;
-        height: 70%; /* Zmniejszenie wysokości obrazów o 30% */
-        object-fit: cover; /* Zachowanie proporcji obrazów */
+        width: 30%; /* Dopasowanie szerokości obrazów */
+        height: auto; /* Zachowanie proporcji obrazów */
     }
     .right-section {
         flex: 1;
