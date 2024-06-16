@@ -192,7 +192,8 @@ body {
     }
 
     .left-section img {
-        max-width: 50%;
+        width: 80vw; /* Zwiększenie rozmiaru do 80% szerokości ekranu */
+        height: auto;
         scroll-snap-align: start;
     }
 
@@ -223,10 +224,5 @@ body {
     .download-links {
         justify-content: center;
         gap: 10px;
-    }
-
-    .left-section img {
-        width: 57%; /* Zwiększenie rozmiaru trzykrotnie */
-        transform: scale(3);
     }
 }
