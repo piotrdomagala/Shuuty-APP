@@ -159,7 +159,7 @@ body {
         order: 2;
         display: flex;
         overflow-x: auto;
-        gap: 1px;
+        gap: 0.5px; /* Zmniejszenie odstępu między sekcjami o połowę */
         scroll-snap-type: x mandatory;
         margin-bottom: 5px;
     }
@@ -205,15 +205,15 @@ body {
     }
     .left-section {
         flex: 1;
-        max-width: 40%; /* Zmniejszenie szerokości o 30% */
+        max-width: 70%; /* Ustawienie szerokości lewej sekcji na 70% */
     }
     .left-section img {
-        width: 100%;
+        width: 90%; /* Zmniejszenie rozmiaru obrazów */
         height: auto;
     }
     .right-section {
         flex: 1;
-        max-width: 60%; /* Dopasowanie do prawej sekcji */
+        max-width: 30%; /* Ustawienie szerokości prawej sekcji na 30% */
         padding-left: 20px;
     }
 }
