@@ -12,7 +12,7 @@ body {
 .header, .footer {
     background-color: #fff;
     text-align: right;
-    padding: 5px 10px; /* Zmniejszenie paddingu */
+    padding: 5px 10px;
     box-sizing: border-box;
 }
 .dropdown {
@@ -67,7 +67,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px; /* Zmniejszenie paddingu */
+    padding: 5px;
     flex-grow: 1;
     flex-wrap: wrap;
     max-width: 1200px;
@@ -89,7 +89,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 5px; /* Zmniejszenie paddingu */
+    padding-left: 5px;
 }
 .right-section h1 {
     font-size: 3em;
@@ -134,7 +134,7 @@ body {
     text-align: center;
     font-size: 0.9em;
     color: #777;
-    padding: 5px 10px; /* Zmniejszenie paddingu */
+    padding: 5px 10px;
 }
 .footer-links {
     margin-top: 10px;
@@ -199,19 +199,21 @@ body {
 @media (min-width: 769px) {
     .container {
         flex-direction: row;
-        justify-content: center; /* Centrowanie sekcji */
-        align-items: center; /* Centrowanie sekcji */
+        justify-content: center;
+        align-items: center;
         gap: 20px;
     }
-    .left-section, .right-section {
-        flex: 1; /* Równe rozszerzenie sekcji */
-        max-width: 600px; /* Ograniczenie szerokości sekcji */
+    .left-section {
+        flex: 1;
+        max-width: 40%; /* Zmniejszenie szerokości o 30% */
     }
     .left-section img {
-        width: 100%; /* Dopasowanie szerokości obrazów */
-        height: auto; /* Zachowanie proporcji obrazów */
+        width: 100%;
+        height: auto;
     }
     .right-section {
+        flex: 1;
+        max-width: 60%; /* Dopasowanie do prawej sekcji */
         padding-left: 20px;
     }
 }
