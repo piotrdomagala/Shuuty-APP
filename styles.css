@@ -151,7 +151,7 @@ body {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        padding: 10px;
+        padding: 5px;
         height: 100vh;
         overflow-y: hidden;
     }
@@ -159,19 +159,19 @@ body {
         order: 2;
         display: flex;
         overflow-x: auto;
-        gap: 1px; /* Zmniejszenie odstępu między obrazami */
+        gap: 1px;
         scroll-snap-type: x mandatory;
-        margin-bottom: 0; /* Usunięcie odstępu między sekcjami */
+        margin-bottom: 5px;
     }
     .left-section img {
-        width: 50%; /* Ustawienie szerokości na 50% szerokości ekranu, aby były dwa obrazy na ekranie */
+        width: 50%;
         scroll-snap-align: start;
     }
     .right-section {
         order: 1;
         text-align: center;
-        margin-bottom: 0; /* Usunięcie odstępu między sekcjami */
-        padding-left: 0; /* Usunięcie odstępu między sekcjami */
+        margin-bottom: 5px;
+        padding-left: 0;
     }
     .right-section h1 {
         font-size: 1.5em;
@@ -186,7 +186,7 @@ body {
         text-align: center;
         order: 3;
         width: 100%;
-        margin-top: 20px;
+        margin-top: 5px;
     }
     .download-links {
         justify-content: center;
@@ -195,15 +195,15 @@ body {
 }
 @media (min-width: 769px) {
     .container {
-        flex-direction: row; /* Ustawienie sekcji w jednym rzędzie na urządzeniach stacjonarnych */
-        align-items: flex-start; /* Wyrównanie sekcji do góry */
-        gap: 20px; /* Ustawienie odstępu między sekcjami */
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
     }
     .left-section {
-        width: 40%; /* Ustawienie szerokości lewej sekcji */
+        width: 40%;
     }
     .right-section {
-        width: 60%; /* Ustawienie szerokości prawej sekcji */
-        padding-left: 20px; /* Dodanie odstępu między sekcjami */
+        width: 60%;
+        padding-left: 20px;
     }
 }
