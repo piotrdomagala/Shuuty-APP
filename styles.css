@@ -179,22 +179,21 @@ body {
     .container {
         flex-direction: column;
         padding: 10px;
-        height: calc(100vh - 60px);
-        overflow-y: hidden;
+        height: auto;
+        overflow-y: auto;
     }
 
     .left-section {
         order: 2;
         display: flex;
-        overflow-x: auto;
+        flex-direction: column;
         gap: 5px;
-        scroll-snap-type: x mandatory;
+        overflow-x: auto;
     }
 
     .left-section img {
-        width: 80vw; /* Zwiększenie rozmiaru do 80% szerokości ekranu */
+        width: 80%;
         height: auto;
-        scroll-snap-align: start;
     }
 
     .right-section {
