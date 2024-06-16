@@ -182,8 +182,8 @@ body {
     .container {
         flex-direction: column;
         padding: 10px;
-        height: auto;
-        overflow-y: auto;
+        height: 100vh; /* Zmiana wysokości, aby cała zawartość była widoczna */
+        overflow-y: hidden;
     }
 
     .left-section {
@@ -192,10 +192,11 @@ body {
         overflow-x: auto;
         gap: 5px;
         scroll-snap-type: x mandatory;
+        width: 100%; /* Zmiana szerokości, aby zajmowało całą szerokość ekranu */
     }
 
     .left-section img {
-        width: 80vw; /* Zwiększenie rozmiaru do 80% szerokości ekranu */
+        width: 80vw; /* Ustawienie szerokości na 80% szerokości ekranu */
         height: auto;
         scroll-snap-align: start;
     }
