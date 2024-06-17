@@ -12,7 +12,7 @@ body {
 .header, .footer {
     background-color: #fff;
     text-align: right;
-    padding: 5px 10px;
+    padding: 5px 10px; /* Zmniejszenie paddingu */
     box-sizing: border-box;
 }
 .dropdown {
@@ -67,7 +67,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 5px; /* Zmniejszenie paddingu */
     flex-grow: 1;
     flex-wrap: wrap;
     max-width: 1200px;
@@ -89,7 +89,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 5px;
+    padding-left: 5px; /* Zmniejszenie paddingu */
 }
 .right-section h1 {
     font-size: 3em;
@@ -134,7 +134,7 @@ body {
     text-align: center;
     font-size: 0.9em;
     color: #777;
-    padding: 5px 10px;
+    padding: 5px 10px; /* Zmniejszenie paddingu */
 }
 .footer-links {
     margin-top: 10px;
@@ -159,9 +159,9 @@ body {
         order: 2;
         display: flex;
         overflow-x: auto;
-        gap: 0.2px; /* Jeszcze bardziej zmniejszenie odstępu między sekcjami */
+        gap: 1px;
         scroll-snap-type: x mandatory;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
     }
     .left-section img {
         width: 50%;
@@ -170,7 +170,7 @@ body {
     .right-section {
         order: 1;
         text-align: center;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
         padding-left: 0;
     }
     .right-section h1 {
@@ -186,7 +186,7 @@ body {
         text-align: center;
         order: 3;
         width: 100%;
-        margin-top: 2px;
+        margin-top: 5px;
     }
     .download-links {
         justify-content: center;
@@ -199,25 +199,19 @@ body {
 @media (min-width: 769px) {
     .container {
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        justify-content: center; /* Centrowanie sekcji */
+        align-items: center; /* Centrowanie sekcji */
         gap: 20px;
     }
-    .left-section {
-        flex: 1;
-        max-width: 70%;
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5%; /* Niewielki odstęp między obrazami */
+    .left-section, .right-section {
+        flex: 1; /* Równe rozszerzenie sekcji */
+        max-width: 600px; /* Ograniczenie szerokości sekcji */
     }
     .left-section img {
-        width: 30%; /* Dopasowanie szerokości obrazów */
+        width: 100%; /* Dopasowanie szerokości obrazów */
         height: auto; /* Zachowanie proporcji obrazów */
     }
     .right-section {
-        flex: 1;
-        max-width: 30%;
         padding-left: 20px;
     }
 }
