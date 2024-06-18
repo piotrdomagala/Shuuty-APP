@@ -90,7 +90,7 @@ body {
 .left-section {
     order: 2;
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
     gap: 5px;
     scroll-snap-type: x mandatory;
     margin-bottom: 0;
