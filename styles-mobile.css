@@ -88,12 +88,11 @@ body {
     gap: 5px; /* Dodanie odstępu między obrazami */
     scroll-snap-type: x mandatory;
     margin-bottom: 0; /* Zmniejszenie marginesu */
-    flex-grow: 1; /* Dodane */
+    max-height: calc(50vh - 50px); /* Ograniczenie wysokości sekcji */
 }
 .left-section img {
-    max-width: 45%; /* Zmniejszenie szerokości obrazów, aby zmieściły się dwa */
+    max-width: 48%; /* Zmniejszenie szerokości obrazów, aby zmieściły się dwa */
     height: auto; /* Naturalny rozmiar */
-    max-height: 150px; /* Dodanie maksymalnej wysokości dla obrazów */
     scroll-snap-align: start;
 }
 .right-section {
