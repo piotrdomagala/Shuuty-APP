@@ -9,13 +9,18 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
 }
-.header, .footer {
+.header {
     background-color: #fff;
-    text-align: right;
+    display: flex;
+    justify-content: flex-end; /* Języki w prawym górnym rogu */
     padding: 5px 10px;
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-between; /* Aby języki były po lewej, a reszta po prawej */
+}
+.footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    box-sizing: border-box;
 }
 .dropdown {
     position: relative;
@@ -41,7 +46,7 @@ body {
     background-color: #fff;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     z-index: 1;
-    left: 0; /* Aby dropdown rozwijał się w lewym górnym rogu */
+    right: 0; /* Aby dropdown rozwijał się w prawym górnym rogu */
 }
 .dropdown-content a {
     color: #000;
@@ -68,7 +73,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Przybliżenie prawej sekcji do nagłówka */
     align-items: center;
     padding: 5px;
     flex-grow: 1;
@@ -95,6 +100,7 @@ body {
 }
 .right-section h1 {
     font-size: 1.5em;
+    margin-top: 5px; /* Przybliżenie do nagłówka */
 }
 .right-section .title {
     font-size: 1.2em;
@@ -125,6 +131,23 @@ body {
     max-width: 100%;
     height: auto;
 }
-.header, .footer {
-    padding: 5px 10px;
+.footer {
+    padding: 10px 10px; /* Zmiana paddingu */
+}
+.footer span {
+    display: block; /* Aby wyświetlało się nad linkami */
+    margin-bottom: 5px;
+}
+.footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.footer .footer-links a {
+    color: #777;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer .footer-links a:hover {
+    color: #333;
 }
