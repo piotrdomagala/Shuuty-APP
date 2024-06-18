@@ -97,8 +97,8 @@ body {
     flex-grow: 1;
 }
 .left-section img {
-    width: 756px;
-    height: 1344px;
+    width: 406px;
+    height: 727px;
     object-fit: cover;
     scroll-snap-align: start;
 }
