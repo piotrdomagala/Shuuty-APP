@@ -131,6 +131,8 @@ body {
     max-width: 100%;
     height: auto;
     max-height: 50px; /* Maksymalna wysokość obrazów, aby były równe */
+    width: auto; /* Zachowanie proporcji obrazów */
+    object-fit: contain; /* Dopasowanie obrazów do kontenera */
 }
 .footer {
     padding: 10px 10px; /* Zmiana paddingu */
