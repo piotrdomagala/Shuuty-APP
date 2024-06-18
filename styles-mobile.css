@@ -46,7 +46,7 @@ body {
     background-color: #fff;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     z-index: 1;
-    right: 0; /* Aby dropdown rozwijał się w prawym górnym rogu */
+    right: 0;
 }
 .dropdown-content a {
     color: #000;
@@ -79,27 +79,27 @@ body {
     flex-grow: 1;
     max-width: 1200px;
     margin: 0 auto;
-    margin-bottom: 0; /* Dodane */
+    margin-bottom: 0;
 }
 .left-section {
     order: 2;
     display: flex;
     overflow-x: auto;
-    gap: 5px; /* Dodanie odstępu między obrazami */
+    gap: 5px;
     scroll-snap-type: x mandatory;
-    margin-bottom: 0; /* Zmniejszenie marginesu */
-    max-height: calc(50vh - 50px); /* Ograniczenie wysokości sekcji */
+    margin-bottom: 0;
+    max-height: calc(50vh - 50px);
 }
 .left-section img {
-    max-width: 90%; /* Ustawienie szerokości obrazów do pojedynczego obrazu */
-    height: auto; /* Naturalny rozmiar */
-    max-height: 150px; /* Dodanie maksymalnej wysokości dla obrazów */
+    max-width: 90%;
+    height: auto;
+    max-height: 150px;
     scroll-snap-align: start;
 }
 .right-section {
     order: 1;
     text-align: center;
-    margin-bottom: 5px; /* Dodanie odstępu między sekcjami */
+    margin-bottom: 5px;
     padding-left: 0;
 }
 .right-section h1 {
@@ -117,7 +117,7 @@ body {
     order: 3;
     width: 100%;
     margin-top: 2px;
-    margin-bottom: 0; /* Zmniejszenie marginesu */
+    margin-bottom: 0;
 }
 .download-section h2 {
     font-size: 1em;
@@ -125,9 +125,9 @@ body {
 }
 .download-links {
     display: flex;
-    justify-content: space-between; /* Równomierne rozmieszczenie obrazów */
+    justify-content: space-between;
     gap: 10px;
-    width: 100%; /* Ustawienie szerokości kontenera linków */
+    width: 100%;
 }
 .download-links a {
     display: flex;
@@ -135,16 +135,22 @@ body {
     align-items: center;
     text-decoration: none;
     color: #000;
-    flex: 1; /* Zapewnienie równej szerokości dla obu linków */
+    flex: 1;
 }
 .download-links a img {
     width: auto;
-    height: 50px; /* Ustawienie tej samej wysokości dla obu obrazów */
-    object-fit: contain; /* Zachowanie proporcji obrazów */
+    height: 50px;
+    object-fit: contain;
+}
+#android img {
+    width: 80px; /* Ustawienie szerokości obrazu Android */
+}
+#ios img {
+    width: 80px; /* Ustawienie tej samej szerokości dla obrazu iOS */
 }
 .footer {
     padding: 5px 10px;
-    margin-top: 0; /* Zmniejszenie marginesu */
+    margin-top: 0;
 }
 .footer span {
     display: block;
