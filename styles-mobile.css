@@ -143,7 +143,7 @@ body {
 }
 .footer {
     padding: 5px 10px; /* Zmniejszenie paddingu */
-    margin-top: 10px; /* Przybliżenie do lewej sekcji */
+    margin-top: 4px; /* Przybliżenie do lewej sekcji */
 }
 .footer span {
     display: block; /* Aby wyświetlało się nad linkami */
