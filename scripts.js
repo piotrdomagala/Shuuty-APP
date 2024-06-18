@@ -69,4 +69,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Set default language to English
     applyLanguage('en');
+
+    // Infinite scroll functionality
+    const leftSection = document.querySelector('.left-section');
+    const images = Array.from(leftSection.querySelectorAll('img'));
+
+    // Clone the images for infinite scroll effect
+    images.forEach(img => {
+        const clone = img.cloneNode(true);
+        leftSection.appendChild(clone);
+    });
+
+    let isScrolling;
+    leftSection.addEventListener('scroll', () => {
+        window.clearTimeout(isScrolling);
+
+        isScrolling = setTimeout(() => {
+            if (leftSection.scrollLeft >= leftSection.scrollWidth / 2) {
+                leftSection.scrollLeft -= leftSection.scrollWidth / 2;
+            }
+        }, 100);
+    });
 });
+
