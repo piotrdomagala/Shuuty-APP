@@ -12,7 +12,7 @@ body {
 .header {
     background-color: #fff;
     display: flex;
-    justify-content: flex-end; /* Języki w prawym górnym rogu */
+    justify-content: flex-end;
     padding: 5px 10px;
     box-sizing: border-box;
 }
@@ -46,7 +46,7 @@ body {
     background-color: #fff;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     z-index: 1;
-    right: 0; /* Aby dropdown rozwijał się w prawym górnym rogu */
+    right: 0;
 }
 .dropdown-content a {
     color: #000;
@@ -73,12 +73,13 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Przybliżenie prawej sekcji do nagłówka */
+    justify-content: flex-start;
     align-items: center;
     padding: 5px;
     flex-grow: 1;
     max-width: 1200px;
     margin: 0 auto;
+    margin-bottom: 0; /* Dodane */
 }
 .left-section {
     order: 2;
@@ -87,6 +88,7 @@ body {
     gap: 0.2px;
     scroll-snap-type: x mandatory;
     margin-bottom: 0; /* Zmniejszenie marginesu */
+    flex-grow: 1; /* Dodane */
 }
 .left-section img {
     width: 50%;
@@ -100,7 +102,7 @@ body {
 }
 .right-section h1 {
     font-size: 1.5em;
-    margin-top: 5px; /* Przybliżenie do nagłówka */
+    margin-top: 5px;
 }
 .right-section .title {
     font-size: 1.2em;
@@ -116,12 +118,12 @@ body {
     margin-bottom: 0; /* Zmniejszenie marginesu */
 }
 .download-section h2 {
-    font-size: 1em; /* Zmniejszenie czcionki */
+    font-size: 1em;
     margin-bottom: 0.5em;
 }
 .download-links {
     display: flex;
-    justify-content: flex-start; /* Ustawienie linków w jednym rzędzie */
+    justify-content: flex-start;
     gap: 10px;
 }
 .download-links a {
@@ -130,31 +132,31 @@ body {
     align-items: center;
     text-decoration: none;
     color: #000;
-    max-width: 45%; /* Dostosowanie rozmiaru do telefonu */
+    max-width: 45%;
 }
 .download-links a img {
     max-width: 100%;
     height: auto;
-    max-height: 50px; /* Maksymalna wysokość obrazów, aby były równe */
-    width: auto; /* Zachowanie proporcji obrazów */
-    object-fit: contain; /* Dopasowanie obrazów do kontenera */
+    max-height: 50px;
+    width: auto;
+    object-fit: contain;
 }
 .download-links a#ios img {
-    max-height: 50px; /* Ustawienie maksymalnej wysokości dla obrazu iOS */
+    max-height: 50px;
 }
 .footer {
-    padding: 5px 10px; /* Zmniejszenie paddingu */
-    margin-top: 5px; /* Zmniejszenie marginesu */
+    padding: 5px 10px;
+    margin-top: 0; /* Zmniejszenie marginesu */
 }
 .footer span {
-    display: block; /* Aby wyświetlało się nad linkami */
-    margin-bottom: 0; /* Zmniejszenie marginesu */
+    display: block;
+    margin-bottom: 0;
 }
 .footer .footer-links {
     display: flex;
     justify-content: center;
-    gap: 5px; /* Zmniejszenie odstępów między linkami */
-    margin-top: 0; /* Zmniejszenie marginesu */
+    gap: 5px;
+    margin-top: 0;
 }
 .footer .footer-links a {
     color: #777;
