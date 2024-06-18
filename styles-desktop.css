@@ -5,14 +5,25 @@ body {
     color: #000;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     min-height: 100vh;
-    overflow-x: hidden;
 }
-.header, .footer {
+.header {
     background-color: #fff;
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
+    box-sizing: border-box;
+}
+.header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 0;
+}
+.footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 10px 0;
     box-sizing: border-box;
 }
 .dropdown {
@@ -65,24 +76,24 @@ body {
 }
 .container {
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    padding: 10px;
+    align-items: flex-start;
+    padding: 20px;
     flex-grow: 1;
-    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 20px;
 }
 .left-section {
     display: flex;
-    gap: 1px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    flex-direction: column;
+    flex: 2;
+    gap: 10px;
 }
 .left-section img {
-    width: 19%;
+    width: 100%;
     height: auto;
-    flex-shrink: 0;
 }
 .right-section {
     flex: 1;
@@ -91,20 +102,14 @@ body {
     justify-content: center;
     padding-left: 10px;
 }
-.right-section h1 {
-    font-size: 3em;
-    font-family: 'OCR A Extended', monospace;
-    margin-bottom: 0.5em;
-}
 .right-section .title {
     font-size: 1.5em;
     font-weight: bold;
-    margin-bottom: 0.2em;
+    margin-bottom: 10px;
 }
 .right-section .description {
     font-size: 1.2em;
-    margin-bottom: 1em;
-    white-space: pre-line;
+    margin-top: 0;
 }
 .download-section {
     text-align: left;
@@ -128,65 +133,26 @@ body {
 }
 .download-links a img {
     max-width: 150px;
-    height: 50px;
+    height: auto;
 }
 .footer {
-    text-align: center;
-    font-size: 0.9em;
-    color: #777;
-    padding: 20px;
+    padding: 10px 20px;
 }
-.footer-links {
-    margin-top: 10px;
+.footer span {
+    display: block;
+    margin-bottom: 0;
 }
-.footer-links a {
+.footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0;
+}
+.footer .footer-links a {
     color: #777;
-    margin: 0 10px;
     text-decoration: none;
     transition: color 0.3s;
 }
-.footer-links a:hover {
+.footer .footer-links a:hover {
     color: #333;
-}
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        padding: 10px;
-        height: calc(100vh - 60px);
-        overflow-y: hidden;
-    }
-    .left-section {
-        order: 2;
-        display: flex;
-        overflow-x: auto;
-        gap: 5px;
-        scroll-snap-type: x mandatory;
-    }
-    .left-section img {
-        max-width: 50%;
-        scroll-snap-align: start;
-    }
-    .right-section {
-        order: 1;
-        text-align: center;
-    }
-    .right-section h1 {
-        font-size: 1.5em;
-    }
-    .right-section .title {
-        font-size: 1.2em;
-    }
-    .right-section .description {
-        font-size: 0.9em;
-    }
-    .download-section {
-        text-align: center;
-        order: 3;
-        width: 100%;
-        margin-top: 20px;
-    }
-    .download-links {
-        justify-content: center;
-        gap: 10px;
-    }
 }
