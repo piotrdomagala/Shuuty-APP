@@ -14,6 +14,8 @@ body {
     text-align: right;
     padding: 5px 10px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between; /* Aby języki były po lewej, a reszta po prawej */
 }
 .dropdown {
     position: relative;
@@ -39,7 +41,7 @@ body {
     background-color: #fff;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     z-index: 1;
-    right: 0;
+    left: 0; /* Aby dropdown rozwijał się w lewym górnym rogu */
 }
 .dropdown-content a {
     color: #000;
@@ -77,9 +79,9 @@ body {
     order: 2;
     display: flex;
     overflow-x: auto;
-    gap: 1px;
+    gap: 0.2px;
     scroll-snap-type: x mandatory;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 .left-section img {
     width: 50%;
@@ -88,7 +90,7 @@ body {
 .right-section {
     order: 1;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     padding-left: 0;
 }
 .right-section h1 {
@@ -104,11 +106,24 @@ body {
     text-align: center;
     order: 3;
     width: 100%;
-    margin-top: 5px;
+    margin-top: 2px;
 }
 .download-links {
-    justify-content: center;
+    display: flex;
+    justify-content: space-around; /* Ustawienie linków w jednym rzędzie */
     gap: 10px;
+}
+.download-links a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    max-width: 45%; /* Dostosowanie rozmiaru do telefonu */
+}
+.download-links a img {
+    max-width: 100%;
+    height: auto;
 }
 .header, .footer {
     padding: 5px 10px;
