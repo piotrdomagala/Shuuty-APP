@@ -19,7 +19,7 @@ body {
 .footer {
     background-color: #fff;
     text-align: center;
-    padding: 5px 10px;
+    padding: 5px 0;
     box-sizing: border-box;
 }
 .dropdown {
@@ -138,8 +138,11 @@ body {
     width: auto; /* Zachowanie proporcji obrazów */
     object-fit: contain; /* Dopasowanie obrazów do kontenera */
 }
+.download-links a#ios {
+    max-height: 50px; /* Ustawienie maksymalnej wysokości dla obrazu iOS */
+}
 .footer {
-    padding: 10px 10px; /* Zmiana paddingu */
+    padding: 5px 10px; /* Zmniejszenie paddingu */
     margin-top: 10px; /* Przybliżenie do lewej sekcji */
 }
 .footer span {
