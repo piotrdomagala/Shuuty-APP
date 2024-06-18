@@ -87,7 +87,7 @@ body {
     overflow-x: auto;
     gap: 0.2px;
     scroll-snap-type: x mandatory;
-    margin-bottom: 2px;
+    margin-bottom: 0; /* Zmniejszenie marginesu */
 }
 .left-section img {
     width: 50%;
@@ -96,7 +96,7 @@ body {
 .right-section {
     order: 1;
     text-align: center;
-    margin-bottom: 2px;
+    margin-bottom: 0; /* Zmniejszenie marginesu */
     padding-left: 0;
 }
 .right-section h1 {
@@ -139,7 +139,7 @@ body {
     width: auto; /* Zachowanie proporcji obrazów */
     object-fit: contain; /* Dopasowanie obrazów do kontenera */
 }
-.download-links a#ios {
+.download-links a#ios img {
     max-height: 50px; /* Ustawienie maksymalnej wysokości dla obrazu iOS */
 }
 .footer {
