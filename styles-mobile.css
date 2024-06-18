@@ -93,6 +93,7 @@ body {
 .left-section img {
     max-width: 45%; /* Zmniejszenie szerokości obrazów, aby zmieściły się dwa */
     height: auto; /* Naturalny rozmiar */
+    max-height: 150px; /* Dodanie maksymalnej wysokości dla obrazów */
     scroll-snap-align: start;
 }
 .right-section {
@@ -163,4 +164,3 @@ body {
 .footer .footer-links a:hover {
     color: #333;
 }
-
