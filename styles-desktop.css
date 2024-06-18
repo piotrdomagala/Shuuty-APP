@@ -88,10 +88,9 @@ body {
 .left-section {
     display: flex;
     flex-direction: row;
+    position: relative;
     flex: 2;
     gap: 10px;
-    overflow: hidden;
-    position: relative;
 }
 .left-section img {
     width: auto;
