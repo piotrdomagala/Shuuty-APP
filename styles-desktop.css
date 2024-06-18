@@ -99,19 +99,19 @@ body {
     position: absolute;
     top: 0;
 }
-.left-section .image1 {
+.left-section img[src*="image1.webp"] {
     left: 0;
 }
-.left-section .image2 {
+.left-section img[src*="image2.webp"] {
     left: 10%;
 }
-.left-section .image3 {
+.left-section img[src*="image3.webp"] {
     left: 20%;
 }
-.left-section .image4 {
+.left-section img[src*="image4.webp"] {
     left: 30%;
 }
-.left-section .image5 {
+.left-section img[src*="image5.webp"] {
     left: 40%;
 }
 .right-section {
