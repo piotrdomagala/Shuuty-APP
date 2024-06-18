@@ -21,7 +21,6 @@ body {
     text-align: center;
     padding: 5px 0;
     box-sizing: border-box;
-    margin-top: 5px; /* Zmniejszenie marginesu */
 }
 .dropdown {
     position: relative;
@@ -114,6 +113,7 @@ body {
     order: 3;
     width: 100%;
     margin-top: 2px;
+    margin-bottom: 0; /* Zmniejszenie marginesu */
 }
 .download-section h2 {
     font-size: 1em; /* Zmniejszenie czcionki */
@@ -148,12 +148,13 @@ body {
 }
 .footer span {
     display: block; /* Aby wyświetlało się nad linkami */
-    margin-bottom: 5px;
+    margin-bottom: 0; /* Zmniejszenie marginesu */
 }
 .footer .footer-links {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 5px; /* Zmniejszenie odstępów między linkami */
+    margin-top: 0; /* Zmniejszenie marginesu */
 }
 .footer .footer-links a {
     color: #777;
