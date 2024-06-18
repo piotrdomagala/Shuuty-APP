@@ -91,9 +91,8 @@ body {
     max-height: calc(50vh - 50px);
 }
 .left-section img {
-    max-width: 90%;
+    max-width: 70%;
     height: auto;
-    max-height: 150px;
     scroll-snap-align: start;
 }
 .right-section {
@@ -138,15 +137,9 @@ body {
     flex: 1;
 }
 .download-links a img {
-    width: auto;
-    height: 50px;
+    width: 100px;
+    height: auto;
     object-fit: contain;
-}
-#android img {
-    width: 80px; /* Ustawienie szerokości obrazu Android */
-}
-#ios img {
-    width: 80px; /* Ustawienie tej samej szerokości dla obrazu iOS */
 }
 .footer {
     padding: 5px 10px;
