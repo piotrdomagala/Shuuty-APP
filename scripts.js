@@ -10,7 +10,7 @@ function applyLanguage(lang) {
             title: 'Shuuty',
             mainTitle: 'Find Those You Seek',
             description: 'Arrange activities wherever you are.<br>Meet new people similar to you and<br>plan your time like never before.',
-            downloadTitle: 'Download the App',
+            downloadTitle: 'Download the app on mobile',
             footerText: '© 2024 Shuuty. All rights reserved.',
             supportLink: 'Support',
             privacyLink: 'Privacy',
@@ -22,10 +22,10 @@ function applyLanguage(lang) {
             title: 'Shuuty',
             mainTitle: 'Znajdź tych których szukasz',
             description: 'Umów się na aktywność, gdziekolwiek jesteś.<br>Poznaj nowych ludzi podobnych do Ciebie oraz<br>zaplanuj swój czas jak nigdy wcześniej.',
-            downloadTitle: 'Pobierz aplikację',
+            downloadTitle: 'Pobierz aplikację na urządzenia mobilne',
             footerText: '© 2024 Shuuty. Wszelkie prawa zastrzeżone.',
             supportLink: 'Wsparcie',
-            privacyLink: 'Warunki',
+            privacyLink: 'Prywatność',
             termsLink: 'Regulamin'
         }
     };
