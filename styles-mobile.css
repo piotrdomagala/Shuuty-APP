@@ -21,6 +21,7 @@ body {
     text-align: center;
     padding: 5px 0;
     box-sizing: border-box;
+    margin-top: 5px; /* Zmniejszenie marginesu */
 }
 .dropdown {
     position: relative;
@@ -143,7 +144,7 @@ body {
 }
 .footer {
     padding: 5px 10px; /* Zmniejszenie paddingu */
-    margin-top: 4px; /* Przybliżenie do lewej sekcji */
+    margin-top: 5px; /* Zmniejszenie marginesu */
 }
 .footer span {
     display: block; /* Aby wyświetlało się nad linkami */
