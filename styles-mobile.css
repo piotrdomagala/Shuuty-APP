@@ -91,7 +91,7 @@ body {
     flex-grow: 1; /* Dodane */
 }
 .left-section img {
-    width: 45%; /* Zmniejszenie szerokości obrazów, aby zmieściły się dwa */
+    max-width: 45%; /* Zmniejszenie szerokości obrazów, aby zmieściły się dwa */
     height: auto; /* Naturalny rozmiar */
     scroll-snap-align: start;
 }
@@ -163,3 +163,4 @@ body {
 .footer .footer-links a:hover {
     color: #333;
 }
+
