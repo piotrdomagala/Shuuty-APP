@@ -109,14 +109,18 @@ body {
     font-size: 0.9em;
 }
 .download-section {
-    text-align: center;
+    text-align: left;
     order: 3;
     width: 100%;
     margin-top: 2px;
 }
+.download-section h2 {
+    font-size: 1em; /* Zmniejszenie czcionki */
+    margin-bottom: 0.5em;
+}
 .download-links {
     display: flex;
-    justify-content: space-around; /* Ustawienie linków w jednym rzędzie */
+    justify-content: flex-start; /* Ustawienie linków w jednym rzędzie */
     gap: 10px;
 }
 .download-links a {
@@ -136,6 +140,7 @@ body {
 }
 .footer {
     padding: 10px 10px; /* Zmiana paddingu */
+    margin-top: 10px; /* Przybliżenie do lewej sekcji */
 }
 .footer span {
     display: block; /* Aby wyświetlało się nad linkami */
