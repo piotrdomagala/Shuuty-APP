@@ -93,7 +93,7 @@ body {
 }
 .left-section img {
     width: auto;
-    height: auto;
+    height: 50%;
 }
 .right-section {
     flex: 1;
@@ -103,12 +103,12 @@ body {
     padding-left: 10px;
 }
 .right-section .title {
-    font-size: 1.5em;
+    font-size: 1.65em; /* Zwiększenie o 10% */
     font-weight: bold;
     margin-bottom: 10px;
 }
 .right-section .description {
-    font-size: 1.2em;
+    font-size: 1.32em; /* Zwiększenie o 10% */
     margin-top: 0;
 }
 .download-section {
@@ -116,7 +116,7 @@ body {
     padding: 10px 0;
 }
 .download-section h2 {
-    font-size: 1.2em;
+    font-size: 1.32em; /* Zwiększenie o 10% */
     font-weight: normal;
     margin-bottom: 0.5em;
 }
@@ -132,7 +132,7 @@ body {
     color: #000;
 }
 .download-links a img {
-    max-width: 150px;
+    max-width: 165px; /* Zwiększenie o 10% */
     height: auto;
 }
 .footer {
