@@ -124,16 +124,16 @@ body {
     padding: 10px;
     border: 2px solid #000;
     border-radius: 10px;
-    margin-bottom: 10px; /* Przybliżenie tekstów do siebie */
+    margin-bottom: 10px;
 }
 .right-section .title {
     font-size: 1.2em;
-    font-weight: bold; /* Pogrubienie tekstu */
-    margin-bottom: 5px; /* Zmniejszenie odstępu */
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 .right-section .description {
     font-size: 0.9em;
-    margin-top: 5px; /* Zmniejszenie odstępu */
+    margin-top: 5px;
 }
 .download-section {
     text-align: left;
