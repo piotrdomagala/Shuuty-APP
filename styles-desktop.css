@@ -16,9 +16,8 @@ body {
     box-sizing: border-box;
 }
 .header .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-left: 0;
+    width: 50px;
+    height: auto;
 }
 .footer {
     background-color: #fff;
@@ -78,7 +77,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center; /* Centrowanie w pionie */
+    align-items: center;
     padding: 20px;
     flex-grow: 1;
     width: 100%;
@@ -95,7 +94,7 @@ body {
     align-items: center;
 }
 .left-section img {
-    max-width: 15%; /* Zmniejszenie rozmiaru obrazów */
+    max-width: 15%;
     height: auto;
 }
 .right-section {
@@ -107,12 +106,12 @@ body {
     text-align: center;
 }
 .right-section .title {
-    font-size: 1.65em; /* Zwiększenie o 10% */
+    font-size: 1.65em;
     font-weight: bold;
     margin-bottom: 10px;
 }
 .right-section .description {
-    font-size: 1.32em; /* Zwiększenie o 10% */
+    font-size: 1.32em;
     margin-top: 0;
 }
 .download-section {
@@ -120,7 +119,7 @@ body {
     padding: 10px 0;
 }
 .download-section h2 {
-    font-size: 1.32em; /* Zwiększenie o 10% */
+    font-size: 1.32em;
     font-weight: normal;
     margin-bottom: 0.5em;
 }
@@ -137,7 +136,7 @@ body {
     color: #000;
 }
 .download-links a img {
-    max-width: 165px; /* Zwiększenie o 10% */
+    max-width: 165px;
     height: auto;
 }
 .footer {
