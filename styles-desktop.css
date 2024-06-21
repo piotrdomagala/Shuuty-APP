@@ -16,7 +16,7 @@ body {
     box-sizing: border-box;
 }
 .header .logo {
-    width: 30px; /* Zmniejszenie rozmiaru logo */
+    width: 60px; /* Powiększenie rozmiaru logo o 200% */
     height: auto;
 }
 .footer {
@@ -94,8 +94,11 @@ body {
     align-items: center;
 }
 .left-section img {
-    max-width: 15%;
+    max-width: 50%; /* Zmniejszenie szerokości obrazów */
     height: auto;
+}
+.left-section img:not(:first-child):not(:nth-child(2)) {
+    display: none; /* Ukrycie wszystkich obrazów oprócz pierwszego i trzeciego */
 }
 .right-section {
     flex: 1;
