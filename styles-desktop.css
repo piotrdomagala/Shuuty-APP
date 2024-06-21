@@ -16,8 +16,10 @@ body {
     box-sizing: border-box;
 }
 .header .logo {
-    width: 60px; /* Powiększenie rozmiaru logo o 200% */
+    width: auto;
     height: auto;
+    max-width: none;
+    max-height: 120px;
 }
 .footer {
     background-color: #fff;
@@ -42,6 +44,17 @@ body {
     margin-left: 5px;
     width: 20px;
     height: 20px;
+}
+.dropbtn .arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-left: 5px;
+}
+.arrow.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 .dropdown-content {
     display: none;
@@ -94,11 +107,11 @@ body {
     align-items: center;
 }
 .left-section img {
-    max-width: 50%; /* Zmniejszenie szerokości obrazów */
+    max-width: 50%;
     height: auto;
 }
 .left-section img:not(:first-child):not(:nth-child(2)) {
-    display: none; /* Ukrycie wszystkich obrazów oprócz pierwszego i trzeciego */
+    display: none;
 }
 .right-section {
     flex: 1;
