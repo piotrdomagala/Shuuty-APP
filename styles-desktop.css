@@ -16,7 +16,7 @@ body {
     box-sizing: border-box;
 }
 .header .logo {
-    width: 50px;
+    width: 30px; /* Zmniejszenie rozmiaru logo */
     height: auto;
 }
 .footer {
