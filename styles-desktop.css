@@ -90,10 +90,11 @@ body {
     flex-direction: row;
     flex: 2;
     gap: 10px;
+    overflow: hidden;
 }
 .left-section img {
-    width: auto;
-    height: 50%;
+    width: 15%; /* Zmniejszenie rozmiaru obrazów */
+    height: auto;
 }
 .right-section {
     flex: 1;
