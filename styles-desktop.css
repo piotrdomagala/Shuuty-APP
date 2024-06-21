@@ -90,29 +90,10 @@ body {
     flex-direction: row;
     flex: 2;
     gap: 10px;
-    overflow: hidden;
-    position: relative;
 }
 .left-section img {
     width: auto;
-    height: 100%;
-    position: absolute;
-    top: 0;
-}
-.left-section img[src*="image1.webp"] {
-    left: 0;
-}
-.left-section img[src*="image2.webp"] {
-    left: 10%;
-}
-.left-section img[src*="image3.webp"] {
-    left: 20%;
-}
-.left-section img[src*="image4.webp"] {
-    left: 30%;
-}
-.left-section img[src*="image5.webp"] {
-    left: 40%;
+    height: auto;
 }
 .right-section {
     flex: 1;
