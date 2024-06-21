@@ -119,17 +119,21 @@ body {
     margin-bottom: 5px;
     padding-left: 0;
 }
+.right-section .title-container {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin-bottom: 10px; /* Przybliżenie tekstów do siebie */
+}
 .right-section .title {
     font-size: 1.2em;
     font-weight: bold; /* Pogrubienie tekstu */
     margin-bottom: 5px; /* Zmniejszenie odstępu */
-    border: 2px solid #000; /* Dodanie ramki */
-    border-radius: 10px; /* Zaokrąglenie ramki */
-    padding: 5px;
 }
 .right-section .description {
     font-size: 0.9em;
-    margin-top: 0;
+    margin-top: 5px; /* Zmniejszenie odstępu */
 }
 .download-section {
     text-align: left;
