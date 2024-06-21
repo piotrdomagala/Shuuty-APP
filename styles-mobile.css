@@ -17,10 +17,9 @@ body {
     padding: 5px 10px;
     box-sizing: border-box;
 }
-.header .logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-left: 0;
+.header .logo img {
+    width: 50px; /* Dostosowanie wielkości ikony */
+    height: auto;
 }
 .footer {
     background-color: #fff;
