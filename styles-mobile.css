@@ -135,8 +135,7 @@ body {
     margin-bottom: 0;
 }
 .download-section h2 {
-    font-size: 0.5em;
-    margin-bottom: 0.5em;
+    display: none;
 }
 .download-links {
     display: flex;
