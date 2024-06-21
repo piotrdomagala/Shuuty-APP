@@ -93,8 +93,8 @@ body {
     overflow: hidden;
 }
 .left-section img {
-    width: 15%; /* Zmniejszenie rozmiaru obrazów */
-    height: auto;
+    width: auto;
+    height: 50%;
 }
 .right-section {
     flex: 1;
@@ -156,4 +156,27 @@ body {
 }
 .footer .footer-links a:hover {
     color: #333;
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 90%;
+    }
+}
+@media (max-width: 1199px) {
+    .left-section img {
+        height: auto;
+        width: 20%;
+    }
+    .right-section .title {
+        font-size: 1.5em;
+    }
+    .right-section .description {
+        font-size: 1.2em;
+    }
+    .download-section h2 {
+        font-size: 1.2em;
+    }
+    .download-links a img {
+        max-width: 150px;
+    }
 }
