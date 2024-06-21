@@ -17,8 +17,8 @@ body {
     padding: 5px 10px;
     box-sizing: border-box;
 }
-.header .logo img {
-    width: 50px; /* Dostosowanie wielkości ikony */
+.header .logo {
+    width: 20px; /* Zmniejszenie rozmiaru logo */
     height: auto;
 }
 .footer {
@@ -120,7 +120,7 @@ body {
 }
 .right-section .title-container {
     display: inline-block;
-    padding: 2px 5px; /* Zmniejszenie paddingu */
+    padding: 2px 5px;
     border: 2px solid #000;
     border-radius: 10px;
     margin-bottom: 5px;
@@ -133,7 +133,7 @@ body {
 .right-section .description {
     font-size: 0.9em;
     margin-top: 5px;
-    margin-bottom: 0; /* Zmniejszenie odstępu */
+    margin-bottom: 0;
 }
 .download-section {
     text-align: left;
