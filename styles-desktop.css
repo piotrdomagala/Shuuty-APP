@@ -78,9 +78,10 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center; /* Centrowanie w pionie */
     padding: 20px;
     flex-grow: 1;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     gap: 20px;
@@ -90,18 +91,20 @@ body {
     flex-direction: row;
     flex: 2;
     gap: 10px;
-    overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 .left-section img {
-    width: auto;
-    height: 50%;
+    max-width: 15%; /* Zmniejszenie rozmiaru obrazów */
+    height: auto;
 }
 .right-section {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 10px;
+    align-items: center;
+    text-align: center;
 }
 .right-section .title {
     font-size: 1.65em; /* Zwiększenie o 10% */
@@ -113,7 +116,7 @@ body {
     margin-top: 0;
 }
 .download-section {
-    text-align: left;
+    text-align: center;
     padding: 10px 0;
 }
 .download-section h2 {
@@ -124,6 +127,7 @@ body {
 .download-links {
     display: flex;
     gap: 20px;
+    justify-content: center;
 }
 .download-links a {
     display: flex;
@@ -156,27 +160,4 @@ body {
 }
 .footer .footer-links a:hover {
     color: #333;
-}
-@media (min-width: 1200px) {
-    .container {
-        max-width: 90%;
-    }
-}
-@media (max-width: 1199px) {
-    .left-section img {
-        height: auto;
-        width: 20%;
-    }
-    .right-section .title {
-        font-size: 1.5em;
-    }
-    .right-section .description {
-        font-size: 1.2em;
-    }
-    .download-section h2 {
-        font-size: 1.2em;
-    }
-    .download-links a img {
-        max-width: 150px;
-    }
 }
