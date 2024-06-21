@@ -121,7 +121,11 @@ body {
 }
 .right-section .title {
     font-size: 1.2em;
-    margin-bottom: 10px;
+    font-weight: bold; /* Pogrubienie tekstu */
+    margin-bottom: 5px; /* Zmniejszenie odstępu */
+    border: 2px solid #000; /* Dodanie ramki */
+    border-radius: 10px; /* Zaokrąglenie ramki */
+    padding: 5px;
 }
 .right-section .description {
     font-size: 0.9em;
