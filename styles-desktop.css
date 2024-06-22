@@ -15,8 +15,10 @@ body {
     padding: 10px 20px;
     box-sizing: border-box;
 }
-.header .logo {
-    display: none; /* Ukrycie logo w nagłówku */
+.header .header-logo {
+    display: block;
+    width: 40px;
+    height: auto;
 }
 .footer {
     background-color: #fff;
@@ -124,12 +126,10 @@ body {
     align-items: center;
     gap: 10px;
 }
-.right-section .title-container .logo {
+.right-section .title-container .title-logo {
     display: inline-block;
     width: 60px; /* Dostosowanie rozmiaru logo */
     height: auto;
-    max-width: none;
-    max-height: 60px;
 }
 .right-section .title {
     font-size: 1.65em;
