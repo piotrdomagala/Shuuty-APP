@@ -186,3 +186,10 @@ body {
 .footer .footer-links a:hover {
     color: #333;
 }
+
+/* Ukryj ikonę w sekcji right-section w wersji mobilnej */
+@media screen and (max-width: 768px) {
+    .right-section .title-container .title-logo {
+        display: none;
+    }
+}
