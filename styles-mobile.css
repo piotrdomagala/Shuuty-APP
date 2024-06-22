@@ -18,10 +18,10 @@ body {
     box-sizing: border-box;
 }
 .header .logo {
-    width: auto;
+    width: 40px; /* Zmniejszenie rozmiaru logo */
     height: auto;
     max-width: none;
-    max-height: 80px;
+    max-height: 40px;
 }
 .header .dropdown {
     position: absolute;
