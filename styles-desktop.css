@@ -124,7 +124,8 @@ body {
     align-items: center;
     gap: 10px;
 }
-.right-section .logo {
+.right-section .title-container .logo {
+    display: inline-block;
     width: 60px; /* Dostosowanie rozmiaru logo */
     height: auto;
     max-width: none;
