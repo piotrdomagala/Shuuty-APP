@@ -16,9 +16,7 @@ body {
     box-sizing: border-box;
 }
 .header .header-logo {
-    display: block;
-    width: 40px;
-    height: auto;
+    display: none; /* Ukrycie logo w nagłówku w wersji desktopowej */
 }
 .footer {
     background-color: #fff;
@@ -126,8 +124,8 @@ body {
     align-items: center;
     gap: 10px;
 }
-.right-section .title-container .title-logo {
-    display: inline-block;
+.right-section .title-container::before {
+    content: url('images/shuuty_icon.webp'); /* Dodanie logo przed tytułem */
     width: 60px; /* Dostosowanie rozmiaru logo */
     height: auto;
 }
@@ -185,11 +183,4 @@ body {
 }
 .footer .footer-links a:hover {
     color: #333;
-}
-
-/* Ukryj ikonę w sekcji right-section w wersji mobilnej */
-@media screen and (max-width: 768px) {
-    .right-section .title-container .title-logo {
-        display: none;
-    }
 }
