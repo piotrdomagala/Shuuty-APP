@@ -139,7 +139,7 @@ body {
     align-items: center;
     gap: 5px;
 }
-.right-section .logo-container img {
+.right-section .logo-container img.right-logo {
     width: 20px; /* Zmniejszenie rozmiaru logo */
     height: auto;
 }
@@ -150,6 +150,7 @@ body {
 }
 .right-section .description {
     font-size: 0.9em;
+    font-weight: normal; /* Usunięcie pogrubienia */
     margin-top: 2px; /* Zmniejszenie marginesu */
     margin-bottom: 5px;
 }
