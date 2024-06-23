@@ -18,7 +18,7 @@ body {
     box-sizing: border-box;
 }
 .header .logo {
-    width: 40px;
+    width: 20px; /* Zmniejszenie rozmiaru logo */
     height: auto;
 }
 .header .dropdown {
@@ -134,11 +134,24 @@ body {
     flex-direction: column;
     align-items: center;
 }
-.right-section .title,
-.right-section .description {
+.right-section .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.right-section .logo-container img {
+    width: 20px; /* Zmniejszenie rozmiaru logo */
+    height: auto;
+}
+.right-section .title {
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 2px; /* Zmniejszenie marginesu */
+}
+.right-section .description {
+    font-size: 0.9em;
+    margin-top: 2px; /* Zmniejszenie marginesu */
+    margin-bottom: 5px;
 }
 .download-section {
     text-align: left;
