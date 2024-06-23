@@ -140,11 +140,6 @@ body {
     font-weight: bold;
     margin-bottom: 5px;
 }
-.right-section .description {
-    font-size: 0.9em;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
 .download-section {
     text-align: left;
     order: 3;
