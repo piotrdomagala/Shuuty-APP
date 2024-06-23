@@ -134,8 +134,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
-.right-section .title,
-.right-section .description {
+.right-section .title {
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 5px;
