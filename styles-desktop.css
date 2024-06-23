@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 .header {
     background-color: #fff;
@@ -126,7 +127,7 @@ body {
 }
 .right-section .title-container::before {
     content: url('images/shuuty_icon.webp'); /* Dodanie logo przed tytułem */
-    width: 60px; /* Dostosowanie rozmiaru logo */
+    width: 40px; /* Dostosowanie rozmiaru logo */
     height: auto;
 }
 .right-section .title {
@@ -183,4 +184,21 @@ body {
 }
 .footer .footer-links a:hover {
     color: #333;
+}
+
+/* Responsywność */
+@media screen and (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .left-section, .right-section {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+    }
+    .left-section img {
+        max-width: 100%;
+    }
 }
