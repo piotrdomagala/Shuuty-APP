@@ -122,11 +122,16 @@ body {
 }
 .right-section .title-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
 }
-.right-section .title-container::before {
-    content: url('images/shuuty_icon.webp'); /* Dodanie logo przed tytułem */
+.right-section .title-container .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.right-section .title-container .logo-container img {
     width: 40px; /* Dostosowanie rozmiaru logo */
     height: auto;
 }
