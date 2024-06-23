@@ -126,13 +126,13 @@ body {
     align-items: center;
     gap: 10px;
 }
-.right-section .title-container .logo-container {
+.right-section .logo-container {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.right-section .title-container .logo-container img {
-    width: 40px; /* Dostosowanie rozmiaru logo */
+.right-section .logo-container img {
+    width: 20px; /* Zmniejszenie rozmiaru logo */
     height: auto;
 }
 .right-section .title {
