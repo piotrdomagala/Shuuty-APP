@@ -101,15 +101,15 @@ body {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     width: 100%;
-    height: calc(100vh - 130px); /* Dostosowanie wysokości sekcji z uwzględnieniem nagłówka */
+    height: calc(90vh - 130px); /* Dostosowanie wysokości sekcji */
     margin-top: 10px; /* Przybliżenie do nagłówka */
 }
 .left-section img {
     flex-shrink: 0;
-    width: 100%;
-    height: 100%;
+    max-width: 90%; /* Dostosowanie szerokości obrazów */
+    max-height: calc(90vh - 150px); /* Dostosowanie wysokości obrazów */
     scroll-snap-align: start;
-    object-fit: cover; /* Zapewnia, że obraz zachowuje swoje proporcje */
+    object-fit: contain; /* Zapewnia, że obraz zachowuje swoje proporcje */
 }
 .right-section {
     position: fixed;
