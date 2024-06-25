@@ -16,6 +16,8 @@ body {
     align-items: center;
     padding: 5px 10px;
     box-sizing: border-box;
+    z-index: 10; /* Ustawienie nagłówka na wierzchu */
+    position: relative;
 }
 .header .dropdown {
     position: absolute;
@@ -99,7 +101,7 @@ body {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     width: 100%;
-    height: calc(100vh - 60px); /* Dopasowanie wysokości sekcji */
+    height: calc(100vh - 120px); /* Dopasowanie wysokości sekcji z uwzględnieniem nagłówka */
     margin-top: 10px; /* Przybliżenie do nagłówka */
 }
 .left-section img {
