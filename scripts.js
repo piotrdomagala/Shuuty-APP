@@ -1,3 +1,27 @@
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.dropdown-content a').forEach(item => {
+        item.addEventListener('click', event => {
+            event.preventDefault();
+            const lang = event.currentTarget.getAttribute('data-lang');
+            changeLanguage(lang);
+        });
+    });
+
+    // Set default language to English
+    applyLanguage('en');
+
+    // Load markdown content for terms and privacy
+    document.getElementById('terms-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = 'documents/terms.md';
+    });
+
+    document.getElementById('privacy-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = 'documents/privacy.md';
+    });
+});
+
 function changeLanguage(lang) {
     applyLanguage(lang);
 }
@@ -54,52 +78,3 @@ function applyLanguage(lang) {
         }
     }
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.dropdown-content a').forEach(item => {
-        item.addEventListener('click', event => {
-            event.preventDefault();
-            const lang = event.currentTarget.getAttribute('data-lang');
-            changeLanguage(lang);
-        });
-    });
-
-    // Set default language to English
-    applyLanguage('en');
-
-    // Infinite scroll functionality for mobile only
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        const leftSection = document.querySelector('.left-section');
-        const images = Array.from(leftSection.querySelectorAll('img'));
-
-        // Clone the images for infinite scroll effect
-        images.forEach(img => {
-            const clone = img.cloneNode(true);
-            leftSection.appendChild(clone);
-        });
-
-        let isScrolling;
-        leftSection.addEventListener('scroll', () => {
-            window.clearTimeout(isScrolling);
-
-            isScrolling = setTimeout(() => {
-                if (leftSection.scrollLeft >= leftSection.scrollWidth / 2) {
-                    leftSection.scrollLeft -= leftSection.scrollWidth / 2;
-                } else if (leftSection.scrollLeft <= 0) {
-                    leftSection.scrollLeft += leftSection.scrollWidth / 2;
-                }
-            }, 100);
-        });
-    }
-
-    // Open privacy.md and terms.md in new window
-    document.getElementById('privacy-link').addEventListener('click', function(event) {
-        event.preventDefault();
-        window.open('documents/privacy.md', '_blank');
-    });
-
-    document.getElementById('terms-link').addEventListener('click', function(event) {
-        event.preventDefault();
-        window.open('documents/terms.md', '_blank');
-    });
-});
