@@ -91,39 +91,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 100);
         });
     }
-
-    // Modal window functionality
-    const modal = document.getElementById('modal');
-    const modalBody = document.getElementById('modal-body');
-    const closeButton = document.getElementById('close-button');
-
-    document.getElementById('privacy-link').addEventListener('click', function(event) {
-        event.preventDefault();
-        fetch('documents/privacy.md')
-            .then(response => response.text())
-            .then(text => {
-                modalBody.innerHTML = marked(text);
-                modal.style.display = 'block';
-            });
-    });
-
-    document.getElementById('terms-link').addEventListener('click', function(event) {
-        event.preventDefault();
-        fetch('documents/terms.md')
-            .then(response => response.text())
-            .then(text => {
-                modalBody.innerHTML = marked(text);
-                modal.style.display = 'block';
-            });
-    });
-
-    closeButton.addEventListener('click', function() {
-        modal.style.display = 'none';
-    });
-
-    window.addEventListener('click', function(event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    });
 });
