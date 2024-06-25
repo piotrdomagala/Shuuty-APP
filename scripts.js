@@ -91,41 +91,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 100);
         });
     }
-
-    // Modal functionality
-    const modal = document.getElementById('modal');
-    const modalBody = document.getElementById('modal-body');
-    const closeModalBtn = document.getElementsByClassName('close-btn')[0];
-
-    function openModal(content) {
-        modalBody.innerHTML = content;
-        modal.style.display = "block";
-    }
-
-    function closeModal() {
-        modal.style.display = "none";
-    }
-
-    closeModalBtn.onclick = closeModal;
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            closeModal();
-        }
-    }
-
-    // Load content for terms and privacy
-    document.getElementById('terms-link').addEventListener('click', function(event) {
-        event.preventDefault();
-        fetch('terms.md')
-            .then(response => response.text())
-            .then(data => openModal(data));
-    });
-
-    document.getElementById('privacy-link').addEventListener('click', function(event) {
-        event.preventDefault();
-        fetch('privacy.md')
-            .then(response => response.text())
-            .then(data => openModal(data));
-    });
 });
