@@ -91,4 +91,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 100);
         });
     }
+
+    // Open privacy.md and terms.md in new window
+    document.getElementById('privacy-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.open('documents/privacy.md', '_blank');
+    });
+
+    document.getElementById('terms-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.open('documents/terms.md', '_blank');
+    });
 });
