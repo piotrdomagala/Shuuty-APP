@@ -7,7 +7,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden; /* Zablokowanie przewijania w pionie */
 }
 .header {
     background-color: #fff;
@@ -101,7 +101,7 @@ body {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     width: 100%;
-    height: calc(100vh - 120px); /* Dopasowanie wysokości sekcji z uwzględnieniem nagłówka */
+    height: calc(100vh - 130px); /* Dostosowanie wysokości sekcji z uwzględnieniem nagłówka */
     margin-top: 10px; /* Przybliżenie do nagłówka */
 }
 .left-section img {
