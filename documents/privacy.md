@@ -1,4 +1,3 @@
-<!-- privacy.md -->
 # Polityka prywatności aplikacji mobilnej Shuuty
 
 ## Postanowienia ogólne
