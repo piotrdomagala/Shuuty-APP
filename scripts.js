@@ -9,6 +9,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Set default language to English
     applyLanguage('en');
+
+    // Event listeners for the links in the footer
+    document.getElementById('privacy-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        openMarkdownInNewWindow('documents/privacy.md');
+    });
+
+    document.getElementById('terms-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        openMarkdownInNewWindow('documents/terms.md');
+    });
 });
 
 function changeLanguage(lang) {
@@ -66,4 +77,24 @@ function applyLanguage(lang) {
             console.warn(`Element with id ${key} not found`);
         }
     }
+}
+
+function openMarkdownInNewWindow(markdownPath) {
+    fetch(markdownPath)
+        .then(response => response.text())
+        .then(text => {
+            const newWindow = window.open();
+            newWindow.document.write(`
+                <html>
+                    <head>
+                        <link rel="stylesheet" href="../css/github-markdown.css">
+                        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+                    </head>
+                    <body>
+                        <article class="markdown-body">${marked(text)}</article>
+                    </body>
+                </html>
+            `);
+            newWindow.document.close();
+        });
 }
