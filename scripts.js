@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listeners for the links in the footer
     document.getElementById('privacy-link').addEventListener('click', function(event) {
         event.preventDefault();
-        openMarkdownInNewWindow('documents/privacy.md');
+        openMarkdownInNewWindow('documents/privacy.html');
     });
 
     document.getElementById('terms-link').addEventListener('click', function(event) {
         event.preventDefault();
-        openMarkdownInNewWindow('documents/terms.md');
+        openMarkdownInNewWindow('documents/terms.html');
     });
 });
 
