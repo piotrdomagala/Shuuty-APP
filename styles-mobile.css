@@ -86,39 +86,38 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 5px;
+    padding: 0;
     flex-grow: 1;
     max-width: 1200px;
     margin: 0 auto;
-    margin-bottom: 0;
     position: relative;
+    overflow: hidden; /* Zapobiega nadmiarowym przewijaniom */
 }
 .left-section {
-    order: 2;
     display: flex;
     overflow-x: auto;
-    margin-bottom: 0;
-    flex-grow: 1;
-    position: relative;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    height: calc(100vh - 60px); /* Dopasowanie wysokości sekcji */
     margin-top: 10px; /* Przybliżenie do nagłówka */
-    height: calc(100vh - 100px); /* Dopasowanie wysokości sekcji */
 }
 .left-section img {
-    width: auto; /* Dopasowanie szerokości obrazów */
-    height: 100%; /* Dopasowanie wysokości obrazów */
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
     scroll-snap-align: start;
+    object-fit: cover; /* Zapewnia, że obraz zachowuje swoje proporcje */
 }
 .right-section {
-    order: 1;
-    text-align: center;
-    margin-bottom: 5px;
-    padding-left: 0;
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.7); /* Przeźroczystość */
+    text-align: center;
     z-index: 10;
+    padding: 10px 0;
 }
 .right-section .title-container {
     display: inline-block;
@@ -143,7 +142,6 @@ body {
 }
 .download-section {
     text-align: center;
-    order: 3;
     width: 100%;
     margin-top: 2px;
     margin-bottom: 0;
