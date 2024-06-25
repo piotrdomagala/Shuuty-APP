@@ -103,6 +103,8 @@ body {
     width: 100%;
     height: calc(90vh - 130px); /* Dostosowanie wysokości sekcji */
     margin-top: 10px; /* Przybliżenie do nagłówka */
+    justify-content: center; /* Wycentrowanie obrazów */
+    align-items: center; /* Wycentrowanie obrazów w pionie */
 }
 .left-section img {
     flex-shrink: 0;
@@ -110,6 +112,7 @@ body {
     max-height: calc(90vh - 150px); /* Dostosowanie wysokości obrazów */
     scroll-snap-align: start;
     object-fit: contain; /* Zapewnia, że obraz zachowuje swoje proporcje */
+    margin-bottom: 10px; /* Przesunięcie obrazu w dół */
 }
 .right-section {
     position: fixed;
