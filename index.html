@@ -6,6 +6,7 @@
     <title>Shuuty App</title>
     <link rel="stylesheet" href="styles-desktop.css" media="screen and (min-width: 769px)">
     <link rel="stylesheet" href="styles-mobile.css" media="screen and (max-width: 768px)">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <div class="header">
@@ -58,11 +59,17 @@
     <footer class="footer">
         <span id="footer-text">&copy; 2024 Shuuty. All rights reserved.</span>
         <div class="footer-links">
-            <a href="documents/support.html" id="support-link">Support</a> | 
-            <a href="documents/privacy.md" target="_blank" id="privacy-link">Privacy</a> | 
-            <a href="documents/terms.md" target="_blank" id="terms-link">Terms</a>
+            <a href="#" id="support-link">Support</a> | 
+            <a href="#" id="privacy-link">Privacy</a> | 
+            <a href="#" id="terms-link">Terms</a>
         </div>
     </footer>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-button">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
