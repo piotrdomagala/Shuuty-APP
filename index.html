@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shuuty App</title>
-    <!-- Linki do stylów -->
     <link rel="stylesheet" href="styles-desktop.css" media="screen and (min-width: 769px)">
     <link rel="stylesheet" href="styles-mobile.css" media="screen and (max-width: 768px)">
 </head>
 <body>
     <div class="header">
+        <img src="images/shuuty_icon.webp" alt="Shuuty Logo" class="logo">
         <div class="dropdown">
             <button class="dropbtn" id="language-btn">
                 <img src="images/english_icon.png" alt="English"> 
                 <span id="current-language">English</span>
-                <i class="arrow down"></i>
             </button>
             <div class="dropdown-content">
                 <a href="#" data-lang="en">
@@ -44,11 +43,12 @@
                 </p>
             </div>
             <div class="download-section">
+                <h2 id="download-title">Download the app on mobile</h2>
                 <div class="download-links">
                     <a href="https://play.google.com/store/apps/details?id=com.shuuty&hl=en-US&ah=JpCaODeLlr4ezPgI17PkuGtLw7M">
                         <img src="images/your_android_icon.png" alt="Download for Android">
                     </a>
-                    <a href="#" id="ios">
+                    <a href="#">
                         <img src="images/your_ios_icon.png" alt="Download for iOS">
                     </a>
                 </div>
@@ -58,11 +58,20 @@
     <footer class="footer">
         <span id="footer-text">&copy; 2024 Shuuty. All rights reserved.</span>
         <div class="footer-links">
-            <a href="documents/support.html" id="support-link">Support</a> | 
-            <a href="documents/privacy.html" id="privacy-link">Privacy</a> | 
-            <a href="documents/terms.html" id="terms-link">Terms</a>
+            <a href="#" id="support-link">Support</a> | 
+            <a href="#" id="privacy-link">Privacy</a> | 
+            <a href="#" id="terms-link">Terms</a>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>
