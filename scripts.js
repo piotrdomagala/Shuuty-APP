@@ -81,7 +81,12 @@ function applyLanguage(lang) {
 
 function openMarkdownInNewWindow(markdownPath) {
     fetch(markdownPath)
-        .then(response => response.text())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.text();
+        })
         .then(text => {
             const newWindow = window.open();
             newWindow.document.write(`
@@ -96,5 +101,8 @@ function openMarkdownInNewWindow(markdownPath) {
                 </html>
             `);
             newWindow.document.close();
+        })
+        .catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
         });
 }
