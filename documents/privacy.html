@@ -8,12 +8,16 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-    <div class="markdown-body" id="content"></div>
+    <article class="markdown-body" id="content"></article>
     <script>
         fetch('privacy.md')
             .then(response => response.text())
             .then(text => {
-                document.getElementById('content').innerHTML = marked(text);
+                document.getElementById('content').innerHTML = marked.parse(text);
+            })
+            .catch(error => {
+                console.error('Error fetching the markdown file:', error);
+                document.getElementById('content').innerText = 'Error loading content. Please try again later.';
             });
     </script>
 </body>
