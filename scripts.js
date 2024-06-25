@@ -9,17 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Set default language to English
     applyLanguage('en');
-
-    // Load markdown content for terms and privacy
-    document.getElementById('terms-link').addEventListener('click', function(event) {
-        event.preventDefault();
-        window.location.href = 'documents/terms.md';
-    });
-
-    document.getElementById('privacy-link').addEventListener('click', function(event) {
-        event.preventDefault();
-        window.location.href = 'documents/privacy.md';
-    });
 });
 
 function changeLanguage(lang) {
