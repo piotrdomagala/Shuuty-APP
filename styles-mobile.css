@@ -112,7 +112,7 @@ body {
     max-height: calc(90vh - 150px); /* Dostosowanie wysokości obrazów */
     scroll-snap-align: start;
     object-fit: contain; /* Zapewnia, że obraz zachowuje swoje proporcje */
-    margin-bottom: 10px; /* Przesunięcie obrazu w dół */
+    margin-bottom: 20px; /* Przesunięcie obrazu w dół */
 }
 .right-section {
     position: fixed;
