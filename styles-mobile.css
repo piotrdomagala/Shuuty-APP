@@ -96,7 +96,6 @@ body {
 .left-section {
     order: 2;
     display: flex;
-    gap: 5px;
     overflow-x: auto;
     margin-bottom: 0;
     flex-grow: 1;
@@ -106,7 +105,7 @@ body {
 }
 .left-section img {
     width: auto; /* Dopasowanie szerokości obrazów */
-    height: 100%; /* Zmniejszenie rozmiaru obrazów */
+    height: 100%; /* Dopasowanie wysokości obrazów */
     scroll-snap-align: start;
 }
 .right-section {
