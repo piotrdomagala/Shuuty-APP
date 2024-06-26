@@ -7,23 +7,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Set default language to English
-    applyLanguage('en');
+    // Set default language based on the cookie
+    const lang = document.cookie.match(/lang=(\w+);?/)?.[1] || 'en';
+    applyLanguage(lang);
 
     // Event listeners for the links in the footer
     document.getElementById('privacy-link').addEventListener('click', function(event) {
         event.preventDefault();
-        window.open('documents/privacy.html', '_blank');
+        const lang = document.cookie.match(/lang=(\w+);?/)?.[1] || 'en';
+        const file = lang === 'pl' ? 'documents/privacy.md' : 'documents/privacy_en.md';
+        window.location.href = file;
     });
 
     document.getElementById('terms-link').addEventListener('click', function(event) {
         event.preventDefault();
-        window.open('documents/terms.html', '_blank');
+        const lang = document.cookie.match(/lang=(\w+);?/)?.[1] || 'en';
+        const file = lang === 'pl' ? 'documents/terms.md' : 'documents/terms_en.md';
+        window.location.href = file;
     });
 });
 
 function changeLanguage(lang) {
+    document.cookie = `lang=${lang};path=/`;
     applyLanguage(lang);
+    location.reload(); // Przeładuj stronę, aby zastosować zmiany języka
 }
 
 function applyLanguage(lang) {
