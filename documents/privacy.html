@@ -23,7 +23,11 @@
 <body>
     <article class="markdown-body" id="content"></article>
     <script>
-        fetch('privacy.md')
+        const userLang = navigator.language || navigator.userLanguage;
+        const lang = userLang.startsWith('pl') ? 'pl' : 'en';
+        const file = lang === 'pl' ? 'privacy.md' : 'privacy_en.md';
+        
+        fetch(file)
             .then(response => response.text())
             .then(text => {
                 document.getElementById('content').innerHTML = marked.parse(text);
