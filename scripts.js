@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('privacy-link').addEventListener('click', function(event) {
         event.preventDefault();
         const lang = document.cookie.match(/lang=(\w+);?/)?.[1] || 'en';
-        const file = lang === 'pl' ? 'documents/privacy.md' : 'documents/privacy_en.md';
+        const file = lang === 'pl' ? 'documents/privacy.html' : 'documents/privacy_en.html';
         window.location.href = file;
     });
 
     document.getElementById('terms-link').addEventListener('click', function(event) {
         event.preventDefault();
         const lang = document.cookie.match(/lang=(\w+);?/)?.[1] || 'en';
-        const file = lang === 'pl' ? 'documents/terms.md' : 'documents/terms_en.md';
+        const file = lang === 'pl' ? 'documents/terms.html' : 'documents/terms_en.html';
         window.location.href = file;
     });
 });
