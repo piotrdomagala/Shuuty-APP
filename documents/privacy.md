@@ -13,22 +13,24 @@
 - Dane osobowe użytkowników będą przechowywane przez okres świadczenia usług, chyba że dłuższy okres przetwarzania jest przewidziany przez prawo.
 
 ## Uprawnienia użytkowników
-- Każdy użytkownik ma prawo dostępu do treści swoich danych oraz prawo do sprostowania, usunięcia, ograniczenia przetwarzania, prawo do przenoszenia danych, prawo do sprzeciwu, prawo do cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania prowadzonego na podstawie zgody przed jej cofnięciem.
+- Każdy użytkownik ma prawo dostępu do treści swoich danych oraz prawo do ich sprostowania, usunięcia, ograniczenia przetwarzania, prawo do przenoszenia danych, prawo do sprzeciwu, prawo do cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania prowadzonego na podstawie zgody przed jej cofnięciem.
 
-## Przekazywanie i udostępnianie danych osobowych
+## Przekazywanie i udostępn
+
+ianie danych osobowych
 - Administrator może przekazywać lub udostępniać dane osobowe stronom trzecim w przypadku, gdy:
   - Użytkownik wyraził na to zgodę,
   - Jest to uzasadnione prawem,
   - Jest to konieczne w celu dostarczenia i wykonania umowy.
-- Dane mogą być powierzone m.in. następującym kategoriom odbiorców danych osobowych: podmioty świadczące usługi na rzecz Administratora, w tym usługi księgowe, prawne; dostawcy oprogramowania, w tym oprogramowania analitycznego; dostawcy treści aplikacji, w tym z wykorzystaniem ich oprogramowania.
+- Dane mogą być powierzone następującym kategoriom odbiorców danych osobowych: podmioty świadczące usługi na rzecz Administratora, w tym usługi księgowe i prawne; dostawcy oprogramowania, w tym oprogramowania analitycznego; dostawcy treści aplikacji, w tym z wykorzystaniem ich oprogramowania.
 
 ## Prawa użytkowników
-- Administrator zapewnia użytkownikowi możliwość na jego żądanie, a także w innych przypadkach, usunięcie jego danych osobowych ze zbioru danych, a także w innych przypadkach w oparciu o obowiązujące przepisy prawa.
-- Administrator może odmówić usunięcia danych osobowych, jeżeli użytkownik nie zapłacił wszystkich należności Administratorowi lub naruszył regulamin lub obowiązujące przepisy prawa, a zachowanie danych osobowych jest niezbędne do ustalenia odpowiedzialności użytkownika.
+- Administrator zapewnia użytkownikowi możliwość, na jego żądanie, a także w innych przypadkach przewidzianych przez obowiązujące przepisy prawa, usunięcie jego danych osobowych ze zbioru danych.
+- Administrator może odmówić usunięcia danych osobowych, jeżeli użytkownik nie uregulował wszystkich należności wobec Administratora lub naruszył regulamin lub obowiązujące przepisy prawa, a zachowanie danych osobowych jest niezbędne do ustalenia odpowiedzialności użytkownika.
 - Każdy użytkownik ma możliwość przeglądania i edytowania swoich danych osobowych w dowolnym momencie w ramach funkcjonalności aplikacji po zalogowaniu się za pomocą adresu e-mail i hasła.
 
 ## Kontakt
 - Shuuty Prosta Spółka Akcyjna
 - ul. Południowa 13, 32-353 Trzyciąż
-- e-mail: piotr-domagala@outlook.com
-- e-mail do kontaktu w sprawach związanych z ochroną danych osobowych: support@shuuty.pl
+- Email: piotr-domagala@outlook.com
+- Email do kontaktu w sprawach związanych z ochroną danych osobowych: support@shuuty.pl
