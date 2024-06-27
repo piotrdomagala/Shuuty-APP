@@ -92,11 +92,13 @@ body {
     order: 1; /* Ustawienie kolejności na pierwsze miejsce */
     text-align: center;
     margin-bottom: 5px;
-    padding: 10px; /* Dodanie paddingu */
-    border: 2px solid #000; /* Dodanie ramki */
-    border-radius: 10px; /* Zaokrąglenie ramki */
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.8); /* Przezroczystość */
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 20px); /* Zmniejszenie szerokości */
     z-index: 1;
 }
 .right-section .title-container {
@@ -139,7 +141,7 @@ body {
     flex: 1;
 }
 .download-links a img {
-    width: 180px; /* Powiększenie ikon */
+    width: 180px;
     height: auto;
     object-fit: contain;
 }
@@ -157,7 +159,7 @@ body {
 .left-section img {
     width: 100%;
     height: auto;
-    max-height: calc(100vh - 200px); /* Ustawienie maksymalnej wysokości obrazów */
+    max-height: calc(100vh - 150px); /* Ustawienie maksymalnej wysokości obrazów */
     scroll-snap-align: start;
 }
 .footer {
