@@ -1,4 +1,3 @@
-
 # Regulamin aplikacji mobilnej Shuuty
 
 ## §1. Postanowienia ogólne
