@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms and Conditions</title>
+    <title>Regulamin</title>
     <link rel="stylesheet" href="../css/github-markdown.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         .markdown-body {
             zoom: 1.25; /* Ustawienie powiększenia na 125% */
+            background-color: #fff; /* Ustawienie białego tła */
+            color: #000; /* Ustawienie czarnego tekstu */
         }
         .markdown-body h1,
         .markdown-body h2,
@@ -18,9 +20,18 @@
         .markdown-body h6 {
             text-align: center;
         }
+        .header-link {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #0366d6;
+        }
     </style>
 </head>
 <body>
+    <a href="../index.html" class="header-link">wróć do Shuuty-APP</a>
     <article class="markdown-body" id="content"></article>
     <script>
         const userLang = navigator.language || navigator.userLanguage;
