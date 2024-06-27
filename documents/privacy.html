@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
+    <title>Polityka Prywatności</title>
     <link rel="stylesheet" href="../css/github-markdown.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         .markdown-body {
             zoom: 1.25; /* Ustawienie powiększenia na 125% */
+            background-color: #fff; /* Ustawienie białego tła */
+            color: #000; /* Ustawienie czarnego tekstu */
         }
         .markdown-body h1,
         .markdown-body h2,
@@ -35,7 +37,7 @@
         const userLang = navigator.language || navigator.userLanguage;
         const lang = userLang.startsWith('pl') ? 'pl' : 'en';
         const file = lang === 'pl' ? 'privacy.md' : 'privacy_en.md';
-
+        
         fetch(file)
             .then(response => response.text())
             .then(text => {
