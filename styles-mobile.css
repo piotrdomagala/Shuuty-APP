@@ -7,8 +7,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    overflow: hidden; /* Zablokowanie przewijania */
-    touch-action: none; /* Zablokowanie przybliżania i oddalania */
+    overflow-x: hidden;
 }
 .header {
     background-color: #fff;
@@ -21,6 +20,12 @@ body {
 .header .logo {
     width: 40px;
     height: auto;
+}
+.footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    box-sizing: border-box;
 }
 .dropdown {
     position: relative;
