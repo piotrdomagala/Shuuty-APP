@@ -1,36 +1,52 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const lang = getCookie('lang') || 'en';
+    applyLanguage(lang);
+
     document.querySelectorAll('.dropdown-content a').forEach(item => {
         item.addEventListener('click', event => {
             event.preventDefault();
             const lang = event.currentTarget.getAttribute('data-lang');
-            changeLanguage(lang);
+            setCookie('lang', lang, 365);
+            applyLanguage(lang);
         });
     });
 
-    // Set default language based on the cookie
-    const lang = document.cookie.match(/lang=(\w+);?/)?.[1] || 'en';
-    applyLanguage(lang);
-
-    // Event listeners for the links in the footer
     document.getElementById('privacy-link').addEventListener('click', function(event) {
         event.preventDefault();
-        const lang = document.cookie.match(/lang=(\w+);?/)?.[1] || 'en';
-        const file = lang === 'pl' ? 'documents/privacy.html' : 'documents/privacy.html';
-        window.location.href = file;
+        const lang = getCookie('lang') || 'en';
+        const file = lang === 'pl' ? 'privacy.md' : 'privacy_en.md';
+        window.location.href = `documents/${file}`;
     });
 
     document.getElementById('terms-link').addEventListener('click', function(event) {
         event.preventDefault();
-        const lang = document.cookie.match(/lang=(\w+);?/)?.[1] || 'en';
-        const file = lang === 'pl' ? 'documents/terms.html' : 'documents/terms.html';
-        window.location.href = file;
+        const lang = getCookie('lang') || 'en';
+        const file = lang === 'pl' ? 'terms.md' : 'terms_en.md';
+        window.location.href = `documents/${file}`;
     });
 });
 
-function changeLanguage(lang) {
-    document.cookie = `lang=${lang};path=/`;
-    applyLanguage(lang);
-    location.reload(); // Przeładuj stronę, aby zastosować zmiany języka
+function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days*24*60*60*1000));
+    const expires = "expires=" + d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+function getCookie(name) {
+    const cname = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(cname) === 0) {
+            return c.substring(cname.length, c.length);
+        }
+    }
+    return "";
 }
 
 function applyLanguage(lang) {
