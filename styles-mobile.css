@@ -148,7 +148,7 @@ body {
 .left-section {
     order: 2;
     display: flex;
-    overflow-x: auto; /* Umożliwienie poziomego przewijania */
+    overflow-x: scroll; /* Umożliwienie poziomego przewijania */
     gap: 5px;
     scroll-snap-type: x mandatory;
     margin-bottom: 0;
