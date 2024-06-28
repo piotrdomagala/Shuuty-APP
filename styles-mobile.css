@@ -155,12 +155,14 @@ body {
     flex-grow: 1;
     position: relative;
     margin-top: 10px; /* Dodanie marginesu, aby obrazy nie zasłaniały nagłówka */
+    justify-content: center;
 }
 .left-section img {
     width: 100%;
     height: auto;
     max-height: calc(100vh - 150px); /* Ustawienie maksymalnej wysokości obrazów */
     scroll-snap-align: start;
+    object-fit: contain; /* Ensure images maintain their aspect ratio */
 }
 .footer {
     display: none; /* Ukrycie stopki */
