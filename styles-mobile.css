@@ -180,4 +180,7 @@ body {
     .container {
         height: calc(100vw - 50px);
     }
+    .left-section img {
+        max-height: calc(100vw - 150px); /* Adjust image height for landscape orientation */
+    }
 }
