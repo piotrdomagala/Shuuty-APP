@@ -15,7 +15,7 @@ body {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end; /* Przesunięcie zawartości do dolnej krawędzi sekcji */
     padding: 5px 10px;
     box-sizing: border-box;
 }
@@ -186,7 +186,7 @@ body {
     height: auto;
     max-height: calc(100vh - 150px); /* Ustawienie maksymalnej wysokości obrazów */
     scroll-snap-align: start;
-    object-fit: cover;
+    object-fit: cover; /* Proporcjonalne wypełnienie kontenera */
 }
 
 .footer {
