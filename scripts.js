@@ -1,60 +1,35 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const lang = getCookie('lang') || 'en';
-    applyLanguage(lang);
-
     document.querySelectorAll('.dropdown-content a').forEach(item => {
         item.addEventListener('click', event => {
             event.preventDefault();
             const lang = event.currentTarget.getAttribute('data-lang');
-            setCookie('lang', lang, 365);
-            applyLanguage(lang);
+            changeLanguage(lang);
         });
     });
 
+    // Set default language to English
+    applyLanguage('en');
+
+    // Event listeners for the links in the footer
     document.getElementById('privacy-link').addEventListener('click', function(event) {
         event.preventDefault();
-        const lang = getCookie('lang') || 'en';
-        const file = lang === 'pl' ? 'documents/privacy.html' : 'documents/privacy_en.html';
-        window.location.href = file;
+        window.open('documents/privacy.html', '_blank');
     });
 
     document.getElementById('terms-link').addEventListener('click', function(event) {
         event.preventDefault();
-        const lang = getCookie('lang') || 'en';
-        const file = lang === 'pl' ? 'documents/terms.html' : 'documents/terms_en.html';
-        window.location.href = file;
+        window.open('documents/terms.html', '_blank');
     });
 
-    // Listen for orientation changes
-    window.addEventListener("orientationchange", function() {
-        adjustLayout();
-    });
+    // Handle orientation change
+    window.addEventListener('orientationchange', handleOrientationChange);
 
-    // Initial layout adjustment
-    adjustLayout();
+    // Initialize the correct layout on load
+    handleOrientationChange();
 });
 
-function setCookie(name, value, days) {
-    const d = new Date();
-    d.setTime(d.getTime() + (days*24*60*60*1000));
-    const expires = "expires=" + d.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path=/";
-}
-
-function getCookie(name) {
-    const cname = name + "=";
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const ca = decodedCookie.split(';');
-    for(let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) === ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(cname) === 0) {
-            return c.substring(cname.length, c.length);
-        }
-    }
-    return "";
+function changeLanguage(lang) {
+    applyLanguage(lang);
 }
 
 function applyLanguage(lang) {
@@ -110,16 +85,9 @@ function applyLanguage(lang) {
     }
 }
 
-function adjustLayout() {
-    const isLandscape = window.matchMedia("(orientation: landscape)").matches;
-    if (isLandscape) {
-        document.body.style.transform = 'rotate(90deg)';
-        document.body.style.transformOrigin = 'left top';
-        document.body.style.width = '100vh';
-        document.body.style.height = '100vw';
-    } else {
-        document.body.style.transform = 'none';
-        document.body.style.width = '100%';
-        document.body.style.height = '100%';
-    }
+function handleOrientationChange() {
+    const images = document.querySelectorAll('.left-section img');
+    images.forEach(img => {
+        img.style.maxHeight = 'calc(100vh - 150px)'; // Adjust max height to fit the screen
+    });
 }
