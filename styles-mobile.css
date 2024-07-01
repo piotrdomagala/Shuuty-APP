@@ -7,27 +7,27 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    overflow: hidden;
-    touch-action: none;
+    overflow: hidden; /* Zablokowanie przewijania */
+    touch-action: none; /* Zablokowanie zoomowania */
 }
 .header {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    padding: 5px 10px;
+    align-items: flex-end; /* Ustawienie elementów w dolnej części sekcji */
+    padding: 0.3em 0.5em; /* Zastosowanie jednostek względnych */
     box-sizing: border-box;
-    height: 60px;
+    height: 3.75em; /* Dostosowanie wysokości sekcji header */
 }
 .header .logo {
-    width: 40px;
+    width: 2.5em;
     height: auto;
-    margin-bottom: 0;
+    margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
 }
 .footer {
     background-color: #fff;
     text-align: center;
-    padding: 5px 0;
+    padding: 0.3em 0;
     box-sizing: border-box;
 }
 .dropdown {
@@ -42,33 +42,33 @@ body {
     font-size: 1em;
     display: flex;
     align-items: center;
-    margin-bottom: 0;
+    margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
 }
 .dropbtn img {
-    margin-left: 5px;
-    width: 20px;
-    height: 20px;
+    margin-left: 0.3em;
+    width: 1.25em;
+    height: 1.25em;
 }
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #fff;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.1);
     z-index: 1;
     right: 0;
 }
 .dropdown-content a {
     color: #000;
-    padding: 8px 12px;
+    padding: 0.5em 0.75em;
     text-decoration: none;
     display: flex;
     align-items: center;
     font-size: 0.9em;
 }
 .dropdown-content a img {
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
+    margin-right: 0.5em;
+    width: 1.25em;
+    height: 1.25em;
 }
 .dropdown-content a:hover {
     background-color: #f1f1f1;
@@ -84,29 +84,29 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 5px;
+    padding: 0.3em;
     flex-grow: 1;
-    max-width: 1200px;
+    max-width: 75em;
     margin: 0 auto;
     margin-bottom: 0;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 3.75em); /* Ustawienie wysokości widoku minus wysokość nagłówka */
 }
 .right-section {
-    order: 1;
+    order: 1; /* Ustawienie kolejności na pierwsze miejsce */
     text-align: center;
-    margin-bottom: 5px;
-    padding: 10px;
-    border: 2px solid #000;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.3em;
+    padding: 0.5em;
+    border: 0.125em solid #000;
+    border-radius: 0.625em;
+    background-color: rgba(255, 255, 255, 0.8); /* Przezroczystość */
     position: absolute;
     bottom: 0;
-    width: calc(100% - 40px);
+    width: calc(100% - 2.5em); /* Zmniejszenie szerokości ramki prawej sekcji */
     z-index: 1;
 }
 .right-section .title-container {
     display: inline-block;
-    margin-bottom: 5px;
+    margin-bottom: 0.3em;
 }
 .right-section .title {
     font-size: 1.2em;
@@ -115,14 +115,14 @@ body {
 }
 .right-section .description {
     font-size: 0.9em;
-    margin-top: 5px;
+    margin-top: 0.3em;
     margin-bottom: 0;
 }
 .download-section {
     text-align: center;
     order: 3;
     width: 100%;
-    margin-top: 2px;
+    margin-top: 0.3em;
     margin-bottom: 0;
 }
 .download-section h2 {
@@ -131,7 +131,7 @@ body {
 .download-links {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 0.6em;
     width: 100%;
     align-items: center;
 }
@@ -144,31 +144,33 @@ body {
     flex: 1;
 }
 .download-links a img {
-    width: 180px;
+    width: 11.25em;
     height: auto;
     object-fit: contain;
 }
 .left-section {
     order: 2;
     display: flex;
-    overflow-x: auto;
-    gap: 5px;
+    overflow-x: auto; /* Umożliwienie poziomego przewijania */
+    gap: 0.3em;
     scroll-snap-type: x mandatory;
     margin-bottom: 0;
     flex-grow: 1;
     position: relative;
-    margin-top: 10px;
+    margin-top: 0.6em; /* Dodanie marginesu, aby obrazy nie zasłaniały nagłówka */
 }
 .left-section img {
     width: 100%;
     height: auto;
-    max-height: calc(100vh - 150px);
-    scroll-snap-align: center;
+    max-height: calc(100vh - 9.375em); /* Ustawienie maksymalnej wysokości obrazów */
+    scroll-snap-align: start;
     object-fit: cover;
 }
 .footer {
-    display: none;
+    display: none; /* Ukrycie stopki */
 }
+
+/* Ustawienie orientacji na pionową */
 @media screen and (orientation: landscape) {
     body {
         transform: rotate(90deg);
@@ -178,6 +180,6 @@ body {
         overflow: hidden;
     }
     .container {
-        height: calc(100vw - 50px);
+        height: calc(100vw - 3.125em);
     }
 }
