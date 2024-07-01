@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Handle language changes
     document.querySelectorAll('.dropdown-content a').forEach(item => {
         item.addEventListener('click', event => {
             event.preventDefault();
@@ -13,17 +14,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listeners for the links in the footer
     document.getElementById('privacy-link').addEventListener('click', function(event) {
         event.preventDefault();
-        window.open('documents/privacy.html', '_blank');
+        window.open('documents/privacy.html', '_self');
     });
 
     document.getElementById('terms-link').addEventListener('click', function(event) {
         event.preventDefault();
-        window.open('documents/terms.html', '_blank');
+        window.open('documents/terms.html', '_self');
+    });
+
+    // Handle orientation change
+    window.addEventListener('orientationchange', function() {
+        setTimeout(() => {
+            window.location.reload();
+        }, 100);
     });
 });
 
 function changeLanguage(lang) {
     applyLanguage(lang);
+    document.cookie = `lang=${lang};path=/;`;
 }
 
 function applyLanguage(lang) {
