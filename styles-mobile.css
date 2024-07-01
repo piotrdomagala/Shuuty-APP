@@ -156,6 +156,7 @@ body {
     position: relative;
     margin-top: 10px; /* Dodanie marginesu, aby obrazy nie zasłaniały nagłówka */
     justify-content: center;
+    align-items: center;
 }
 .left-section img {
     width: 100%;
@@ -180,7 +181,8 @@ body {
     .container {
         height: calc(100vw - 50px);
     }
-    .left-section img {
-        max-height: calc(100vw - 150px); /* Adjust image height for landscape orientation */
+    .left-section {
+        max-height: 100vh;
+        max-width: 100vw;
     }
 }
