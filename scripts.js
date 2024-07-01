@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const lang = getCookie('lang') || 'en';
-    applyLanguage(lang);
-
     document.querySelectorAll('.dropdown-content a').forEach(item => {
         item.addEventListener('click', event => {
             event.preventDefault();
             const lang = event.currentTarget.getAttribute('data-lang');
-            setCookie('lang', lang, 365);
-            applyLanguage(lang);
+            changeLanguage(lang);
         });
     });
 
+    // Set default language to English
+    applyLanguage('en');
+
+    // Event listeners for the links in the footer
     document.getElementById('privacy-link').addEventListener('click', function(event) {
         event.preventDefault();
         const lang = getCookie('lang') || 'en';
@@ -25,17 +25,15 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = file;
     });
 
-    // Handling screen orientation change
-    window.addEventListener('orientationchange', function() {
-        if (window.orientation === 0 || window.orientation === 180) {
-            document.body.style.height = '100vh';
-            document.querySelector('.container').style.height = 'calc(100vh - 60px)';
-        } else {
-            document.body.style.height = '100vw';
-            document.querySelector('.container').style.height = 'calc(100vw - 50px)';
-        }
-    });
+    // Monitor orientation changes
+    window.addEventListener('orientationchange', handleOrientationChange);
 });
+
+function handleOrientationChange() {
+    // Reset scroll position to top when orientation changes
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 
 function setCookie(name, value, days) {
     const d = new Date();
@@ -58,6 +56,11 @@ function getCookie(name) {
         }
     }
     return "";
+}
+
+function changeLanguage(lang) {
+    setCookie('lang', lang, 365);
+    applyLanguage(lang);
 }
 
 function applyLanguage(lang) {
