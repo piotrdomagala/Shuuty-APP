@@ -20,12 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         window.open('documents/terms.html', '_blank');
     });
-
-    // Handle orientation change
-    window.addEventListener('orientationchange', handleOrientationChange);
-
-    // Initialize the correct layout on load
-    handleOrientationChange();
 });
 
 function changeLanguage(lang) {
@@ -83,11 +77,4 @@ function applyLanguage(lang) {
             console.warn(`Element with id ${key} not found`);
         }
     }
-}
-
-function handleOrientationChange() {
-    const images = document.querySelectorAll('.left-section img');
-    images.forEach(img => {
-        img.style.maxHeight = 'calc(100vh - 150px)'; // Adjust max height to fit the screen
-    });
 }
