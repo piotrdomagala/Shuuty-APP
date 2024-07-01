@@ -161,6 +161,7 @@ body {
     height: auto;
     max-height: calc(100vh - 150px); /* Ustawienie maksymalnej wysokości obrazów */
     scroll-snap-align: start;
+    object-fit: cover;
 }
 .footer {
     display: none; /* Ukrycie stopki */
