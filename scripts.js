@@ -1,10 +1,3 @@
-window.addEventListener('orientationchange', function() {
-    setTimeout(function() {
-        document.body.style.height = window.innerHeight + 'px';
-        document.body.style.width = window.innerWidth + 'px';
-    }, 100);
-});
-
 document.addEventListener('DOMContentLoaded', function() {
     const lang = getCookie('lang') || 'en';
     applyLanguage(lang);
@@ -31,6 +24,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const file = lang === 'pl' ? 'documents/terms.html' : 'documents/terms_en.html';
         window.location.href = file;
     });
+
+    // Listen for orientation changes
+    window.addEventListener("orientationchange", function() {
+        adjustLayout();
+    });
+
+    // Initial layout adjustment
+    adjustLayout();
 });
 
 function setCookie(name, value, days) {
@@ -106,5 +107,19 @@ function applyLanguage(lang) {
         } else {
             console.warn(`Element with id ${key} not found`);
         }
+    }
+}
+
+function adjustLayout() {
+    const isLandscape = window.matchMedia("(orientation: landscape)").matches;
+    if (isLandscape) {
+        document.body.style.transform = 'rotate(90deg)';
+        document.body.style.transformOrigin = 'left top';
+        document.body.style.width = '100vh';
+        document.body.style.height = '100vw';
+    } else {
+        document.body.style.transform = 'none';
+        document.body.style.width = '100%';
+        document.body.style.height = '100%';
     }
 }
