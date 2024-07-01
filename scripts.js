@@ -1,3 +1,10 @@
+window.addEventListener('orientationchange', function() {
+    setTimeout(function() {
+        document.body.style.height = window.innerHeight + 'px';
+        document.body.style.width = window.innerWidth + 'px';
+    }, 100);
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const lang = getCookie('lang') || 'en';
     applyLanguage(lang);
