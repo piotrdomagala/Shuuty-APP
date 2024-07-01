@@ -16,12 +16,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-end; /* Przesunięcie zawartości do dolnej krawędzi sekcji */
-    padding: 10px 10px; /* Zwiększenie marginesu wewnętrznego */
+    padding: 15px 10px; /* Zwiększenie marginesu wewnętrznego */
     box-sizing: border-box;
+    height: 70px; /* Zwiększenie wysokości sekcji nagłówka */
 }
 
 .header .logo {
-    width: 35px; /* Zmniejszenie szerokości logo */
+    width: 50px; /* Powiększenie szerokości logo */
     height: auto;
 }
 
@@ -99,7 +100,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 0;
-    height: calc(100vh - 50px); /* Ustawienie wysokości widoku minus wysokość nagłówka */
+    height: calc(100vh - 70px); /* Ustawienie wysokości widoku minus wysokość nagłówka */
 }
 
 .right-section {
@@ -184,7 +185,7 @@ body {
 .left-section img {
     width: 100%;
     height: auto;
-    max-height: calc(100vh - 150px); /* Ustawienie maksymalnej wysokości obrazów */
+    max-height: calc(100vh - 220px); /* Ustawienie maksymalnej wysokości obrazów */
     scroll-snap-align: start;
     object-fit: cover; /* Proporcjonalne wypełnienie kontenera */
 }
