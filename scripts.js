@@ -1,38 +1,63 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Handle language changes
+    const lang = getCookie('lang') || 'en';
+    applyLanguage(lang);
+
     document.querySelectorAll('.dropdown-content a').forEach(item => {
         item.addEventListener('click', event => {
             event.preventDefault();
             const lang = event.currentTarget.getAttribute('data-lang');
-            changeLanguage(lang);
+            setCookie('lang', lang, 365);
+            applyLanguage(lang);
         });
     });
 
-    // Set default language to English
-    applyLanguage('en');
-
-    // Event listeners for the links in the footer
     document.getElementById('privacy-link').addEventListener('click', function(event) {
         event.preventDefault();
-        window.open('documents/privacy.html', '_self');
+        const lang = getCookie('lang') || 'en';
+        const file = lang === 'pl' ? 'documents/privacy.html' : 'documents/privacy_en.html';
+        window.location.href = file;
     });
 
     document.getElementById('terms-link').addEventListener('click', function(event) {
         event.preventDefault();
-        window.open('documents/terms.html', '_self');
+        const lang = getCookie('lang') || 'en';
+        const file = lang === 'pl' ? 'documents/terms.html' : 'documents/terms_en.html';
+        window.location.href = file;
     });
 
-    // Handle orientation change
+    // Handling screen orientation change
     window.addEventListener('orientationchange', function() {
-        setTimeout(() => {
-            window.location.reload();
-        }, 100);
+        if (window.orientation === 0 || window.orientation === 180) {
+            document.body.style.height = '100vh';
+            document.querySelector('.container').style.height = 'calc(100vh - 60px)';
+        } else {
+            document.body.style.height = '100vw';
+            document.querySelector('.container').style.height = 'calc(100vw - 50px)';
+        }
     });
 });
 
-function changeLanguage(lang) {
-    applyLanguage(lang);
-    document.cookie = `lang=${lang};path=/;`;
+function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days*24*60*60*1000));
+    const expires = "expires=" + d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+function getCookie(name) {
+    const cname = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(cname) === 0) {
+            return c.substring(cname.length, c.length);
+        }
+    }
+    return "";
 }
 
 function applyLanguage(lang) {
