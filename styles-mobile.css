@@ -14,7 +14,7 @@ body {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-end; /* Ustawienie elementów w dolnej części sekcji */
     padding: 5px 10px;
     box-sizing: border-box;
     height: 60px; /* Dostosowanie wysokości sekcji header */
@@ -152,19 +152,19 @@ body {
     order: 2;
     display: flex;
     overflow-x: auto; /* Umożliwienie poziomego przewijania */
+    gap: 5px;
     scroll-snap-type: x mandatory;
     margin-bottom: 0;
     flex-grow: 1;
     position: relative;
     margin-top: 10px; /* Dodanie marginesu, aby obrazy nie zasłaniały nagłówka */
     scroll-behavior: smooth; /* Płynne przewijanie */
-    justify-content: center; /* Wyśrodkowanie obrazów */
 }
 .left-section img {
-    min-width: 100%;
+    width: 100%;
     height: auto;
     max-height: calc(100vh - 150px); /* Ustawienie maksymalnej wysokości obrazów */
-    scroll-snap-align: center; /* Wyśrodkowanie obrazów podczas przewijania */
+    scroll-snap-align: center; /* Wycentrowanie obrazów */
     object-fit: cover;
 }
 .footer {
@@ -181,6 +181,6 @@ body {
         overflow: hidden;
     }
     .container {
-        height: calc(100vw - 50px);
+        height: calc(100vw - 60px); /* Ustawienie wysokości widoku minus wysokość nagłówka */
     }
 }
