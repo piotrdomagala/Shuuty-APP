@@ -14,15 +14,13 @@ body {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; /* Ustawienie elementów w dolnej części sekcji */
+    align-items: center;
     padding: 5px 10px;
     box-sizing: border-box;
-    height: 60px; /* Dostosowanie wysokości sekcji header */
 }
 .header .logo {
     width: 40px;
     height: auto;
-    margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
 }
 .footer {
     background-color: #fff;
@@ -42,7 +40,6 @@ body {
     font-size: 1em;
     display: flex;
     align-items: center;
-    margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
 }
 .dropbtn img {
     margin-left: 5px;
@@ -89,7 +86,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     margin-bottom: 0;
-    height: calc(100vh - 60px); /* Ustawienie wysokości widoku minus wysokość nagłówka */
+    height: calc(100vh - 50px); /* Ustawienie wysokości widoku minus wysokość nagłówka */
 }
 .right-section {
     order: 1; /* Ustawienie kolejności na pierwsze miejsce */
@@ -158,14 +155,12 @@ body {
     flex-grow: 1;
     position: relative;
     margin-top: 10px; /* Dodanie marginesu, aby obrazy nie zasłaniały nagłówka */
-    scroll-behavior: smooth; /* Płynne przewijanie */
 }
 .left-section img {
     width: 100%;
     height: auto;
     max-height: calc(100vh - 150px); /* Ustawienie maksymalnej wysokości obrazów */
-    scroll-snap-align: center; /* Wycentrowanie obrazów */
-    object-fit: cover;
+    scroll-snap-align: start;
 }
 .footer {
     display: none; /* Ukrycie stopki */
@@ -181,6 +176,6 @@ body {
         overflow: hidden;
     }
     .container {
-        height: calc(100vw - 60px); /* Ustawienie wysokości widoku minus wysokość nagłówka */
+        height: calc(100vw - 50px);
     }
 }
