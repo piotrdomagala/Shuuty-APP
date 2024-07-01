@@ -17,10 +17,6 @@ body {
     align-items: center;
     padding: 5px 10px;
     box-sizing: border-box;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
 }
 .header .logo {
     width: 40px;
@@ -31,10 +27,6 @@ body {
     text-align: center;
     padding: 5px 0;
     box-sizing: border-box;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 1000;
 }
 .dropdown {
     position: relative;
@@ -93,9 +85,8 @@ body {
     flex-grow: 1;
     max-width: 1200px;
     margin: 0 auto;
-    margin-top: 50px; /* Ustawienie marginesu górnego dla nagłówka */
-    margin-bottom: 50px; /* Ustawienie marginesu dolnego dla stopki */
-    height: calc(100vh - 100px); /* Ustawienie wysokości widoku minus wysokość nagłówka i stopki */
+    margin-bottom: 0;
+    height: calc(100vh - 50px); /* Ustawienie wysokości widoku minus wysokość nagłówka */
 }
 .right-section {
     order: 1; /* Ustawienie kolejności na pierwsze miejsce */
@@ -105,6 +96,8 @@ body {
     border: 2px solid #000;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.8); /* Przezroczystość */
+    position: absolute;
+    bottom: 0;
     width: calc(100% - 40px); /* Zmniejszenie szerokości ramki prawej sekcji */
     z-index: 1;
 }
@@ -162,7 +155,6 @@ body {
     flex-grow: 1;
     position: relative;
     margin-top: 10px; /* Dodanie marginesu, aby obrazy nie zasłaniały nagłówka */
-    width: 100%;
 }
 .left-section img {
     width: 100%;
@@ -185,11 +177,6 @@ body {
         overflow: hidden;
     }
     .container {
-        height: calc(100vw - 100px); /* Wysokość widoku minus wysokość nagłówka i stopki */
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-    .header, .footer {
-        display: none; /* Ukryj nagłówek i stopkę w trybie poziomym */
+        height: calc(100vw - 50px);
     }
 }
