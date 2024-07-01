@@ -1,11 +1,3 @@
-:root {
-    --header-height: 10vh;
-    --logo-width: 10vw;
-    --dropdown-img-width: 5vw;
-    --right-section-width: calc(100% - 4em);
-    --right-section-padding: 1em;
-}
-
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -15,35 +7,28 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-
 .header {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; /* Ustawienie elementów w dolnej części sekcji */
-    padding: 0.5em 1em;
+    align-items: center;
+    padding: 10px 20px;
     box-sizing: border-box;
-    height: var(--header-height); /* Dostosowanie wysokości sekcji header */
 }
-
 .header .logo {
-    width: var(--logo-width);
+    width: 60px;
     height: auto;
-    margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
 }
-
 .footer {
     background-color: #fff;
     text-align: center;
-    padding: 0.5em 0;
+    padding: 10px 0;
     box-sizing: border-box;
 }
-
 .dropdown {
     position: relative;
     display: inline-block;
 }
-
 .dropbtn {
     background-color: transparent;
     color: #000;
@@ -52,15 +37,12 @@ body {
     font-size: 1em;
     display: flex;
     align-items: center;
-    margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
 }
-
 .dropbtn img {
     margin-left: 5px;
-    width: var(--dropdown-img-width);
-    height: auto;
+    width: 20px;
+    height: 20px;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -69,7 +51,6 @@ body {
     z-index: 1;
     right: 0;
 }
-
 .dropdown-content a {
     color: #000;
     padding: 8px 12px;
@@ -78,25 +59,20 @@ body {
     align-items: center;
     font-size: 0.9em;
 }
-
 .dropdown-content a img {
     margin-right: 10px;
-    width: var(--dropdown-img-width);
-    height: auto;
+    width: 20px;
+    height: 20px;
 }
-
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 .dropdown:hover .dropbtn {
     color: #333;
 }
-
 .container {
     display: flex;
     flex-direction: row;
@@ -109,7 +85,6 @@ body {
     margin: 0 auto;
     gap: 20px;
 }
-
 .left-section {
     display: flex;
     flex-direction: row;
@@ -118,16 +93,13 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .left-section img {
     max-width: 50%;
     height: auto;
 }
-
 .left-section img:not(:first-child):not(:nth-child(2)) {
     display: none;
 }
-
 .right-section {
     flex: 1;
     display: flex;
@@ -136,35 +108,29 @@ body {
     align-items: center;
     text-align: center;
 }
-
 .right-section .title {
     font-size: 1.65em;
     font-weight: bold;
     margin-bottom: 10px;
 }
-
 .right-section .description {
     font-size: 1.32em;
     margin-top: 0;
 }
-
 .download-section {
     text-align: center;
     padding: 10px 0;
 }
-
 .download-section h2 {
     font-size: 1.32em;
     font-weight: normal;
     margin-bottom: 0.5em;
 }
-
 .download-links {
     display: flex;
     gap: 20px;
     justify-content: center;
 }
-
 .download-links a {
     display: flex;
     flex-direction: column;
@@ -172,34 +138,28 @@ body {
     text-decoration: none;
     color: #000;
 }
-
 .download-links a img {
     max-width: 165px;
     height: auto;
 }
-
 .footer {
     padding: 10px 20px;
 }
-
 .footer span {
     display: block;
     margin-bottom: 0;
 }
-
 .footer .footer-links {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 0;
 }
-
 .footer .footer-links a {
     color: #777;
     text-decoration: none;
     transition: color 0.3s;
 }
-
 .footer .footer-links a:hover {
     color: #333;
 }
