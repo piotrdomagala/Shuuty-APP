@@ -14,14 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('privacy-link').addEventListener('click', function(event) {
         event.preventDefault();
         const lang = getCookie('lang') || 'en';
-        const file = lang === 'pl' ? 'documents/privacy.html' : 'documents/privacy_en.html';
+        const file = lang === 'pl' ? 'documents/privacy.md' : 'documents/privacy_en.md';
         window.location.href = file;
     });
 
     document.getElementById('terms-link').addEventListener('click', function(event) {
         event.preventDefault();
         const lang = getCookie('lang') || 'en';
-        const file = lang === 'pl' ? 'documents/terms.html' : 'documents/terms_en.html';
+        const file = lang === 'pl' ? 'documents/terms.md' : 'documents/terms_en.md';
         window.location.href = file;
     });
 
