@@ -11,6 +11,13 @@ body {
     touch-action: none; /* Zablokowanie zoomowania */
 }
 
+/* Resetowanie marginu i paddingu dla wszystkich elementów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .header {
     background-color: #fff;
     display: flex;
@@ -32,6 +39,7 @@ body {
     text-align: center;
     padding: 0.5em 0;
     box-sizing: border-box;
+    display: none; /* Ukrycie stopki */
 }
 
 .dropdown {
@@ -191,10 +199,6 @@ body {
     object-fit: cover;
 }
 
-.footer {
-    display: none; /* Ukrycie stopki */
-}
-
 /* Ustawienie orientacji na pionową */
 @media screen and (orientation: landscape) {
     body {
@@ -204,5 +208,41 @@ body {
     }
     .container {
         height: calc(100vh - 41.2px);
+    }
+}
+
+/* Media Queries dla większej responsywności */
+@media (max-width: 600px) {
+    .container {
+        padding: 1em;
+        height: auto; /* Dostosowanie wysokości do zawartości */
+    }
+    .right-section {
+        position: static;
+        width: 100%;
+    }
+    .left-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    .container {
+        padding: 1.5em;
+    }
+    .right-section {
+        position: static;
+        width: 90%;
+    }
+}
+
+@media (min-width: 1201px) {
+    .container {
+        padding: 2em;
+    }
+    .right-section {
+        position: static;
+        width: 80%;
     }
 }
