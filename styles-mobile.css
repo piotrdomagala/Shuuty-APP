@@ -1,11 +1,5 @@
-/* Resetowanie marginesów i paddingu */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
+    margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     background-color: #fff;
     color: #000;
@@ -21,15 +15,16 @@ body {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-end; /* Ustawienie elementów w dolnej części sekcji */
     padding: 0.5em 1em;
     box-sizing: border-box;
-    height: 10vh; /* Dostosowanie wysokości sekcji header */
+    height: 41.2px; /* Dostosowanie wysokości sekcji header */
 }
 
 .header .logo {
-    width: 10vw;
+    width: 41.19px;
     height: auto;
+    margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
 }
 
 .footer {
@@ -52,11 +47,12 @@ body {
     font-size: 1em;
     display: flex;
     align-items: center;
+    margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
 }
 
 .dropbtn img {
     margin-left: 0.5em;
-    width: 5vw;
+    width: 20px;
     height: auto;
 }
 
@@ -80,7 +76,7 @@ body {
 
 .dropdown-content a img {
     margin-right: 0.5em;
-    width: 5vw;
+    width: 20px;
     height: auto;
 }
 
@@ -106,20 +102,20 @@ body {
     max-width: 100%;
     margin: 0 auto;
     margin-bottom: 0;
-    height: calc(100vh - 10vh); /* Ustawienie wysokości widoku minus wysokość nagłówka */
+    height: calc(100vh - 41.2px); /* Ustawienie wysokości widoku minus wysokość nagłówka */
 }
 
 .right-section {
-    order: 1;
+    order: 1; /* Ustawienie kolejności na pierwsze miejsce */
     text-align: center;
     margin-bottom: 0.5em;
     padding: 1em;
     border: 0.2em solid #000;
     border-radius: 1em;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8); /* Przezroczystość */
     position: absolute;
     bottom: 0;
-    width: calc(100% - 4em);
+    width: calc(100% - 4em); /* Zmniejszenie szerokości ramki prawej sekcji */
     z-index: 1;
 }
 
@@ -131,11 +127,13 @@ body {
 .right-section .title {
     font-size: 1.2em;
     font-weight: bold;
+    margin-bottom: 0;
 }
 
 .right-section .description {
     font-size: 0.9em;
     margin-top: 0.5em;
+    margin-bottom: 0;
 }
 
 .download-section {
@@ -143,6 +141,7 @@ body {
     order: 3;
     width: 100%;
     margin-top: 0.2em;
+    margin-bottom: 0;
 }
 
 .download-section h2 {
@@ -167,7 +166,7 @@ body {
 }
 
 .download-links a img {
-    width: 18vw;
+    width: 165px;
     height: auto;
     object-fit: contain;
 }
@@ -175,27 +174,28 @@ body {
 .left-section {
     order: 2;
     display: flex;
-    overflow-x: auto;
+    overflow-x: auto; /* Umożliwienie poziomego przewijania */
     gap: 0.5em;
     scroll-snap-type: x mandatory;
     margin-bottom: 0;
     flex-grow: 1;
     position: relative;
-    margin-top: 1em;
+    margin-top: 1em; /* Dodanie marginesu, aby obrazy nie zasłaniały nagłówka */
 }
 
 .left-section img {
     width: 100%;
     height: auto;
-    max-height: calc(100vh - 15vh);
+    max-height: calc(100vh - 15vh); /* Ustawienie maksymalnej wysokości obrazów */
     scroll-snap-align: start;
     object-fit: cover;
 }
 
 .footer {
-    display: none;
+    display: none; /* Ukrycie stopki */
 }
 
+/* Ustawienie orientacji na pionową */
 @media screen and (orientation: landscape) {
     body {
         width: 100vw;
@@ -203,6 +203,6 @@ body {
         overflow: hidden;
     }
     .container {
-        height: calc(100vh - 10vh);
+        height: calc(100vh - 41.2px);
     }
 }
