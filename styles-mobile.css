@@ -195,14 +195,35 @@ body {
     display: none; /* Ukrycie stopki */
 }
 
-/* Ustawienie orientacji na pionową */
+/* Ustawienie orientacji na poziomą */
 @media screen and (orientation: landscape) {
     body {
         width: 100vw;
         height: 100vh;
         overflow: hidden;
     }
+
     .container {
+        flex-direction: row; /* Zmiana kierunku flex na poziomy */
+        justify-content: space-between; /* Dopasowanie sekcji */
         height: calc(100vh - 4vh);
+    }
+
+    .left-section {
+        order: 1; /* Kolejność sekcji */
+        flex: 1; /* Dopasowanie szerokości */
+        margin-top: 0; /* Usunięcie marginesu górnego */
+    }
+
+    .right-section {
+        order: 2; /* Kolejność sekcji */
+        position: static; /* Usunięcie pozycji absolutnej */
+        width: 30vw; /* Ustawienie szerokości sekcji */
+        height: 100%; /* Ustawienie wysokości sekcji */
+        margin-left: 1em; /* Dodanie marginesu */
+    }
+
+    .download-links a img {
+        width: 80px; /* Dostosowanie wielkości ikony */
     }
 }
