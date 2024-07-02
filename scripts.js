@@ -57,6 +57,8 @@ function getCookie(name) {
 function changeLanguage(lang) {
     setCookie('lang', lang, 365);
     applyLanguage(lang);
+    // Reload page to apply language changes
+    location.reload();
 }
 
 function applyLanguage(lang) {
