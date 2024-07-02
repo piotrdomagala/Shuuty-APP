@@ -13,16 +13,53 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listeners for the links in the footer
     document.getElementById('privacy-link').addEventListener('click', function(event) {
         event.preventDefault();
-        window.open('documents/privacy.html', '_blank');
+        const lang = getCookie('lang') || 'en';
+        const file = lang === 'pl' ? 'documents/privacy.html' : 'documents/privacy_en.html';
+        window.location.href = file;
     });
 
     document.getElementById('terms-link').addEventListener('click', function(event) {
         event.preventDefault();
-        window.open('documents/terms.html', '_blank');
+        const lang = getCookie('lang') || 'en';
+        const file = lang === 'pl' ? 'documents/terms.html' : 'documents/terms_en.html';
+        window.location.href = file;
     });
+
+    // Monitor orientation changes
+    window.addEventListener('orientationchange', handleOrientationChange);
 });
 
+function handleOrientationChange() {
+    // Reset scroll position to top when orientation changes
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days*24*60*60*1000));
+    const expires = "expires=" + d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+function getCookie(name) {
+    const cname = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(cname) === 0) {
+            return c.substring(cname.length, c.length);
+        }
+    }
+    return "";
+}
+
 function changeLanguage(lang) {
+    setCookie('lang', lang, 365);
     applyLanguage(lang);
 }
 
