@@ -8,10 +8,10 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         .markdown-body {
-            zoom: 1.25; /* Ustawienie powiększenia na 125% */
-            background-color: #fff; /* Ustawienie białego tła */
-            color: #000; /* Ustawienie czarnego tekstu */
-            margin-top: 60px; /* Dodanie marginesu górnego dla odstępu */
+            zoom: 1.25;
+            background-color: #fff;
+            color: #000;
+            margin-top: 60px;
         }
         .markdown-body h1,
         .markdown-body h2,
@@ -25,17 +25,20 @@
             position: absolute;
             left: 10px;
             top: 10px;
-            font-size: 20px; /* Powiększenie rozmiaru tekstu */
+            font-size: 20px;
             text-decoration: none;
             color: #0366d6;
+        }
+        .header-link::before {
+            content: "← ";
         }
     </style>
 </head>
 <body>
-    <a href="../index.html" class="header-link">wróć do Shuuty-APP</a>
+    <a href="../index.html" class="header-link">Powrót do strony głównej</a>
     <article class="markdown-body" id="content"></article>
     <script>
-        const lang = getCookie('lang') || 'en'; // Pobierz ustawienia języka z ciasteczek
+        const lang = getCookie('lang') || 'en'; 
         const file = lang === 'pl' ? 'terms.md' : 'terms_en.md';
         
         fetch(file)
