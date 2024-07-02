@@ -15,10 +15,10 @@ body {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; /* Ustawienie elementów w dolnej części sekcji */
-    padding: 0.2em 0.5em; /* Zmniejszenie paddingu */
+    align-items: center; /* Zmiana na center */
+    padding: 0.5em 1em; /* Dostosowanie paddingu */
     box-sizing: border-box;
-    height: 4vh; /* Zmniejszenie wysokości sekcji header */
+    height: auto; /* Zamiast stałej wysokości */
 }
 
 .header .logo {
