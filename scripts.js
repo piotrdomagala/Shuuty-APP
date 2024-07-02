@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Zmiana adresu URL na główną stronę bez 'index.html'
+    if (window.location.pathname.endsWith('index.html')) {
+        window.history.replaceState({}, document.title, window.location.pathname.replace('index.html', ''));
+    }
+
     document.querySelectorAll('.dropdown-content a').forEach(item => {
         item.addEventListener('click', event => {
             event.preventDefault();
