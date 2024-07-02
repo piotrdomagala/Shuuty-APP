@@ -16,15 +16,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-end; /* Ustawienie elementów w dolnej części sekcji */
-    padding: 0.5em 1em;
+    padding: 0.2em 0.5em; /* Zmniejszenie paddingu */
     box-sizing: border-box;
-    height: 10vh; /* Dostosowanie wysokości sekcji header */
+    height: 4vh; /* Zmniejszenie wysokości sekcji header */
 }
 
 .header .logo {
     width: 10vw;
     height: auto;
-    margin-bottom: -0.5em; /* Obniżenie logo */
+    margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
 }
 
 .footer {
@@ -102,7 +102,7 @@ body {
     max-width: 100%;
     margin: 0 auto;
     margin-bottom: 0;
-    height: calc(100vh - 10vh); /* Ustawienie wysokości widoku minus wysokość nagłówka */
+    height: calc(100vh - 4vh); /* Ustawienie wysokości widoku minus wysokość nagłówka */
 }
 
 .right-section {
@@ -166,7 +166,7 @@ body {
 }
 
 .download-links a img {
-    width: 18vw;
+    width: 165px;
     height: auto;
     object-fit: contain;
 }
@@ -203,6 +203,6 @@ body {
         overflow: hidden;
     }
     .container {
-        height: calc(100vh - 10vh);
+        height: calc(100vh - 4vh);
     }
 }
