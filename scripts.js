@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Set default language to English
-    applyLanguage('en');
+    applyLanguage(getCookie('lang') || 'en');
 
     // Event listeners for the links in the footer
     document.getElementById('privacy-link').addEventListener('click', function(event) {
