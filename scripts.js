@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
         event.preventDefault();
         const lang = getCookie('lang') || 'en';
         const file = lang === 'pl' ? 'documents/privacy.html' : 'documents/privacy_en.md';
-        window.location.href = file;
+        showMarkdown(file);
     });
 
     document.getElementById('terms-link').addEventListener('click', function(event) {
         event.preventDefault();
         const lang = getCookie('lang') || 'en';
         const file = lang === 'pl' ? 'documents/terms.html' : 'documents/terms_en.md';
-        window.location.href = file;
+        showMarkdown(file);
     });
 
     // Monitor orientation changes
@@ -114,4 +114,17 @@ function applyLanguage(lang) {
             console.warn(`Element with id ${key} not found`);
         }
     }
+}
+
+function showMarkdown(file) {
+    fetch(file)
+        .then(response => response.text())
+        .then(text => {
+            const markdownContainer = document.createElement('div');
+            markdownContainer.classList.add('markdown-body');
+            markdownContainer.innerHTML = marked(text);
+            document.body.innerHTML = '';
+            document.body.appendChild(markdownContainer);
+        })
+        .catch(error => console.error('Error fetching markdown file:', error));
 }
