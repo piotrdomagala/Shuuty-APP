@@ -103,6 +103,7 @@ body {
     margin: 0 auto;
     margin-bottom: 0;
     height: calc(100vh - 4vh); /* Ustawienie wysokości widoku minus wysokość nagłówka */
+    overflow-y: auto; /* Dodanie przewijania w pionie */
 }
 
 .right-section {
@@ -113,8 +114,6 @@ body {
     border: 0.2em solid #000;
     border-radius: 1em;
     background-color: rgba(255, 255, 255, 0.8); /* Przezroczystość */
-    position: absolute;
-    bottom: 0;
     width: calc(100% - 4em); /* Zmniejszenie szerokości ramki prawej sekcji */
     z-index: 1;
 }
@@ -200,13 +199,13 @@ body {
     body {
         width: 100vw;
         height: 100vh;
-        overflow: hidden;
+        overflow: auto; /* Dodanie przewijania */
     }
 
     .container {
         flex-direction: row; /* Zmiana kierunku flex na poziomy */
         justify-content: space-between; /* Dopasowanie sekcji */
-        height: calc(100vh - 4vh);
+        height: auto; /* Ustawienie wysokości na auto, aby umożliwić przewijanie */
     }
 
     .left-section {
@@ -226,9 +225,8 @@ body {
 
     .right-section {
         order: 2; /* Kolejność sekcji */
-        position: static; /* Usunięcie pozycji absolutnej */
         width: 30vw; /* Ustawienie szerokości sekcji */
-        height: 100%; /* Ustawienie wysokości sekcji */
+        height: auto; /* Ustawienie wysokości na auto, aby umożliwić przewijanie */
         margin-left: 1em; /* Dodanie marginesu */
     }
 
