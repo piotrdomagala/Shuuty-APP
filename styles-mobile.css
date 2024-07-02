@@ -211,8 +211,17 @@ body {
 
     .left-section {
         order: 1; /* Kolejność sekcji */
-        flex: 1; /* Dopasowanie szerokości */
+        flex: 2; /* Dopasowanie szerokości */
         margin-top: 0; /* Usunięcie marginesu górnego */
+    }
+
+    .left-section img {
+        max-width: 50%; /* Wyświetlanie dwóch obrazów */
+        height: auto;
+    }
+
+    .left-section img:not(:first-child):not(:nth-child(2)) {
+        display: none; /* Ukrycie pozostałych obrazów */
     }
 
     .right-section {
