@@ -15,16 +15,16 @@ body {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Zmiana na center */
-    padding: 0.5em 1em; /* Dostosowanie paddingu */
+    align-items: center;
+    padding: 0.5em 1em;
     box-sizing: border-box;
-    height: auto; /* Zamiast stałej wysokości */
+    height: auto;
 }
 
 .header .logo {
     width: 10vw;
     height: auto;
-    margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
+    margin-bottom: 0;
 }
 
 .footer {
@@ -47,7 +47,7 @@ body {
     font-size: 1em;
     display: flex;
     align-items: center;
-    margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
+    margin-bottom: 0;
 }
 
 .dropbtn img {
@@ -102,19 +102,18 @@ body {
     max-width: 100%;
     margin: 0 auto;
     margin-bottom: 0;
-    height: calc(100vh - 4vh); /* Ustawienie wysokości widoku minus wysokość nagłówka */
-    overflow-y: auto; /* Dodanie przewijania w pionie */
+    height: calc(100vh - 4vh);
 }
 
 .right-section {
-    order: 1; /* Ustawienie kolejności na pierwsze miejsce */
+    order: 1;
     text-align: center;
     margin-bottom: 0.5em;
     padding: 1em;
     border: 0.2em solid #000;
     border-radius: 1em;
-    background-color: rgba(255, 255, 255, 0.8); /* Przezroczystość */
-    width: calc(100% - 4em); /* Zmniejszenie szerokości ramki prawej sekcji */
+    background-color: rgba(255, 255, 255, 0.8);
+    width: calc(100% - 4em);
     z-index: 1;
 }
 
@@ -173,28 +172,27 @@ body {
 .left-section {
     order: 2;
     display: flex;
-    overflow-x: auto; /* Umożliwienie poziomego przewijania */
+    overflow-x: auto;
     gap: 0.5em;
     scroll-snap-type: x mandatory;
     margin-bottom: 0;
     flex-grow: 1;
     position: relative;
-    margin-top: 1em; /* Dodanie marginesu, aby obrazy nie zasłaniały nagłówka */
+    margin-top: 1em;
 }
 
 .left-section img {
     width: 100%;
     height: auto;
-    max-height: calc(100vh - 15vh); /* Ustawienie maksymalnej wysokości obrazów */
+    max-height: calc(100vh - 15vh);
     scroll-snap-align: start;
     object-fit: cover;
 }
 
 .footer {
-    display: none; /* Ukrycie stopki */
+    display: none;
 }
 
-/* Ustawienie orientacji na poziomą */
 @media screen and (orientation: landscape) {
     body {
         width: 100vw;
