@@ -13,16 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listeners for the links in the footer
     document.getElementById('privacy-link').addEventListener('click', function(event) {
         event.preventDefault();
-        const lang = getCookie('lang') || 'en';
-        const file = lang === 'pl' ? 'documents/privacy.html' : 'documents/privacy_en.md';
-        window.location.href = file;
+        window.location.href = 'documents/privacy.html';
     });
 
     document.getElementById('terms-link').addEventListener('click', function(event) {
         event.preventDefault();
-        const lang = getCookie('lang') || 'en';
-        const file = lang === 'pl' ? 'documents/terms.html' : 'documents/terms_en.md';
-        window.location.href = file;
+        window.location.href = 'documents/terms.html';
     });
 
     // Monitor orientation changes
