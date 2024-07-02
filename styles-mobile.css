@@ -1,5 +1,11 @@
-body {
+/* Resetowanie marginesów i paddingu */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     background-color: #fff;
     color: #000;
@@ -11,27 +17,19 @@ body {
     touch-action: none; /* Zablokowanie zoomowania */
 }
 
-/* Resetowanie marginu i paddingu dla wszystkich elementów */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .header {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; /* Ustawienie elementów w dolnej części sekcji */
+    align-items: flex-end;
     padding: 0.5em 1em;
     box-sizing: border-box;
-    height: 41.2px; /* Dostosowanie wysokości sekcji header */
+    height: 10vh; /* Dostosowanie wysokości sekcji header */
 }
 
 .header .logo {
-    width: 41.19px;
+    width: 10vw;
     height: auto;
-    margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
 }
 
 .footer {
@@ -39,7 +37,6 @@ body {
     text-align: center;
     padding: 0.5em 0;
     box-sizing: border-box;
-    display: none; /* Ukrycie stopki */
 }
 
 .dropdown {
@@ -55,12 +52,11 @@ body {
     font-size: 1em;
     display: flex;
     align-items: center;
-    margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
 }
 
 .dropbtn img {
     margin-left: 0.5em;
-    width: 20px;
+    width: 5vw;
     height: auto;
 }
 
@@ -84,7 +80,7 @@ body {
 
 .dropdown-content a img {
     margin-right: 0.5em;
-    width: 20px;
+    width: 5vw;
     height: auto;
 }
 
@@ -110,20 +106,20 @@ body {
     max-width: 100%;
     margin: 0 auto;
     margin-bottom: 0;
-    height: calc(100vh - 41.2px); /* Ustawienie wysokości widoku minus wysokość nagłówka */
+    height: calc(100vh - 10vh); /* Ustawienie wysokości widoku minus wysokość nagłówka */
 }
 
 .right-section {
-    order: 1; /* Ustawienie kolejności na pierwsze miejsce */
+    order: 1;
     text-align: center;
     margin-bottom: 0.5em;
     padding: 1em;
     border: 0.2em solid #000;
     border-radius: 1em;
-    background-color: rgba(255, 255, 255, 0.8); /* Przezroczystość */
+    background-color: rgba(255, 255, 255, 0.8);
     position: absolute;
     bottom: 0;
-    width: calc(100% - 4em); /* Zmniejszenie szerokości ramki prawej sekcji */
+    width: calc(100% - 4em);
     z-index: 1;
 }
 
@@ -135,13 +131,11 @@ body {
 .right-section .title {
     font-size: 1.2em;
     font-weight: bold;
-    margin-bottom: 0;
 }
 
 .right-section .description {
     font-size: 0.9em;
     margin-top: 0.5em;
-    margin-bottom: 0;
 }
 
 .download-section {
@@ -149,7 +143,6 @@ body {
     order: 3;
     width: 100%;
     margin-top: 0.2em;
-    margin-bottom: 0;
 }
 
 .download-section h2 {
@@ -174,7 +167,7 @@ body {
 }
 
 .download-links a img {
-    width: 165px;
+    width: 18vw;
     height: auto;
     object-fit: contain;
 }
@@ -182,24 +175,27 @@ body {
 .left-section {
     order: 2;
     display: flex;
-    overflow-x: auto; /* Umożliwienie poziomego przewijania */
+    overflow-x: auto;
     gap: 0.5em;
     scroll-snap-type: x mandatory;
     margin-bottom: 0;
     flex-grow: 1;
     position: relative;
-    margin-top: 1em; /* Dodanie marginesu, aby obrazy nie zasłaniały nagłówka */
+    margin-top: 1em;
 }
 
 .left-section img {
     width: 100%;
     height: auto;
-    max-height: calc(100vh - 15vh); /* Ustawienie maksymalnej wysokości obrazów */
+    max-height: calc(100vh - 15vh);
     scroll-snap-align: start;
     object-fit: cover;
 }
 
-/* Ustawienie orientacji na pionową */
+.footer {
+    display: none;
+}
+
 @media screen and (orientation: landscape) {
     body {
         width: 100vw;
@@ -207,42 +203,6 @@ body {
         overflow: hidden;
     }
     .container {
-        height: calc(100vh - 41.2px);
-    }
-}
-
-/* Media Queries dla większej responsywności */
-@media (max-width: 600px) {
-    .container {
-        padding: 1em;
-        height: auto; /* Dostosowanie wysokości do zawartości */
-    }
-    .right-section {
-        position: static;
-        width: 100%;
-    }
-    .left-section {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (min-width: 601px) and (max-width: 1200px) {
-    .container {
-        padding: 1.5em;
-    }
-    .right-section {
-        position: static;
-        width: 90%;
-    }
-}
-
-@media (min-width: 1201px) {
-    .container {
-        padding: 2em;
-    }
-    .right-section {
-        position: static;
-        width: 80%;
+        height: calc(100vh - 10vh);
     }
 }
