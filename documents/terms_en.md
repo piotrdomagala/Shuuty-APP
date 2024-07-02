@@ -51,12 +51,9 @@
 ## §13. Communications
 1. All notices given by users to the Service Provider must be given via the Application or by email to support@shuuty.pl. The Service Provider may give notice to users at either the email or postal address provided when registering for the Application.
 
-## §14. Final Provisions
-1. These terms and conditions come into effect on the date of publication in the application.
-2. Any disputes arising from the use of the Shuuty application will be resolved by competent Polish courts.
-3. In matters not regulated by these terms, the provisions of Polish law, particularly the Civil Code and the Act on Providing Services by Electronic Means, apply.
-4. If any provision of these terms is deemed invalid, the remaining provisions remain in force.
-5. These terms and conditions are available electronically in the Shuuty application and on the Service Provider's website.
+## §14. Liability and Disclaimer
+1. The Service Provider shall not be liable for any indirect or consequential losses, loss of profit, loss of business, or loss of data arising out of or in connection with the use of the Application.
+2. Nothing in these Terms shall exclude or limit the Service Provider's liability for death or personal injury caused by its negligence, fraud, or fraudulent misrepresentation.
 
 ## §15. Application Availability
 1. The Service Provider will use its best efforts to ensure the application is available 24/7. However, the Service Provider is not obligated to ensure uninterrupted service availability.
