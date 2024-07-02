@@ -235,4 +235,22 @@ body {
     .download-links a img {
         width: 80px; /* Dostosowanie wielkości ikony */
     }
+
+    @media screen and (max-width: 568px) {
+        .header .logo {
+            width: 20vw;
+        }
+
+        .dropbtn img {
+            width: 10vw;
+        }
+
+        .right-section {
+            width: 50vw; /* Zmniejszenie szerokości sekcji dla mniejszych ekranów */
+        }
+
+        .download-links a img {
+            width: 50px; /* Dostosowanie wielkości ikony */
+        }
+    }
 }
