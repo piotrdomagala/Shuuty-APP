@@ -3,12 +3,14 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', event => {
             event.preventDefault();
             const lang = event.currentTarget.getAttribute('data-lang');
-            changeLanguage(lang);
+            setCookie('lang', lang, 365);
+            applyLanguage(lang);
         });
     });
 
-    // Set default language to English
-    applyLanguage('en');
+    // Set default language to English or get from cookies
+    const defaultLang = getCookie('lang') || 'en';
+    applyLanguage(defaultLang);
 
     // Event listeners for the links in the footer
     document.getElementById('privacy-link').addEventListener('click', function(event) {
@@ -24,16 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const file = lang === 'pl' ? 'documents/terms.html' : 'documents/terms_en.html';
         window.location.href = file;
     });
-
-    // Monitor orientation changes
-    window.addEventListener('orientationchange', handleOrientationChange);
 });
-
-function handleOrientationChange() {
-    // Reset scroll position to top when orientation changes
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
 
 function setCookie(name, value, days) {
     const d = new Date();
@@ -56,11 +49,6 @@ function getCookie(name) {
         }
     }
     return "";
-}
-
-function changeLanguage(lang) {
-    setCookie('lang', lang, 365);
-    applyLanguage(lang);
 }
 
 function applyLanguage(lang) {
