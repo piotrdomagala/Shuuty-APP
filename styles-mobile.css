@@ -195,12 +195,16 @@ body {
     display: none; /* Ukrycie stopki */
 }
 
-/* Ustawienie orientacji na poziomą */
+/* Ustawienie orientacji na pionową */
 @media screen and (orientation: landscape) {
     body {
         width: 100vw;
         height: 100vh;
         overflow: auto; /* Dodanie przewijania */
+    }
+
+    .header {
+        height: auto; /* Zmniejszenie wysokości nagłówka */
     }
 
     .container {
@@ -231,6 +235,10 @@ body {
         margin-left: 1em; /* Dodanie marginesu */
         position: relative; /* Ustawienie pozycji na relative */
         bottom: auto; /* Resetowanie wartości bottom */
+    }
+
+    .footer {
+        display: block; /* Wyświetlenie stopki */
     }
 
     .download-links a img {
