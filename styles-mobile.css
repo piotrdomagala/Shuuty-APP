@@ -15,16 +15,16 @@ body {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end; /* Ustawienie elementów w dolnej części sekcji */
     padding: 0.5em 1em;
     box-sizing: border-box;
-    height: auto;
+    height: 10vh; /* Dostosowanie wysokości sekcji header */
 }
 
 .header .logo {
     width: 10vw;
     height: auto;
-    margin-bottom: 0;
+    margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
 }
 
 .footer {
@@ -47,7 +47,7 @@ body {
     font-size: 1em;
     display: flex;
     align-items: center;
-    margin-bottom: 0;
+    margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
 }
 
 .dropbtn img {
@@ -102,18 +102,20 @@ body {
     max-width: 100%;
     margin: 0 auto;
     margin-bottom: 0;
-    height: calc(100vh - 4vh);
+    height: calc(100vh - 10vh); /* Ustawienie wysokości widoku minus wysokość nagłówka */
 }
 
 .right-section {
-    order: 1;
+    order: 1; /* Ustawienie kolejności na pierwsze miejsce */
     text-align: center;
     margin-bottom: 0.5em;
     padding: 1em;
     border: 0.2em solid #000;
     border-radius: 1em;
-    background-color: rgba(255, 255, 255, 0.8);
-    width: calc(100% - 4em);
+    background-color: rgba(255, 255, 255, 0.8); /* Przezroczystość */
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 4em); /* Zmniejszenie szerokości ramki prawej sekcji */
     z-index: 1;
 }
 
@@ -164,7 +166,7 @@ body {
 }
 
 .download-links a img {
-    width: 165px;
+    width: 18vw;
     height: auto;
     object-fit: contain;
 }
@@ -172,27 +174,28 @@ body {
 .left-section {
     order: 2;
     display: flex;
-    overflow-x: auto;
+    overflow-x: auto; /* Umożliwienie poziomego przewijania */
     gap: 0.5em;
     scroll-snap-type: x mandatory;
     margin-bottom: 0;
     flex-grow: 1;
     position: relative;
-    margin-top: 1em;
+    margin-top: 1em; /* Dodanie marginesu, aby obrazy nie zasłaniały nagłówka */
 }
 
 .left-section img {
     width: 100%;
     height: auto;
-    max-height: calc(100vh - 15vh);
+    max-height: calc(100vh - 15vh); /* Ustawienie maksymalnej wysokości obrazów */
     scroll-snap-align: start;
     object-fit: cover;
 }
 
 .footer {
-    display: none;
+    display: none; /* Ukrycie stopki */
 }
 
+/* Ustawienie orientacji na poziomą */
 @media screen and (orientation: landscape) {
     body {
         width: 100vw;
@@ -208,7 +211,7 @@ body {
 
     .left-section {
         order: 1; /* Kolejność sekcji */
-        flex: 2; /* Dopasowanie szerokości */
+        flex: 1; /* Dopasowanie szerokości */
         margin-top: 0; /* Usunięcie marginesu górnego */
     }
 
@@ -226,6 +229,8 @@ body {
         width: 30vw; /* Ustawienie szerokości sekcji */
         height: auto; /* Ustawienie wysokości na auto, aby umożliwić przewijanie */
         margin-left: 1em; /* Dodanie marginesu */
+        position: relative; /* Ustawienie pozycji na relative */
+        bottom: auto; /* Resetowanie wartości bottom */
     }
 
     .download-links a img {
