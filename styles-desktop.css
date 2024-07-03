@@ -7,6 +7,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
 .header {
     background-color: #fff;
     display: flex;
@@ -15,20 +16,24 @@ body {
     padding: 10px 20px;
     box-sizing: border-box;
 }
+
 .header .logo {
     width: 60px;
     height: auto;
 }
+
 .footer {
     background-color: #fff;
     text-align: center;
     padding: 10px 0;
     box-sizing: border-box;
 }
+
 .dropdown {
     position: relative;
     display: inline-block;
 }
+
 .dropbtn {
     background-color: transparent;
     color: #000;
@@ -38,11 +43,13 @@ body {
     display: flex;
     align-items: center;
 }
+
 .dropbtn img {
     margin-left: 5px;
     width: 20px;
     height: 20px;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -51,6 +58,7 @@ body {
     z-index: 1;
     right: 0;
 }
+
 .dropdown-content a {
     color: #000;
     padding: 8px 12px;
@@ -59,20 +67,25 @@ body {
     align-items: center;
     font-size: 0.9em;
 }
+
 .dropdown-content a img {
     margin-right: 10px;
     width: 20px;
     height: 20px;
 }
+
 .dropdown-content a:hover {
     background-color: #f1f1f1;
 }
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 .dropdown:hover .dropbtn {
     color: #333;
 }
+
 .container {
     display: flex;
     flex-direction: row;
@@ -85,6 +98,7 @@ body {
     margin: 0 auto;
     gap: 20px;
 }
+
 .left-section {
     display: flex;
     flex-direction: row;
@@ -93,13 +107,16 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .left-section img {
     max-width: 45%;
     height: auto;
 }
+
 .left-section img:not(:first-child):not(:nth-child(2)) {
     display: none;
 }
+
 .right-section {
     flex: 1;
     display: flex;
@@ -108,29 +125,35 @@ body {
     align-items: center;
     text-align: center;
 }
+
 .right-section .title {
     font-size: 1.65em;
     font-weight: bold;
     margin-bottom: 10px;
 }
+
 .right-section .description {
     font-size: 1.32em;
     margin-top: 0;
 }
+
 .download-section {
     text-align: center;
     padding: 10px 0;
 }
+
 .download-section h2 {
     font-size: 1.32em;
     font-weight: normal;
     margin-bottom: 0.5em;
 }
+
 .download-links {
     display: flex;
     gap: 20px;
     justify-content: center;
 }
+
 .download-links a {
     display: flex;
     flex-direction: column;
@@ -138,28 +161,34 @@ body {
     text-decoration: none;
     color: #000;
 }
+
 .download-links a img {
     max-width: 165px;
     height: auto;
 }
+
 .footer {
     padding: 10px 20px;
 }
+
 .footer span {
     display: block;
     margin-bottom: 0;
 }
+
 .footer .footer-links {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 0;
 }
+
 .footer .footer-links a {
     color: #777;
     text-decoration: none;
     transition: color 0.3s;
 }
+
 .footer .footer-links a:hover {
     color: #333;
 }
@@ -206,20 +235,25 @@ body {
         flex-direction: column;
         padding: 10px;
     }
+
     .left-section {
         flex-direction: column;
         align-items: center;
     }
+
     .left-section img {
         max-width: 100%;
         margin-bottom: 10px;
     }
+
     .left-section img:not(:first-child):not(:nth-child(2)) {
         display: none;
     }
+
     .right-section {
         width: 100%;
     }
+
     .download-links {
         flex-direction: column;
         gap: 10px;
