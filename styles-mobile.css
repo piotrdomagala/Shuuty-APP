@@ -166,7 +166,7 @@ body {
 }
 
 .download-links a img {
-    width: 18vw;
+    width: 165px; /* Przywrócenie oryginalnej wielkości */
     height: auto;
     object-fit: contain;
 }
@@ -195,7 +195,7 @@ body {
     display: none; /* Ukrycie stopki */
 }
 
-/* Ustawienie orientacji na pionową */
+/* Ustawienie orientacji na poziomą */
 @media screen and (orientation: landscape) {
     body {
         width: 100vw;
@@ -204,7 +204,7 @@ body {
     }
 
     .header {
-        height: auto; /* Zmniejszenie wysokości nagłówka */
+        height: auto; /* Dostosowanie wysokości nagłówka */
     }
 
     .container {
@@ -237,12 +237,12 @@ body {
         bottom: auto; /* Resetowanie wartości bottom */
     }
 
-    .footer {
-        display: block; /* Wyświetlenie stopki */
+    .download-links a img {
+        width: 165px; /* Przywrócenie oryginalnej wielkości */
     }
 
-    .download-links a img {
-        width: 80px; /* Dostosowanie wielkości ikony */
+    .footer {
+        display: block; /* Wyświetlenie stopki */
     }
 
     @media screen and (max-width: 568px) {
@@ -259,7 +259,7 @@ body {
         }
 
         .download-links a img {
-            width: 50px; /* Dostosowanie wielkości ikony */
+            width: 80px; /* Dostosowanie wielkości ikony */
         }
     }
 }
