@@ -15,14 +15,14 @@ body {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; /* Ustawienie elementów w dolnej części sekcji */
+    align-items: center; /* Zmiana na center */
     padding: 0.5em 1em;
     box-sizing: border-box;
-    height: 10vh; /* Dostosowanie wysokości sekcji header */
+    height: 8vh; /* Zmniejszenie wysokości sekcji header */
 }
 
 .header .logo {
-    width: 10vw;
+    width: 15vw; /* Zwiększenie szerokości ikony */
     height: auto;
     margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
 }
@@ -102,7 +102,7 @@ body {
     max-width: 100%;
     margin: 0 auto;
     margin-bottom: 0;
-    height: calc(100vh - 10vh); /* Ustawienie wysokości widoku minus wysokość nagłówka */
+    height: calc(100vh - 8vh); /* Ustawienie wysokości widoku minus wysokość nagłówka */
 }
 
 .right-section {
@@ -166,7 +166,7 @@ body {
 }
 
 .download-links a img {
-    width: 165px; /* Przywrócenie oryginalnej wielkości */
+    width: 25vw; /* Zwiększenie szerokości ikon */
     height: auto;
     object-fit: contain;
 }
@@ -238,7 +238,7 @@ body {
     }
 
     .download-links a img {
-        width: 165px; /* Przywrócenie oryginalnej wielkości */
+        width: 80px; /* Dostosowanie wielkości ikony */
     }
 
     .footer {
