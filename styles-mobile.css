@@ -166,7 +166,7 @@ body {
 }
 
 .download-links a img {
-    width: 25vw; /* Zwiększenie szerokości ikon */
+    width: 35vw; /* Zwiększenie szerokości ikon */
     height: auto;
     object-fit: contain;
 }
