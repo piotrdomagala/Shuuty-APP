@@ -166,7 +166,7 @@ body {
 }
 
 .download-links a img {
-    width: 45vw; /* Zwiększenie szerokości ikon */
+    width: 40vw; /* Zmniejszenie szerokości ikon */
     height: auto;
     object-fit: contain;
 }
@@ -208,7 +208,7 @@ body {
     }
 
     .header .logo {
-        width: 15vw; /* Przywrócenie oryginalnej szerokości dla orientacji poziomej */
+        width: 10vw; /* Przywrócenie oryginalnej szerokości dla orientacji poziomej */
     }
 
     .container {
@@ -283,6 +283,6 @@ body {
     }
 
     .download-links a img {
-        width: 45vw; /* Ustawienie szerokości ikon */
+        width: 40vw; /* Ustawienie szerokości ikon */
     }
 }
