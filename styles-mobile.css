@@ -15,7 +15,7 @@ body {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Zmiana na center */
+    align-items: center;
     padding: 0.5em 1em;
     box-sizing: border-box;
     height: 8vh; /* Zmniejszenie wysokości sekcji header */
@@ -24,7 +24,7 @@ body {
 .header .logo {
     width: 15vw; /* Zwiększenie szerokości ikony */
     height: auto;
-    margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
+    margin-bottom: 0;
 }
 
 .footer {
@@ -47,7 +47,7 @@ body {
     font-size: 1em;
     display: flex;
     align-items: center;
-    margin-bottom: 0; /* Ustawienie marginesu dolnego na 0 */
+    margin-bottom: 0;
 }
 
 .dropbtn img {
@@ -166,7 +166,7 @@ body {
 }
 
 .download-links a img {
-    width: 35vw; /* Zwiększenie szerokości ikon */
+    width: 45vw; /* Zwiększenie szerokości ikon */
     height: auto;
     object-fit: contain;
 }
@@ -205,6 +205,10 @@ body {
 
     .header {
         height: auto; /* Dostosowanie wysokości nagłówka */
+    }
+
+    .header .logo {
+        width: 15vw; /* Przywrócenie oryginalnej szerokości dla orientacji poziomej */
     }
 
     .container {
@@ -247,7 +251,7 @@ body {
 
     @media screen and (max-width: 568px) {
         .header .logo {
-            width: 20vw;
+            width: 10vw; /* Dostosowanie dla mniejszych ekranów */
         }
 
         .dropbtn img {
@@ -261,5 +265,24 @@ body {
         .download-links a img {
             width: 80px; /* Dostosowanie wielkości ikony */
         }
+    }
+}
+
+/* Dodanie resetowania widoku po zmianie orientacji */
+@media screen and (orientation: portrait) {
+    .container {
+        height: calc(100vh - 8vh); /* Ustawienie wysokości widoku minus wysokość nagłówka */
+    }
+
+    .right-section {
+        width: calc(100% - 4em); /* Zmniejszenie szerokości ramki prawej sekcji */
+    }
+
+    .left-section img {
+        max-height: calc(100vh - 15vh); /* Ustawienie maksymalnej wysokości obrazów */
+    }
+
+    .download-links a img {
+        width: 45vw; /* Ustawienie szerokości ikon */
     }
 }
