@@ -1,41 +1,62 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shuuty-APP</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuuty App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul class="language-switcher">
-        <li><a href="#" class="active" data-lang="pl">Polski</a></li>
-        <li><a href="#" data-lang="en">English</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="content">
-      <div class="text">
-        <h1>Shuuty</h1>
-        <h2>Find Those You Seek</h2>
-        <p>Zorganizuj aktywności i poznaj nowych ludzi dzięki Shuuty.</p>
-        <div class="download-buttons">
-          <a href="#" class="button android">Pobierz na Androida</a>
-          <a href="#" class="button ios">Pobierz na iOS</a>
+    <div class="header">
+        <img src="images/shuuty_icon.webp" alt="Shuuty Logo" class="logo">
+        <div class="dropdown">
+            <button class="dropbtn" id="language-btn">
+                <img src="images/english_icon.png" alt="English"> 
+                <span id="current-language">English</span>
+            </button>
+            <div class="dropdown-content">
+                <a href="#" data-lang="en"><img src="images/english_icon.png" alt="English"> English</a>
+                <a href="#" data-lang="pl"><img src="images/polish_icon.png" alt="Polski"> Polski</a>
+            </div>
         </div>
-      </div>
-      <div class="gallery">
-        <img src="obraz1.jpg" alt="Obraz 1">
-        <img src="obraz2.jpg" alt="Obraz 2">
-        <!-- Dodaj więcej obrazów -->
-      </div>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Shuuty-APP. Wszelkie prawa zastrzeżone.</p>
-  </footer>
-  <script src="scripts.js" defer></script>
+    </div>
+    <div class="container">
+        <div class="left-section">
+            <img src="images/image1.webp" alt="Image 1">
+            <img src="images/image3.webp" alt="Image 3">
+            <img src="images/image2.webp" alt="Image 2">
+            <img src="images/image4.webp" alt="Image 4">
+            <img src="images/image5.webp" alt="Image 5">
+        </div>
+        <div class="right-section">
+            <div class="title-container">
+                <div class="title" id="main-title">Find Those You Seek</div>
+                <p id="description" class="description">
+                    Arrange activities wherever you are.<br>
+                    Meet new people similar to you and<br>
+                    plan your time like never before.
+                </p>
+                <div class="download-section">
+                    <h2 id="download-title">Download the app on mobile</h2>
+                    <div class="download-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.shuuty">
+                            <img src="images/your_android_icon.png" alt="Download for Android">
+                        </a>
+                        <a href="#" id="ios">
+                            <img src="images/your_ios_icon.png" alt="Download for iOS">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <span id="footer-text">&copy; 2024 Shuuty. All rights reserved.</span>
+            <div class="footer-links">
+                <a href="documents/support.html" id="support-link">Support</a> |
+                <a href="documents/privacy.html" id="privacy-link">Privacy</a> |
+                <a href="documents/terms.html" id="terms-link">Terms</a>
+            </div>
+        </footer>
 </body>
 </html>
