@@ -1,14 +1,19 @@
-// Przykładowa funkcja obsługująca zmianę języka
-function zmienJezyk(jezyk) {
-  // Implementacja zmiany języka
-  console.log('Zmieniono język na: ' + jezyk);
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const languageLinks = document.querySelectorAll('.language-switcher a');
 
-// Przykładowa funkcja obsługująca menu rozwijane
-function toggleMenu() {
-  const menu = document.querySelector('nav ul');
-  menu.classList.toggle('active');
-}
+  languageLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const selectedLang = link.getAttribute('data-lang');
 
-// Dodanie nasłuchiwania na kliknięcie przycisku menu
-document.querySelector('.menu-toggle').addEventListener('click', toggleMenu);
+      // Usuń klasę 'active' ze wszystkich linków
+      languageLinks.forEach(link => link.classList.remove('active'));
+
+      // Dodaj klasę 'active' do klikniętego linku
+      link.classList.add('active');
+
+      // Tutaj możesz dodać funkcję zmieniającą treść strony na wybrany język
+      console.log('Zmieniono język na: ' + selectedLang);
+    });
+  });
+});
