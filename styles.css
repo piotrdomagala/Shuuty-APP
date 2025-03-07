@@ -1,0 +1,90 @@
+/* Resetowanie domyślnych stylów */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.left-section, .right-section {
+  flex: 1 1 300px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.left-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.download-buttons {
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.android {
+  background-color: #a4c639;
+}
+
+.ios {
+  background-color: #000;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  main {
+    flex-direction: column;
+  }
+}
