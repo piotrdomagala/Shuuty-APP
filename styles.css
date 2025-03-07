@@ -12,23 +12,27 @@ body {
 }
 
 header {
-  text-align: center;
-  padding: 20px 0;
+  text-align: right;
+  padding: 10px 0;
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
+.language-switcher {
   list-style: none;
 }
 
-nav ul li {
-  margin: 0 15px;
+.language-switcher li {
+  display: inline;
+  margin-left: 15px;
 }
 
-nav ul li a {
+.language-switcher a {
   text-decoration: none;
   color: #333;
+}
+
+.language-switcher a.active {
+  font-weight: bold;
+  border-bottom: 2px solid #333;
 }
 
 main {
@@ -37,18 +41,30 @@ main {
   justify-content: space-between;
 }
 
-.left-section, .right-section {
-  flex: 1 1 300px;
-  margin: 10px;
-  padding: 20px;
-  background-color: #f4f4f4;
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
-.left-section img {
+.text {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+.gallery {
+  flex: 2 1 300px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  overflow-x: auto;
+}
+
+.gallery img {
   max-width: 100%;
   height: auto;
-  display: block;
-  margin-bottom: 10px;
+  margin: 5px;
+  flex: 1 1 200px;
 }
 
 .download-buttons {
@@ -80,11 +96,12 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
+  .gallery {
+    flex-wrap: nowrap;
+    overflow-x: auto;
   }
 
-  main {
-    flex-direction: column;
+  .gallery img {
+    flex: 0 0 auto;
   }
 }
