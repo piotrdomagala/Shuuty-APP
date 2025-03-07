@@ -1,28 +1,27 @@
-document.addEventListener('DOMContentLoaded', function() {
-
-    // Remove 'index.html' from URL
-    if (window.location.pathname.endsWith('index.html')) {
-        window.history.replaceState({}, document.title, window.location.pathname.replace('index.html', ''));
-    }
-
-    // Language switching optimization
-    const languageBtn = document.getElementById('language-btn');
-    const currentLangDisplay = document.getElementById('current-language');
-    const languageOptions = document.querySelectorAll('.dropdown-content a');
+document.addEventListener('DOMContentLoaded', () => {
 
     const translations = {
         en: {
-            title: "Find Those You Seek",
+            mainTitle: "Find Those You Seek",
             description: "Arrange activities wherever you are.<br>Meet new people similar to you and<br>plan your time like never before.",
             downloadTitle: "Download the app on mobile",
-            footerText: "© 2024 Shuuty. All rights reserved."
+            footerText: "© 2024 Shuuty. All rights reserved.",
+            supportLink: "Support",
+            privacyLink: "Privacy",
+            termsLink: "Terms"
         },
         pl: {
             title: "Znajdź tych, których szukasz",
             description: "Zorganizuj aktywności, gdziekolwiek jesteś.<br>Poznaj nowych ludzi podobnych do Ciebie oraz<br>zaplanuj swój czas jak nigdy wcześniej.",
-            downloadTitle: "Pobierz aplikację na urządzenia mobilne"
+            downloadTitle: "Pobierz aplikację na urządzenia mobilne",
+            footerText: "© 2024 Shuuty. Wszelkie prawa zastrzeżone.",
+            supportLink: "Wsparcie",
+            privacyLink: "Prywatność",
+            termsLink: "Regulamin"
         }
     };
+
+    const languageOptions = document.querySelectorAll('.dropdown-content a');
 
     languageOptions.forEach(option => {
         option.addEventListener('click', event => {
@@ -59,23 +58,15 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('download-title').innerText = translations[lang].downloadTitle;
         document.getElementById('footer-text').innerText = translations[lang].footerText;
 
-        currentLangDisplay.textContent = lang === 'en' ? 'English' : 'Polski';
-        document.querySelector('.dropbtn img').src = `images/${lang === 'en' ? 'english_icon.png' : 'polish_icon.png'}`;
+        document.getElementById('support-link').innerText = translations[lang].supportLink;
+        document.getElementById('privacy-link').innerText = translations[lang].privacyLink;
+        document.getElementById('terms-link').innerText = translations[lang].termsLink;
+
+        const langImg = lang === 'en' ? 'english_icon.png' : 'polish_icon.png';
+        document.querySelector('.dropbtn img').src = `images/${langImg}`;
+        document.getElementById('current-language').innerText = lang === 'en' ? 'English' : 'Polski';
     }
 
-    function getCookie(name) {
-        let cname = name + "=";
-        const decodedCookie = decodeURIComponent(document.cookie);
-        const ca = decodedCookie.split(';');
-        for(let c of ca) {
-            c = c.trim();
-            if (c.indexOf(cname) === 0) {
-                return c.substring(cname.length, c.length);
-            }
-        }
-        return "";
-    }
-
-    const selectedLang = getCookie('lang') || 'en';
-    applyLanguage(selectedLang);
+    const currentLang = getCookie('lang') || 'en';
+    applyLanguage(currentLang);
 });
