@@ -58,13 +58,65 @@
         </div>
     </div>
     <footer class="footer">
-        <span id="footer-text">&copy; 2024 Shuuty. All rights reserved.</span>
+        <span id="footer-text">&copy; 2025 Shuuty. All rights reserved.</span>
         <div class="footer-links">
             <a href="documents/support.html">Support</a>
             <a href="documents/privacy.html">Privacy</a>
             <a href="documents/terms.html">Terms</a>
         </div>
     </footer>
-    <script src="scripts.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function setCookie(name, value, days) {
+            const d = new Date();
+            d.setTime(d.getTime() + (days*24*60*60*1000));
+            document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/";
+        }
+        function getCookie(name) {
+            const cname = name + "=";
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const ca = decodedCookie.split(';');
+            for(let i = 0; i < ca.length; i++) {
+                let c = ca[i].trim();
+                if (c.indexOf(cname) === 0) {
+                    return c.substring(cname.length, c.length);
+                }
+            }
+            return "";
+        }
+        function applyLanguage(lang) {
+            const langElements = {
+                en: {
+                    support: 'Support',
+                    privacy: 'Privacy',
+                    terms: 'Terms',
+                    footerText: '© 2025 Shuuty. All rights reserved.'
+                },
+                pl: {
+                    support: 'Wsparcie',
+                    privacy: 'Prywatność',
+                    terms: 'Regulamin',
+                    footerText: '© 2025 Shuuty. Wszelkie prawa zastrzeżone.'
+                }
+            };
+            document.getElementById('support-link').innerText = langElements[lang].support;
+            document.getElementById('privacy-link').innerText = langElements[lang].privacy;
+            document.getElementById('terms-link').innerText = langElements[lang].terms;
+            document.getElementById('footer-text').innerText = langElements[lang].footerText;
+        }
+        function changeLanguage(lang) {
+            setCookie('lang', lang, 365);
+            applyLanguage(lang);
+        }
+        document.querySelectorAll('.dropdown-content a').forEach(item => {
+            item.addEventListener('click', function(event) {
+                event.preventDefault();
+                const lang = event.currentTarget.getAttribute('data-lang');
+                changeLanguage(lang);
+            });
+        });
+        applyLanguage(getCookie('lang') || 'en');
+    });
+</script>
 </body>
 </html>
