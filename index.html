@@ -118,6 +118,10 @@
             });
         });
         applyLanguage(getCookie('lang') || 'en');
+        setTextContent('support-link', langElements[getCookie('lang') || 'en'].support);
+        setTextContent('privacy-link', langElements[getCookie('lang') || 'en'].privacy);
+        setTextContent('terms-link', langElements[getCookie('lang') || 'en'].terms);
+        setTextContent('footer-text', langElements[getCookie('lang') || 'en'].footerText);
     });
 </script>
 </body>
