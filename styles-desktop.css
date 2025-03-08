@@ -1,8 +1,9 @@
 /* Optimized Desktop CSS */
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    background-color: #fff;
+    background-color: #ffffff;
     color: #000;
     display: flex;
     flex-direction: column;
@@ -13,12 +14,25 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 2em;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #eaeaea;
 }
 
 .logo {
     width: 60px;
     height: auto;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .dropdown-content {
@@ -37,61 +51,59 @@ body {
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
-    padding: 20px;
+    padding: 2rem;
+    flex-wrap: wrap;
 }
 
 .left-section {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
     justify-content: center;
-    flex: 2;
+    gap: 1rem;
 }
 
 .left-section img {
-    max-width: calc(50% - 10px);
+    width: calc(50% - 1rem);
+    max-width: 300px;
     height: auto;
+    border-radius: 8px;
 }
 
 .right-section {
     flex: 1;
     text-align: center;
-    padding: 1em;
-    border: 0.2em solid #000;
-    border-radius: 1em;
-    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #f9f9f9;
 }
 
-.download-links {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    margin-top: 1em;
+.download-section {
+    margin-top: 1rem;
 }
 
-.download-links a img {
-    width: 120px;
+.download-links img {
+    width: 150px;
     height: auto;
+    margin: 0 0.5rem;
 }
 
 .footer {
     text-align: center;
-    padding: 10px;
+    padding: 1rem 0;
+    border-top: 1px solid #eaeaea;
     margin-top: auto;
 }
 
 .footer-links a {
-    margin: 0 5px;
     text-decoration: none;
     color: inherit;
+    margin: 0 0.5rem;
 }
 
 @media screen and (max-width: 1024px) {
     .container {
         flex-direction: column;
-    }
-    .left-section img {
-        max-width: 100%;
+        align-items: center;
     }
 }
-
