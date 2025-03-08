@@ -39,9 +39,7 @@
             <div class="title-container">
                 <div class="title" id="main-title">Find Those You Seek</div>
                 <p id="description" class="description">
-                    Arrange activities wherever you are.<br>
-                    Meet new people similar to you and<br>
-                    plan your time like never before.
+                    Arrange activities wherever you are.<br>Meet new people similar to you and<br>plan your time like never before.
                 </p>
             </div>
             <div class="download-section">
@@ -60,13 +58,19 @@
     <footer class="footer">
         <span id="footer-text">&copy; 2025 Shuuty. All rights reserved.</span>
         <div class="footer-links">
-            <a href="documents/support.html">Support</a>
-            <a href="documents/privacy.html">Privacy</a>
-            <a href="documents/terms.html">Terms</a>
+            <a href="documents/support.html" id="support-link">Support</a>
+            <a href="documents/privacy.html" id="privacy-link">Privacy</a>
+            <a href="documents/terms.html" id="terms-link">Terms</a>
         </div>
     </footer>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
+        function setTextContent(id, text) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.innerText = text;
+            }
+        }
         function setCookie(name, value, days) {
             const d = new Date();
             d.setTime(d.getTime() + (days*24*60*60*1000));
@@ -99,10 +103,10 @@
                     footerText: '© 2025 Shuuty. Wszelkie prawa zastrzeżone.'
                 }
             };
-            document.getElementById('support-link').innerText = langElements[lang].support;
-            document.getElementById('privacy-link').innerText = langElements[lang].privacy;
-            document.getElementById('terms-link').innerText = langElements[lang].terms;
-            document.getElementById('footer-text').innerText = langElements[lang].footerText;
+            setTextContent('support-link', langElements[lang].support);
+            setTextContent('privacy-link', langElements[lang].privacy);
+            setTextContent('terms-link', langElements[lang].terms);
+            setTextContent('footer-text', langElements[lang].footerText);
         }
         function changeLanguage(lang) {
             setCookie('lang', lang, 365);
