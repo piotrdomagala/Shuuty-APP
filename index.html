@@ -1,70 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shuuty App</title>
-    <link rel="stylesheet" href="styles-desktop.css" media="screen and (min-width: 769px)">
-    <link rel="stylesheet" href="styles-mobile.css" media="screen and (max-width: 768px)">
-    <link rel="stylesheet" href="css/github-markdown.css"> <!-- Link do stylizacji markdown -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> <!-- Skrypt do konwersji markdown na HTML -->
+    <title>Shuuty - Twoja aplikacja mobilna</title>
+    <link rel="stylesheet" href="styles-desktop.css" media="(min-width: 768px)">
+    <link rel="stylesheet" href="styles-mobile.css" media="(max-width: 767px)">
+    <link rel="icon" href="images/shuuty_icon.webp">
 </head>
 <body>
-    <div class="header">
+    <header>
         <img src="images/shuuty_icon.webp" alt="Shuuty Logo" class="logo">
-        <div class="dropdown">
-            <button class="dropbtn" id="language-btn">
-                <img src="images/english_icon.png" alt="English"> 
-                <span id="current-language">English</span>
-            </button>
-            <div class="dropdown-content">
-                <a href="#" data-lang="en">
-                    <img src="images/english_icon.png" alt="English"> English
-                </a>
-                <a href="#" data-lang="pl">
-                    <img src="images/polish_icon.png" alt="Polski"> Polski
-                </a>
-            </div>
+        <h1>Shuuty</h1>
+        <nav>
+            <ul>
+                <li><a href="#opis">O aplikacji</a></li>
+                <li><a href="#funkcje">Funkcje</a></li>
+                <li><a href="#download">Pobierz</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </nav>
+    </header>
+
+    <section id="intro">
+        <h2>Wszystko, czego potrzebujesz, w jednym miejscu.</h2>
+        <p>Shuuty to nowoczesna aplikacja mobilna, która pozwala wygodnie zarządzać spotkaniami, grupami oraz codziennymi zadaniami. Zorganizuj swój dzień efektywnie i szybko!</p>
+        <div class="download-buttons">
+            <a href="#"><img src="images/your_android_icon.png" alt="Android"></a>
+            <a href="images/your_ios_icon.png" alt="iOS"></a>
+    </section>
+
+    <section id="funkcje">
+        <h2>Najważniejsze funkcje</h2>
+        <div class="feature">
+            <img src="images/image1.webp" alt="Funkcja 1">
+            <h3>Twój Organizer</h3>
+            <p>Zarządzaj spotkaniami, grupami i zadaniami w przejrzysty sposób.</p>
         </div>
-    </div>
-    <div class="container">
-        <div class="left-section">
-            <img src="images/image1.webp" alt="Image 1">
-            <img src="images/image3.webp" alt="Image 3">
-            <img src="images/image2.webp" alt="Image 2">
-            <img src="images/image4.webp" alt="Image 4">
-            <img src="images/image5.webp" alt="Image 5">
+        <div class="feature">
+            <img src="images/image2.webp" alt="Mapa">
+            <h3>Interaktywna Mapa</h3>
+            <p>Znajdź spotkania w okolicy lub stwórz własne wydarzenie.</p>
         </div>
-        <div class="right-section">
-            <div class="title-container">
-                <div class="title" id="main-title">Find Those You Seek</div>
-                <p id="description" class="description">
-                    Arrange activities wherever you are.<br>
-                    Meet new people similar to you and<br>
-                    plan your time like never before.
-                </p>
-            </div>
-            <div class="download-section">
-                <h2 id="download-title">Download the app on mobile</h2>
-                <div class="download-links">
-                    <a href="https://play.google.com/store/apps/details?id=com.shuuty&hl=en-US&ah=JpCaODeLlr4ezPgI17PkuGtLw7M">
-                        <img src="images/your_android_icon.png" alt="Download for Android">
-                    </a>
-                    <a href="#" id="ios">
-                        <img src="images/your_ios_icon.png" alt="Download for iOS">
-                    </a>
-                </div>
-            </div>
+        <div class="feature">
+            <img src="images/image1.webp" alt="Aktualności">
+            <h3>Aktualności</h3>
+            <p>Bądź zawsze na bieżąco z wydarzeniami w twojej grupie.</p>
         </div>
-    </div>
-    <footer class="footer">
-        <span id="footer-text">&copy; 2024 Shuuty. All rights reserved.</span>
-        <div class="footer-links">
-            <a href="documents/support.html" id="support-link">Support</a> | 
-            <a href="documents/privacy.html" id="privacy-link">Privacy</a> | 
-            <a href="documents/terms.html" id="terms-link">Terms</a>
-        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Galeria aplikacji</h2>
+        <img src="images/image1.webp" alt="Shuuty screen 1">
+        <img src="images/image2.webp" alt="Shuuty screen 2">
+    </section>
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <form>
+            <input type="text" placeholder="Twoje imię">
+            <input type="email" placeholder="Twój email">
+            <textarea placeholder="Twoja wiadomość"></textarea>
+            <button type="submit">Wyślij</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Shuuty. Wszelkie prawa zastrzeżone.</p>
     </footer>
+
     <script src="scripts.js"></script>
 </body>
 </html>
