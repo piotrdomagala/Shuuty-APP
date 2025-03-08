@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             termsLink: "Terms"
         },
         pl: {
-            title: "Znajdź tych, których szukasz",
+            mainTitle: "Znajdź tych, których szukasz",
             description: "Zorganizuj aktywności, gdziekolwiek jesteś.<br>Poznaj nowych ludzi podobnych do Ciebie oraz<br>zaplanuj swój czas jak nigdy wcześniej.",
             downloadTitle: "Pobierz aplikację na urządzenia mobilne",
             footerText: "© 2024 Shuuty. Wszelkie prawa zastrzeżone.",
