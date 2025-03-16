@@ -166,7 +166,7 @@ body {
 }
 
 .download-links a img {
-    width: 40vw; /* Zmniejszenie szerokości ikon */
+    width: clamp(120px, 40vw, 200px);
     height: auto;
     object-fit: contain;
 }
